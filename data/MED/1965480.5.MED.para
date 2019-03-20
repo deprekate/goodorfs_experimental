@@ -1,0 +1,165 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.343778
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.385          0.157          0.105          0.350
+          0.491          0.035          0.052          0.421
+          0.614          0.140          0.017          0.228
+          0.561          0.052          0.087          0.298
+          0.999              0              0              0
+              0              0              0          0.999
+              0              0          0.999              0
+          0.526          0.052          0.315          0.105
+          0.228          0.456          0.122          0.192
+          0.403          0.070          0.070          0.456
+          0.456          0.052          0.245          0.245
+          0.543          0.140          0.017          0.298
+          0.421          0.192          0.140          0.245
+          0.543          0.035          0.192          0.228
+          0.350          0.192          0.052          0.403
+          0.456          0.070          0.052          0.421
+          0.526          0.122          0.175          0.175
+          0.403          0.228          0.122          0.245
+          0.456          0.140          0.140          0.263
+          0.333          0.192          0.157          0.315
+          0.438          0.122          0.140          0.298
+          0.438          0.157          0.017          0.385
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.722
+         2          0.131
+         3          0.049
+         4          0.033
+         5          0.039
+         6          0.023
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -40          0.026
+       -25          0.026
+       -22          0.026
+       -10          0.052
+        -7          0.052
+        -3          0.078
+         0          0.184
+         2          0.026
+         3          0.052
+         4          0.026
+         5          0.078
+         9          0.052
+        11          0.026
+        12          0.052
+        13          0.052
+        14          0.026
+        15          0.052
+        16          0.026
+        20          0.026
+        21          0.026
+        26          0.026
+    others          0.026
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.13651        0.86349
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+       509      2986       +   ATTAA     503  ATG       0
+      3088      3705       +   ATTAA    3082  ATG       4
+      3769      4293       +   ATTAA    3763  ATG       0
+      4286      5815       +   ATTAA    4280  ATG       0
+      5812      5943       -   TTTCA   53951  ATG       4
+      5930      6598       +   ATTAA    5924  ATG       0
+      6624      8591       +   ATTAA    6618  ATG       0
+      8691      9425       +   ATTAA    8685  ATG       0
+      9425     10120       +   ATTAA    9419  ATG       0
+     10139     10396       +   ATTAA   10133  ATG       0
+     10408     10821       +   ATTAA   10402  ATG       0
+     10818     10973       +   ATTAA   10812  ATG       0
+     11079     11420       +   ATTAA   11073  ATG       0
+     11433     11636       +   ATTAA   11427  ATG       0
+     11778     12113       +   ATTAA   11772  ATG       0
+     12110     12421       +   ATTAA   12104  ATG       0
+     12494     13129       +   ATTAA   12488  ATG       0
+     13131     13490       +   ATTAA   13125  ATG       0
+     13529     13723       +   ATTAA   13523  ATG       2
+     13653     14036       +   ATTAA   13647  ATG       1
+     14038     14334       +   ATTAA   14032  ATG       0
+     14297     14548       +   ATTAA   14291  ATG       0
+     14655     15692       +   ATTAA   14649  ATG       0
+     15686     15949       +   ATTAA   15680  ATG       0
+     15959     16114       +   ATTAA   15953  ATG       0
+     16126     16851       +   ATTAA   16120  ATG       1
+     16862     16966       -   TTTCA   42928  ATG       0
+     16928     17158       +   ATTAA   16922  ATG       0
+     17137     17325       +   ATTAA   17131  ATG       0
+     17322     17615       +   ATTAA   17316  ATG       0
+     17602     17760       +   ATTAA   17596  ATG       0
+     17760     18689       +   ATTAA   17754  ATG       0
+     18818     19312       +   ATTAA   18812  ATG       0
+     19332     19769       +   ATTAA   19326  ATG       0
+     19771     20169       +   ATTAA   19765  ATG       1
+     20144     20281       +   ATTAA   20138  ATG       0
+     20307     20609       +   ATTAA   20301  ATG       2
+     20685     20816       +   ATTAA   20679  TTG       0
+     20758     20940       +   ATTAA   20752  ATG       0
+     21053     21289       +   ATTAA   21047  ATG       1
+     21368     21559       +   ATTAA   21362  ATG       0
+     21556     21657       +   ATTAA   21550  ATG       0
+     21852     21995       +   ATTAA   21846  ATG       0
+     21998     22330       +   ATTAA   21992  ATG       0
+     22343     22522       +   ATTAA   22337  ATG       0
+     22717     23685       +   ATTAA   22711  ATG       1
+     23764     23859       +   ATTAA   23758  ATG       0
+     23903     24157       -   TTTCA   35737  ATG       2
+     24205     25173       +   ATTAA   24199  ATG       0
+     25246     25347       +   ATTAA   25240  ATG       1
+     25436     25579       -   TTTCA   34315  ATG       1
+     25600     25815       +   ATTAA   25594  ATG       0
+     25770     25925       +   ATTAA   25764  ATG       0
+     26197     26367       -   TTTCA   33527  TTG       1
+     26352     26840       +   ATTAA   26346  ATG       0
+     26846     27034       +   ATTAA   26840  ATG       0
+     27036     27287       +   ATTAA   27030  ATG       4
+     27222     27332       -   TTTCA   32562  ATG       1
+     27344     27577       -   TTTCA   32317  ATG       0
+     27711     27911       +   ATTAA   27705  ATG       4
+     27853     27996       +   ATTAA   27847  ATG       0
+     27989     29233       +   ATTAA   27983  ATG       0
+     29233     29757       +   ATTAA   29227  ATG       0
+     29772     30416       +   ATTAA   29766  ATG       0
+     30486     32222       +   ATTAA   30480  ATG       1
+     32219     33697       +   ATTAA   32213  ATG       0
+     33761     34333       +   ATTAA   33755  ATG       0
+     34349     34861       +   ATTAA   34343  ATG       0
+     34884     35093       +   ATTAA   34878  ATG       0
+     35083     35397       +   ATTAA   35077  ATG       0
+     35457     36437       +   ATTAA   35451  ATG       4
+     36451     37587       +   ATTAA   36445  ATG       0
+     37600     38322       +   ATTAA   37594  ATG       0
+     38319     38576       +   ATTAA   38313  ATG       0
+     38536     38991       +   ATTAA   38530  ATG       0
+     38988     39365       +   ATTAA   38982  ATG       1
+     39362     39916       +   ATTAA   39356  ATG       0
+     39931     40164       +   ATTAA   39925  ATG       0
+     40164     41504       +   ATTAA   40158  ATG       0
+     41615     42241       +   ATTAA   41609  ATG       0
+     42343     42576       +   ATTAA   42337  ATG       2
+     42581     46510       +   ATTAA   42575  ATG       0
+     46514     47644       +   ATTAA   46508  ATG       0
+     47644     48876       +   ATTAA   47638  ATG       0
+     48876     49700       +   ATTAA   48870  ATG       0
+     49675     50160       +   ATTAA   49669  ATG       0
+     50150     50803       +   ATTAA   50144  ATG       0
+     50815     51588       +   ATTAA   50809  ATG       0
+     51601     52416       +   ATTAA   51595  ATG       0
+     52427     52813       +   ATTAA   52421  ATG       0
+     52818     53138       +   ATTAA   52812  ATG       0
+     53141     53491       +   ATTAA   53135  ATG       0
+     53469     53774       +   ATTAA   53463  ATG       0
+     53774     54523       +   ATTAA   53768  ATG       0
+     54578     57436       +   ATTAA   54572  ATG       1
+     57445     58278       +   ATTAA   57439  ATG       0
+     58293     59222       +   ATTAA   58287  ATG       0
+     59638     59736       +   ATTAA   59632  ATG       0

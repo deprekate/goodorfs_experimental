@@ -1,0 +1,120 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.44379
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.285          0.228          0.228          0.257
+          0.314          0.228          0.314          0.142
+          0.171          0.342          0.257          0.228
+          0.342          0.085          0.2.0          0.371
+          0.633              0          0.335          0.030
+              0              0              0          0.999
+              0              0          0.999              0
+          0.485          0.085          0.371          0.057
+          0.171          0.314          0.228          0.285
+          0.257          0.085          0.428          0.228
+          0.371          0.228          0.171          0.228
+          0.428          0.171          0.028          0.371
+          0.428          0.114          0.342          0.114
+          0.314          0.085          0.171          0.428
+          0.314          0.171          0.114          0.4.0
+          0.285          0.142          0.228          0.342
+          0.457          0.2.0          0.2.0          0.142
+          0.514          0.085          0.142          0.257
+          0.4.0          0.171          0.2.0          0.228
+          0.428          0.085          0.257          0.228
+          0.542          0.028          0.028          0.4.0
+          0.228          0.257          0.285          0.228
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.708
+         2          0.095
+         3          0.039
+         4          0.068
+         5          0.049
+         6          0.039
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -37          0.083
+       -27          0.041
+       -19          0.083
+        -7          0.041
+        -3          0.291
+         3          0.083
+         4          0.083
+         5          0.041
+         7          0.041
+        14          0.041
+        19          0.041
+        21          0.041
+        36          0.041
+        42          0.041
+    others          0.041
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.32707        0.67293
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        37       129       -   CCCGT   34549  TTG       1
+       269      1234       +   AAGAG     263  ATG       0
+      1231      2100       +   AAGAG    1225  ATG       0
+      2142      3008       +   AAGAG    2136  ATG       0
+      2842      3675       +   AAGAG    2836  ATG       1
+      3686      3913       +   AAGAG    3680  GTG       0
+      3898      4095       +   AAGAG    3892  TTG       0
+      4114      4605       +   AAGAG    4108  GTG       0
+      4510      5058       -   CCCGT   29620  ATG       0
+      5118      5288       +   AAGAG    5112  ATG       5
+      5368      5520       +   AAGAG    5362  GTG       2
+      5517      5651       +   AAGAG    5511  ATG       0
+      5612      5785       +   AAGAG    5606  TTG       0
+      5863      6318       +   AAGAG    5857  GTG       0
+      6501      7226       +   AAGAG    6495  ATG       0
+      7229      7978       +   AAGAG    7223  ATG       0
+      8248      8418       +   AAGAG    8242  GTG       0
+      8731      9180       +   AAGAG    8725  ATG       3
+      9213      9494       +   AAGAG    9207  ATG       0
+      9596      9952       +   AAGAG    9590  ATG       0
+      9949     11670       +   AAGAG    9943  ATG       0
+     11675     12895       +   AAGAG   11669  ATG       0
+     12858     13478       +   AAGAG   12852  GTG       0
+     13441     14718       +   AAGAG   13435  ATG       0
+     14738     14929       +   AAGAG   14732  ATG       0
+     14926     15207       +   AAGAG   14920  ATG       0
+     15204     15509       +   AAGAG   15198  GTG       0
+     15502     15876       +   AAGAG   15496  ATG       0
+     15873     16187       +   AAGAG   15867  ATG       0
+     16184     16768       +   AAGAG   16178  ATG       0
+     16772     17119       +   AAGAG   16766  ATG       0
+     17206     17322       +   AAGAG   17200  TTG       1
+     17329     20205       +   AAGAG   17323  GTG       0
+     20202     20927       +   AAGAG   20196  ATG       0
+     20931     22625       +   AAGAG   20925  GTG       0
+     22639     24024       +   AAGAG   22633  ATG       0
+     24005     24448       +   AAGAG   23999  ATG       0
+     24445     25125       +   AAGAG   24439  ATG       0
+     25158     25373       -   CCCGT    9305  ATG       0
+     25374     26219       -   CCCGT    8459  ATG       1
+     26311     26553       +   AAGAG   26305  ATG       0
+     26591     26815       -   CCCGT    7863  ATG       0
+     26812     26928       -   CCCGT    7750  GTG       1
+     26934     27029       -   CCCGT    7649  ATG       1
+     27009     27119       +   AAGAG   27003  ATG       0
+     27092     27526       +   AAGAG   27086  ATG       0
+     27453     28724       +   AAGAG   27447  GTG       0
+     28705     29385       +   AAGAG   28699  GTG       0
+     29398     29580       +   AAGAG   29392  GTG       0
+     29722     29868       -   CCCGT    4810  GTG       0
+     29865     31049       -   CCCGT    3629  TTG       0
+     31052     31234       -   CCCGT    3444  GTG       0
+     31341     31784       -   CCCGT    2894  ATG       0
+     31805     32302       -   CCCGT    2376  TTG       0
+     32462     32650       +   AAGAG   32456  ATG       1
+     32647     32802       +   AAGAG   32641  ATG       0
+     32838     33398       +   AAGAG   32832  GTG       0
+     33522     33968       +   AAGAG   33516  ATG       3
+     33968     34246       +   AAGAG   33962  ATG       1
+     34451     34579       +   AAGAG   34445  ATG       4

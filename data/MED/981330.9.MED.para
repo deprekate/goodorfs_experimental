@@ -1,0 +1,179 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.695736
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.207          0.205          0.304          0.282
+          0.294          0.318          0.249          0.137
+          0.465          0.164          0.085          0.285
+          0.186          0.518          0.295              0
+          0.624              0          0.374              0
+          0.25.          0.25.          0.25.          0.25.
+          0.25.          0.25.          0.25.          0.25.
+          0.438          0.185          0.232          0.143
+          0.193          0.524          0.262          0.019
+          0.181          0.168          0.136          0.513
+          0.448          0.152          0.212          0.186
+          0.271          0.229          0.225          0.273
+          0.199          0.257          0.116          0.426
+          0.222          0.285          0.190          0.301
+          0.372          0.202          0.075          0.349
+          0.275          0.213          0.150          0.360
+          0.156          0.282          0.283          0.277
+          0.162          0.431          0.178          0.227
+          0.724          0.131          0.095          0.047
+          0.170          0.304          0.172          0.351
+          0.287          0.303          0.305          0.102
+          0.262          0.175          0.150          0.412
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.687
+         2          0.062
+         3          0.062
+         4          0.062
+         5          0.062
+         6          0.062
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+         2          0.166
+         4          0.166
+        10          0.166
+        26          0.166
+        40          0.166
+        41          0.166
+    others          0.166
+GB distribution for coding region downstream of TIS
+   GB          Prob.
+   52          0.011
+   55          0.011
+   62          0.022
+   66          0.022
+   67          0.011
+   68          0.011
+   69          0.022
+   70          0.102
+   71          0.068
+   72          0.079
+   73          0.045
+   74          0.022
+   75          0.102
+   76          0.090
+   77          0.147
+   78          0.125
+   79          0.011
+   80          0.022
+   81          0.022
+   82          0.022
+   84          0.011
+   85          0.011
+GB distribution for non-coding region upstream of TIS
+   GB          Prob.
+   58          0.1.0
+   60          0.1.0
+   61          0.05.
+   62          0.05.
+   64          0.05.
+   65          0.05.
+   66          0.05.
+   68          0.05.
+   69          0.05.
+   70          0.15.
+   71          0.2.0
+   77          0.05.
+   81          0.05.
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.45433        0.54567
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+       457      1035       -   GCACC   60400  ATG       0
+      1048      1524       -   GCACC   59911  GTG       0
+      1473      1853       -   GCACC   59582  GTG       1
+      1697      1945       -   GCACC   59490  ATG       0
+      2072      2308       -   GCACC   59127  ATG       2
+      2308      2466       -   GCACC   58969  ATG       0
+      2519      2935       -   GCACC   58500  ATG       0
+      3003      3287       -   GCACC   58148  ATG       1
+      3368      5014       +   AGATC    3362  ATG       1
+      5011      5691       -   GCACC   55744  GTG       2
+      5727      5954       -   GCACC   55481  ATG       0
+      5947      6300       -   GCACC   55135  ATG       1
+      6285      6671       +   AGATC    6279  GTG       0
+      6584      6922       -   GCACC   54513  ATG       0
+      6925      7500       -   GCACC   53935  ATG       0
+      7536      7940       +   AGATC    7530  GTG       0
+      7975      9807       +   AGATC    7969  ATG       0
+      7986      8144       -   GCACC   53291  ATG       0
+      9791     12169       +   AGATC    9785  ATG       0
+     12170     12361       +   AGATC   12164  ATG       0
+     12464     14209       +   AGATC   12458  GTG       0
+     14324     15103       +   AGATC   14318  ATG       1
+     14920     16716       -   GCACC   44719  ATG       0
+     15530     15712       +   AGATC   15524  ATG       5
+     15712     16110       +   AGATC   15706  GTG       1
+     16114     16566       +   AGATC   16108  ATG       0
+     16442     16993       +   AGATC   16436  GTG       0
+     17080     17883       +   AGATC   17074  ATG       0
+     17959     18726       +   AGATC   17953  ATG       0
+     18558     19259       +   AGATC   18552  ATG       0
+     19222     19842       -   GCACC   41593  GTG       0
+     19553     19993       +   AGATC   19547  ATG       0
+     20033     20467       +   AGATC   20027  ATG       0
+     20508     27740       +   AGATC   20502  GTG       0
+     27750     29273       +   AGATC   27744  GTG       0
+     29412     30311       +   AGATC   29406  GTG       4
+     30377     31627       +   AGATC   30371  GTG       1
+     31282     32196       +   AGATC   31276  GTG       0
+     31728     32819       +   AGATC   31722  GTG       0
+     31749     31856       -   GCACC   29579  ATG       0
+     32855     33403       +   AGATC   32849  GTG       5
+     33405     34019       +   AGATC   33399  GTG       0
+     34044     34442       +   AGATC   34038  ATG       0
+     34358     34702       +   AGATC   34352  GTG       0
+     34717     35127       +   AGATC   34711  ATG       0
+     34737     35525       -   GCACC   25910  GTG       0
+     35124     35834       +   AGATC   35118  GTG       0
+     35939     36925       +   AGATC   35933  GTG       4
+     36929     37582       +   AGATC   36923  ATG       0
+     37630     37920       -   GCACC   23515  GTG       0
+     37917     38300       -   GCACC   23135  GTG       0
+     38558     38668       -   GCACC   22767  GTG       1
+     38936     39328       -   GCACC   22107  ATG       0
+     39410     40141       -   GCACC   21294  ATG       0
+     40325     41080       +   AGATC   40319  GTG       5
+     41047     42684       +   AGATC   41041  GTG       0
+     42707     42805       +   AGATC   42701  GTG       1
+     42775     42975       -   GCACC   18460  ATG       0
+     42981     43487       -   GCACC   17948  ATG       0
+     43513     44817       -   GCACC   16618  ATG       3
+     43976     44080       +   AGATC   43970  ATG       0
+     44814     46460       -   GCACC   14975  ATG       0
+     46601     47083       -   GCACC   14352  ATG       0
+     47076     47393       +   AGATC   47070  GTG       4
+     47369     50491       -   GCACC   10944  GTG       1
+     49978     50784       -   GCACC   10651  GTG       0
+     50550     52787       -   GCACC    8648  GTG       0
+     52624     53196       -   GCACC    8239  GTG       0
+     53186     54322       -   GCACC    7113  GTG       0
+     54358     54462       -   GCACC    6973  ATG       1
+     54546     54653       +   AGATC   54540  GTG       0
+     54846     55451       +   AGATC   54840  ATG       0
+     55441     56361       +   AGATC   55435  GTG       0
+     55565     55855       +   AGATC   55559  GTG       5
+     56493     56627       +   AGATC   56487  GTG       5
+     56624     56995       +   AGATC   56618  ATG       0
+     56746     57288       +   AGATC   56740  GTG       1
+     57285     57575       +   AGATC   57279  GTG       2
+     57521     57727       -   GCACC    3708  GTG       0
+     57622     58404       +   AGATC   57616  GTG       0
+     58475     58696       +   AGATC   58469  ATG       0
+     58859     59047       -   GCACC    2388  ATG       0
+     58982     59434       +   AGATC   58976  ATG       0
+     59427     59762       +   AGATC   59421  ATG       0
+     59717     59878       -   GCACC    1557  GTG       0
+     59902     60435       +   AGATC   59896  GTG       1
+     60459     60764       -   GCACC     671  ATG       0
+     60876     61421       -       -       -  GTG       0

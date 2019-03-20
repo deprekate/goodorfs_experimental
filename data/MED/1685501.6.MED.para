@@ -1,0 +1,66 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.621202
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+              0          0.137          0.412          0.450
+              0          0.150          0.602          0.246
+          0.574          0.116          0.116          0.191
+              0          0.451          0.301          0.246
+          0.985          0.004          0.004          0.004
+          0.259          0.259          0.259          0.222
+          0.259          0.259          0.222          0.259
+          0.705          0.058          0.058          0.176
+              0              0          0.999              0
+              0          0.999              0              0
+          0.454          0.227          0.090          0.227
+          0.999              0              0              0
+          0.999              0              0              0
+          0.666              0              0          0.333
+          0.142          0.428          0.428              0
+              0              0              0          0.999
+          0.142          0.285          0.285          0.285
+          0.799          0.200              0              0
+          0.999              0              0              0
+          0.25.          0.499              0          0.25.
+          0.428          0.285          0.285              0
+              0              0              0          0.999
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.363
+         2          0.121
+         3          0.121
+         4          0.121
+         5          0.152
+         6          0.121
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+         0          1.000
+    others          1.000
+GB distribution for coding region downstream of TIS
+   GB          Prob.
+   67          0.142
+   68          0.142
+   69          0.285
+   78          0.142
+   83          0.285
+GB distribution for non-coding region upstream of TIS
+   GB          Prob.
+   64          0.25.
+   74          0.5.0
+   77          0.25.
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.54433        0.45567
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+         1       207       +       -       -  ATG       0
+       207      1334       +   ATGCA     201  ATG       0
+      3883      4977       +   ATGCA    3877  ATG       0
+      5169      5690       +   ATGCA    5163  ATG       4
+      5849      6163       +   ATGCA    5843  GTG       5
+      6343      6741       +   ATGCA    6337  ATG       0
+      6688      7158       -   CGTTT     110  ATG       0

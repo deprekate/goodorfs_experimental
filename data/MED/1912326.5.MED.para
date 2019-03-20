@@ -1,0 +1,76 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.463544
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.142          0.357              0          0.499
+          0.714          0.285              0              0
+          0.285          0.499          0.142          0.071
+          0.285          0.357          0.357              0
+          0.595              0          0.223          0.179
+              0              0              0          0.999
+              0              0          0.999              0
+          0.428          0.142          0.285          0.142
+          0.428          0.142          0.428              0
+              0          0.071          0.214          0.714
+          0.214          0.428          0.071          0.285
+          0.571          0.142              0          0.285
+          0.357          0.285          0.071          0.285
+          0.285          0.071          0.357          0.285
+          0.285          0.142          0.428          0.142
+          0.071          0.357          0.142          0.428
+              0          0.285          0.571          0.142
+          0.428          0.071          0.142          0.357
+              0          0.357          0.142          0.499
+          0.142          0.357          0.214          0.285
+              0          0.071          0.499          0.428
+              0          0.214          0.285          0.499
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.642
+         2          0.071
+         3          0.071
+         4          0.071
+         5          0.071
+         6          0.071
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+        -3          0.666
+         4          0.333
+    others          0.333
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.52574        0.47426
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+       100      1146       +   CTACT      94  ATG       0
+      1150      1299       +   CTACT    1144  ATG       0
+      1347      1478       -   TCATC   19529  ATG       0
+      2141      2575       +   CTACT    2135  ATG       0
+      2581      2694       -   TCATC   18313  ATG       2
+      2859      3614       +   CTACT    2853  GTG       0
+      3822      5069       +   CTACT    3816  TTG       0
+      5066      5170       -   TCATC   15837  ATG       0
+      6008      6205       +   CTACT    6002  GTG       0
+      6191      6655       -   TCATC   14352  ATG       0
+      7158      7280       -   TCATC   13727  GTG       2
+      7483      8724       +   CTACT    7477  TTG       0
+      8728      9081       +   CTACT    8722  ATG       0
+      9716     11191       +   CTACT    9710  ATG       0
+     11399     12646       +   CTACT   11393  TTG       0
+     12643     12747       -   TCATC    8260  ATG       0
+     13437     13793       -   TCATC    7214  ATG       0
+     13790     14233       -   TCATC    6774  ATG       0
+     14737     14859       -   TCATC    6148  GTG       2
+     15258     16181       +   CTACT   15252  ATG       0
+     16506     16637       -   TCATC    4370  ATG       0
+     17300     17440       +   CTACT   17294  ATG       0
+     17437     18732       +   CTACT   17431  GTG       0
+     18980     19165       +   CTACT   18974  TTG       0
+     19113     19751       +   CTACT   19107  GTG       0
+     19822     20085       -   TCATC     922  ATG       0
+     20594     20713       -   TCATC     294  GTG       2
+     20801     20986       -       -       -  TTG       0

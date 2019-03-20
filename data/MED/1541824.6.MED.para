@@ -1,0 +1,435 @@
+
+TUI TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.610176
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.433          0.223          0.159          0.183
+          0.236          0.215          0.194          0.354
+          0.295          0.166          0.311          0.226
+          0.611          0.215          0.092          0.080
+          0.575              0          0.192          0.230
+          0.25.          0.25.          0.25.          0.25.
+          0.25.          0.25.          0.25.          0.25.
+          0.523          0.115          0.235          0.124
+          0.174          0.280          0.408          0.136
+          0.327          0.229          0.163          0.278
+          0.368          0.185          0.251          0.195
+          0.330          0.196          0.304          0.167
+          0.589          0.164          0.104          0.141
+          0.233          0.166          0.158          0.441
+          0.170          0.395          0.187          0.246
+          0.126          0.210          0.175          0.487
+          0.303          0.103          0.251          0.341
+          0.209          0.262          0.298          0.229
+          0.230          0.129          0.189          0.451
+          0.207          0.401          0.273          0.116
+          0.353          0.262          0.204          0.179
+          0.304          0.283          0.218          0.193
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.583
+         2          0.083
+         3          0.083
+         4          0.083
+         5          0.083
+         6          0.083
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+         0          0.230
+         1          0.153
+         5          0.076
+        10          0.153
+        11          0.153
+        27          0.076
+        40          0.153
+    others          0.076
+GB distribution for coding region downstream of TIS
+   GB          Prob.
+   61          0.013
+   62          0.027
+   66          0.041
+   67          0.054
+   68          0.041
+   69          0.041
+   70          0.068
+   71          0.041
+   72          0.054
+   73          0.013
+   74          0.027
+   75          0.123
+   76          0.095
+   77          0.082
+   78          0.041
+   79          0.054
+   80          0.082
+   81          0.041
+   82          0.013
+   84          0.013
+   85          0.013
+   86          0.013
+GB distribution for non-coding region upstream of TIS
+   GB          Prob.
+   56          0.076
+   59          0.153
+   60          0.076
+   61          0.076
+   62          0.076
+   67          0.076
+   71          0.230
+   75          0.153
+   79          0.076
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.41587        0.58413
+TUL TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.610176
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.321          0.230          0.166          0.281
+          0.219          0.267          0.114          0.398
+          0.351          0.277          0.184          0.186
+          0.509          0.182          0.247          0.061
+          0.355          0.003          0.355          0.285
+          0.25.          0.25.          0.25.          0.25.
+          0.25.          0.25.          0.25.          0.25.
+          0.222          0.489          0.200          0.087
+          0.070          0.292          0.620          0.016
+          0.805          0.118          0.016          0.060
+          0.242          0.140          0.197          0.420
+          0.266          0.354          0.098          0.280
+          0.465          0.176          0.181          0.176
+          0.515          0.175          0.137          0.171
+              0          0.173          0.238          0.587
+          0.188          0.161          0.371          0.279
+          0.120          0.219          0.327          0.332
+          0.070          0.317          0.403          0.208
+          0.232          0.200          0.464          0.103
+          0.096          0.344          0.182          0.376
+          0.258          0.148          0.240          0.352
+          0.232          0.160          0.503          0.103
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.237
+         2          0.203
+         3          0.179
+         4          0.118
+         5          0.118
+         6          0.141
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+    others          0.016
+GB distribution for coding region downstream of TIS
+   GB          Prob.
+   55          0.016
+   59          0.016
+   61          0.016
+   62          0.049
+   63          0.016
+   64          0.049
+   66          0.016
+   67          0.032
+   68          0.098
+   69          0.032
+   70          0.114
+   71          0.016
+   72          0.131
+   73          0.049
+   75          0.032
+   76          0.147
+   77          0.016
+   78          0.032
+   79          0.049
+   80          0.016
+   81          0.016
+   84          0.032
+GB distribution for non-coding region upstream of TIS
+   GB          Prob.
+   53          0.1.0
+   60          0.1.0
+   67          0.1.0
+   68          0.2.0
+   70          0.2.0
+   74          0.1.0
+   77          0.1.0
+   78          0.1.0
+Weight for motif in region [-35,-15) and [-20, 0 )
+         0.4809         0.5191
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+       143       814       +   GCCAT     137  GTG       1
+       904      1407       +   GCCAT     898  ATG       0
+      1515      1637       +   GCCAT    1509  ATG       2
+      1612      1986       +   GCCAT    1606  ATG       0
+      2183      2359       +   GCCAT    2177  ATG       1
+      2352      2558       +   GCCAT    2346  GTG       1
+      2356      2952       +   GCCAT    2350  GTG       0
+      2867      4441       +   GCCAT    2861  TTG       0
+      4444      4638       +   GCCAT    4438  TTG       1
+      4635      5864       +   GCCAT    4629  ATG       0
+      5861      7132       +   GCCAT    5855  ATG       1
+      7304      8782       +   GCCAT    7298  GTG       0
+      8797      8889       +   GCCAT    8791  GTG       0
+      8990      9571       +   GCCAT    8984  GTG       2
+      9804     10199       +   GCCAT    9798  GTG       3
+     10208     10687       +   GCCAT   10202  ATG       0
+     10612     11298       +   GCCAT   10606  ATG       1
+     11138     11896       +   GCCAT   11132  ATG       0
+     11801     12244       -   GGATG   97552  ATG       2
+     11906     12211       +   GCCAT   11900  ATG       0
+     12234     12371       +   GCCAT   12228  ATG       0
+     12440     12652       +   GCCAT   12434  GTG       1
+     12549     13277       +   GCCAT   12543  GTG       0
+     13270     13527       +   GCCAT   13264  ATG       0
+     13668     14096       +   GCCAT   13662  GTG       2
+     14066     14755       -   GGATG   95041  ATG       0
+     14189     14437       +   GCCAT   14183  GTG       2
+     14438     14887       +   GCCAT   14432  ATG       0
+     14884     15306       +   GCCAT   14878  GTG       0
+     15303     15446       -   GGATG   94350  TTG       4
+     15597     15872       +   GCCAT   15591  ATG       0
+     15912     16916       +   GCCAT   15906  ATG       0
+     17010     17516       +   GCCAT   17004  ATG       1
+     17452     17742       +   GCCAT   17446  TTG       0
+     17742     22595       +   GCCAT   17736  ATG       0
+     22987     24663       +   GCCAT   22981  ATG       5
+     24674     26407       +   GCCAT   24668  TTG       0
+     26490     27341       +   GCCAT   26484  ATG       0
+     27569     29845       +   GCCAT   27563  TTG       2
+     29842     32688       +   GCCAT   29836  ATG       0
+     32688     33635       +   GCCAT   32682  ATG       1
+     32951     33118       -   GGATG   76678  GTG       5
+     33072     33329       -   GGATG   76467  TTG       0
+     33257     33352       -   GGATG   76444  GTG       2
+     33877     33993       -   GGATG   75803  GTG       2
+     34145     34342       -   GGATG   75454  GTG       2
+     34411     34785       +   GCCAT   34405  TTG       2
+     34845     35006       +   GCCAT   34839  ATG       0
+     35083     35601       +   GCCAT   35077  ATG       1
+     35602     36270       +   GCCAT   35596  GTG       0
+     36590     37219       +   GCCAT   36584  TTG       2
+     37294     38682       +   GCCAT   37288  ATG       0
+     38736     39686       +   GCCAT   38730  ATG       1
+     39605     39778       +   GCCAT   39599  GTG       0
+     39729     40019       +   GCCAT   39723  ATG       1
+     40019     40405       +   GCCAT   40013  GTG       0
+     40408     40647       +   GCCAT   40402  GTG       0
+     40742     40978       -   GGATG   68818  ATG       0
+     41037     41333       -   GGATG   68463  ATG       0
+     41291     41458       -   GGATG   68338  TTG       1
+     41395     41724       -   GGATG   68072  GTG       2
+     41887     42057       -   GGATG   67739  ATG       0
+     42060     42419       -   GGATG   67377  ATG       1
+     42382     42615       -   GGATG   67181  TTG       0
+     42578     42874       -   GGATG   66922  GTG       0
+     42871     43071       -   GGATG   66725  ATG       0
+     43068     43241       -   GGATG   66555  GTG       0
+     43238     43738       -   GGATG   66058  GTG       0
+     43851     44141       -   GGATG   65655  GTG       0
+     44131     44334       -   GGATG   65462  TTG       0
+     44331     44534       -   GGATG   65262  ATG       4
+     44531     44779       -   GGATG   65017  GTG       0
+     44734     44943       -   GGATG   64853  GTG       0
+     45009     45182       +   GCCAT   45003  ATG       0
+     45190     45450       -   GGATG   64346  ATG       0
+     45371     45586       -   GGATG   64210  ATG       1
+     45583     45936       -   GGATG   63860  ATG       0
+     45933     46256       -   GGATG   63540  GTG       1
+     46291     46695       -   GGATG   63101  TTG       1
+     46704     47072       -   GGATG   62724  ATG       0
+     47047     47292       +   GCCAT   47041  TTG       0
+     47346     47843       -   GGATG   61953  GTG       0
+     47826     48383       +   GCCAT   47820  GTG       0
+     47840     48124       -   GGATG   61672  TTG       0
+     48076     48171       -   GGATG   61625  ATG       0
+     48168     48554       -   GGATG   61242  TTG       1
+     48384     48713       +   GCCAT   48378  TTG       0
+     48563     48805       -   GGATG   60991  ATG       0
+     48984     49253       -   GGATG   60543  ATG       0
+     49246     49545       -   GGATG   60251  GTG       0
+     49503     49820       -   GGATG   59976  ATG       2
+     49820     49918       -   GGATG   59878  GTG       3
+     50048     51337       +   GCCAT   50042  ATG       1
+     51352     51459       -   GGATG   58337  GTG       0
+     51456     51665       -   GGATG   58131  TTG       0
+     51573     51791       +   GCCAT   51567  GTG       1
+     51929     52072       -   GGATG   57724  ATG       0
+     52053     52148       -   GGATG   57648  ATG       0
+     52165     52374       +   GCCAT   52159  TTG       0
+     52573     52746       +   GCCAT   52567  GTG       1
+     52764     53417       -   GGATG   56379  GTG       1
+     53465     53560       +   GCCAT   53459  TTG       0
+     53578     53826       -   GGATG   55970  GTG       5
+     54045     54215       -   GGATG   55581  ATG       1
+     54277     54501       +   GCCAT   54271  ATG       0
+     54357     55415       -   GGATG   54381  GTG       2
+     54397     54537       -   GGATG   55259  TTG       0
+     54498     54749       +   GCCAT   54492  GTG       0
+     54759     55124       +   GCCAT   54753  ATG       0
+     55125     55925       +   GCCAT   55119  ATG       0
+     55922     56074       +   GCCAT   55916  ATG       0
+     55984     56196       +   GCCAT   55978  GTG       0
+     56166     56570       +   GCCAT   56160  GTG       0
+     56567     56881       +   GCCAT   56561  ATG       0
+     57019     57171       -   GGATG   52625  GTG       1
+     57198     57593       +   GCCAT   57192  GTG       0
+     57583     57717       +   GCCAT   57577  GTG       0
+     57648     57887       +   GCCAT   57642  TTG       0
+     57932     58108       +   GCCAT   57926  TTG       3
+     58105     58308       +   GCCAT   58099  ATG       0
+     58389     59027       +   GCCAT   58383  ATG       1
+     59186     59359       +   GCCAT   59180  TTG       2
+     59245     59844       +   GCCAT   59239  GTG       0
+     59805     59939       -   GGATG   49857  TTG       5
+     59841     60011       +   GCCAT   59835  ATG       0
+     60012     60251       +   GCCAT   60006  ATG       0
+     60291     60674       +   GCCAT   60285  ATG       0
+     61018     61833       +   GCCAT   61012  TTG       1
+     61833     62153       +   GCCAT   61827  ATG       0
+     62324     62425       +   GCCAT   62318  TTG       3
+     62422     62853       +   GCCAT   62416  GTG       0
+     62835     63020       -   GGATG   46776  ATG       0
+     62877     63554       +   GCCAT   62871  TTG       2
+     63048     63281       -   GGATG   46515  GTG       0
+     63341     63517       +   GCCAT   63335  ATG       0
+     63532     64182       +   GCCAT   63526  ATG       1
+     64179     64499       +   GCCAT   64173  ATG       0
+     64508     64795       +   GCCAT   64502  ATG       0
+     64681     65106       +   GCCAT   64675  GTG       0
+     65076     65381       +   GCCAT   65070  TTG       0
+     65330     65701       +   GCCAT   65324  ATG       0
+     65791     65952       +   GCCAT   65785  GTG       1
+     65934     66242       +   GCCAT   65928  ATG       0
+     66209     67198       +   GCCAT   66203  ATG       0
+     67198     67488       +   GCCAT   67192  ATG       0
+     67490     67666       +   GCCAT   67484  ATG       1
+     67671     68153       +   GCCAT   67665  TTG       0
+     68157     68387       +   GCCAT   68151  ATG       0
+     68384     69184       +   GCCAT   68378  ATG       0
+     69129     69404       +   GCCAT   69123  ATG       0
+     69405     69953       +   GCCAT   69399  TTG       0
+     69964     70317       +   GCCAT   69958  GTG       0
+     70379     70537       +   GCCAT   70373  ATG       0
+     70547     71227       +   GCCAT   70541  ATG       0
+     71246     71965       +   GCCAT   71240  TTG       0
+     71962     72201       +   GCCAT   71956  ATG       0
+     72198     72317       +   GCCAT   72192  GTG       0
+     72320     72649       +   GCCAT   72314  ATG       1
+     72649     72987       +   GCCAT   72643  ATG       0
+     72738     73286       +   GCCAT   72732  TTG       0
+     73283     73555       +   GCCAT   73277  ATG       0
+     73552     73857       +   GCCAT   73546  GTG       0
+     73881     74024       +   GCCAT   73875  GTG       1
+     74163     75437       +   GCCAT   74157  TTG       0
+     75566     76039       +   GCCAT   75560  ATG       3
+     76053     76664       +   GCCAT   76047  ATG       0
+     76439     76984       +   GCCAT   76433  GTG       0
+     76984     77751       +   GCCAT   76978  ATG       0
+     77763     78242       +   GCCAT   77757  ATG       1
+     78205     78576       +   GCCAT   78199  TTG       0
+     78573     78800       +   GCCAT   78567  ATG       0
+     78773     78985       +   GCCAT   78767  GTG       0
+     78934     80319       +   GCCAT   78928  TTG       0
+     80329     81039       +   GCCAT   80323  TTG       0
+     80985     81110       +   GCCAT   80979  GTG       0
+     81050     81694       +   GCCAT   81044  GTG       0
+     81822     82013       +   GCCAT   81816  TTG       0
+     81829     81957       +   GCCAT   81823  ATG       5
+     82014     82586       +   GCCAT   82008  ATG       0
+     82557     82688       -   GGATG   27108  ATG       0
+     82951     83286       +   GCCAT   82945  ATG       0
+     83313     83693       +   GCCAT   83307  GTG       0
+     83718     84584       -   GGATG   25212  ATG       0
+     83818     84171       +   GCCAT   83812  ATG       1
+     84168     84737       +   GCCAT   84162  ATG       0
+     84569     85312       +   GCCAT   84563  GTG       0
+     85431     85568       +   GCCAT   85425  ATG       1
+     85565     86785       +   GCCAT   85559  GTG       0
+     86883     87119       +   GCCAT   86877  TTG       1
+     87126     87374       +   GCCAT   87120  ATG       0
+     87801     87917       +   GCCAT   87795  GTG       5
+     87907     88125       +   GCCAT   87901  ATG       0
+     88026     88511       -   GGATG   21285  GTG       0
+     88122     88295       +   GCCAT   88116  ATG       0
+     88369     88605       +   GCCAT   88363  GTG       2
+     88559     88729       +   GCCAT   88553  ATG       0
+     88585     88869       -   GGATG   20927  GTG       0
+     88729     88947       +   GCCAT   88723  ATG       1
+     88944     89210       +   GCCAT   88938  GTG       0
+     89033     89131       -   GGATG   20665  GTG       3
+     89413     89745       +   GCCAT   89407  ATG       2
+     89742     89864       +   GCCAT   89736  GTG       1
+     89861     90265       +   GCCAT   89855  ATG       0
+     90288     90563       -   GGATG   19233  ATG       0
+     90388     90705       +   GCCAT   90382  ATG       0
+     90644     90778       -   GGATG   19018  GTG       0
+     91087     91281       +   GCCAT   91081  TTG       0
+     91433     91585       +   GCCAT   91427  ATG       1
+     91592     91906       +   GCCAT   91586  ATG       0
+     91890     92060       +   GCCAT   91884  ATG       1
+     92050     92247       +   GCCAT   92044  ATG       0
+     92530     92874       +   GCCAT   92524  GTG       4
+     92881     93291       +   GCCAT   92875  ATG       0
+     93288     93509       +   GCCAT   93282  GTG       0
+     93467     93940       -   GGATG   15856  GTG       0
+     93506     93664       +   GCCAT   93500  GTG       0
+     93750     94367       -   GGATG   15429  ATG       2
+     94603     94791       -   GGATG   15005  ATG       0
+     94761     94859       -   GGATG   14937  ATG       3
+     94891     95043       -   GGATG   14753  ATG       0
+     95043     95213       -   GGATG   14583  GTG       0
+     95225     95368       -   GGATG   14428  GTG       0
+     95365     95679       -   GGATG   14117  ATG       0
+     95700     95990       -   GGATG   13806  GTG       0
+     95987     96259       -   GGATG   13537  GTG       0
+     96190     97518       -   GGATG   12278  ATG       0
+     97515     97700       -   GGATG   12096  GTG       0
+     97752     98030       -   GGATG   11766  GTG       1
+     97970     98092       -   GGATG   11704  GTG       3
+     98251     98598       -   GGATG   11198  GTG       0
+     98511     99359       -   GGATG   10437  ATG       0
+     99356     99538       -   GGATG   10258  ATG       0
+     99599     99763       -   GGATG   10033  GTG       0
+     99751    100053       -   GGATG    9743  TTG       0
+    100022    100330       -   GGATG    9466  GTG       1
+    100519    101043       -   GGATG    8753  ATG       0
+    101040    101354       -   GGATG    8442  ATG       0
+    101420    101515       -   GGATG    8281  GTG       3
+    101710    102219       -   GGATG    7577  ATG       0
+    102216    102410       -   GGATG    7386  ATG       1
+    102407    102622       -   GGATG    7174  ATG       0
+    102619    102825       -   GGATG    6971  ATG       0
+    102831    103016       -   GGATG    6780  ATG       2
+    103016    103285       -   GGATG    6511  GTG       0
+    103243    103401       -   GGATG    6395  GTG       0
+    103398    103544       -   GGATG    6252  ATG       0
+    103583    103732       -   GGATG    6064  ATG       1
+    103852    104205       -   GGATG    5591  ATG       0
+    104243    104404       -   GGATG    5392  GTG       0
+    104401    104610       -   GGATG    5186  ATG       0
+    104607    104717       -   GGATG    5079  TTG       1
+    104738    105061       -   GGATG    4735  ATG       0
+    105029    105430       +   GCCAT  105023  GTG       1
+    105376    105840       -   GGATG    3956  TTG       0
+    105825    106139       -   GGATG    3657  TTG       0
+    106225    106395       -   GGATG    3401  ATG       0
+    106355    106540       -   GGATG    3256  TTG       1
+    106579    106746       -   GGATG    3050  ATG       1
+    106757    106861       -   GGATG    2935  TTG       3
+    106927    107061       -   GGATG    2735  ATG       2
+    107088    107423       -   GGATG    2373  ATG       0
+    107441    107614       +   GCCAT  107435  ATG       0
+    107546    107755       -   GGATG    2041  GTG       0
+    107746    108204       -   GGATG    1592  ATG       1
+    108065    108364       -   GGATG    1432  ATG       0
+    108404    108574       -   GGATG    1222  ATG       0
+    108652    108843       -   GGATG     953  ATG       5
+    108860    109129       -   GGATG     667  GTG       0
+    109045    109461       +   GCCAT  109039  GTG       0
+    109408    109530       -   GGATG     266  TTG       0
+    109518    109625       +   GCCAT  109512  TTG       0

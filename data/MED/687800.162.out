@@ -1,0 +1,39 @@
+Welcome to MED2.0
+Genome file is /home3/katelyn/PATRIC/fna/687800.162.fna
+sequence size: 175444
+GC%: 0.421496
+
+Number of exactcted ORFs: 1637
+Select root ORFs and first running of TIS model...
+ iteration      Selected as coding    rejected as non-coding
+       0                       50                      100
+       1                       36                      328
+       2                       11                      195
+       3                        2                       83
+       4                        0                       42
+       5                        0                       24
+       6                        0                       13
+       7                        0                        5
+       8                        0                        4
+       9                        0                        2
+      10                        0                        0
+Selected root coding ORFs number: 99
+Rejected non-coding ORFs number: 796
+Remaining ORFs number: 742
+
+Select coding ORFs from remianing ORFs using a Fisher discriminant function...
+Remaining: 476
+Process overlapping genes...
+Totally predict 223 genes.
+Second run of TIS model.
+Extract TUI and TUL genes (length >300bp)
+TUI genes number: 96
+TUL genes number: 35
+Compare TUI TIS model with TUL TIS model...
+Train TUI TIS model..
+Train TUL TIS model..
+Lamda > 0: TUL TIS model is similar to TUI TIS model.
+Re-train TIS model...
+Choose final TIS...
+Predicted genes have been saved in file: /home3/katelyn/PATRIC/fna/687800.162.fna.MED
+Detailed information for predicted TIS has been saved in /home3/katelyn/PATRIC/fna/687800.162.fna.MED.para

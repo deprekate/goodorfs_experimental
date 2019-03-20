@@ -1,0 +1,138 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.34492
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.591          0.081          0.142          0.183
+          0.551          0.081          0.183          0.183
+          0.571          0.061          0.122          0.244
+          0.428          0.061          0.122          0.387
+          0.861              0          0.138              0
+              0              0              0          0.999
+              0              0          0.999              0
+          0.428          0.204          0.122          0.244
+          0.408          0.183          0.061          0.346
+          0.428          0.122          0.224          0.224
+          0.367          0.142          0.204          0.285
+          0.306          0.204          0.102          0.387
+          0.408          0.102          0.122          0.367
+          0.510          0.102          0.265          0.122
+          0.408          0.183          0.102          0.306
+          0.326          0.122          0.163          0.387
+          0.551          0.102          0.204          0.142
+          0.408          0.142          0.102          0.346
+          0.387          0.102          0.061          0.448
+          0.448          0.102          0.081          0.367
+          0.346          0.163          0.040          0.448
+          0.408          0.142          0.081          0.367
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.722
+         2          0.087
+         3          0.041
+         4          0.068
+         5          0.042
+         6          0.038
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -18          0.038
+       -13          0.038
+        -7          0.038
+        -3          0.076
+         0          0.115
+         1          0.038
+         2          0.038
+         3          0.076
+         5          0.038
+         6          0.038
+         7          0.038
+        11          0.038
+        14          0.038
+        16          0.038
+        23          0.038
+        29          0.038
+        33          0.038
+        35          0.038
+        36          0.038
+        37          0.076
+        38          0.038
+    others          0.038
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.35655        0.64345
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        85       339       +   AATAA      79  ATG       0
+       375       845       +   AATAA     369  GTG       0
+       848      2317       +   AATAA     842  ATG       0
+      2314      4149       +   AATAA    2308  ATG       0
+      4139      4363       +   AATAA    4133  ATG       1
+      4364      5776       +   AATAA    4358  ATG       0
+      5787      6821       +   AATAA    5781  GTG       0
+      6858      7268       +   AATAA    6852  ATG       0
+      7305      8309       +   AATAA    7299  ATG       0
+      8309      8620       +   AATAA    8303  ATG       0
+      8613      9125       +   AATAA    8607  GTG       0
+      9122      9595       +   AATAA    9116  ATG       0
+      9582     10046       +   AATAA    9576  ATG       0
+     10052     10306       +   AATAA   10046  ATG       0
+     10311     10646       +   AATAA   10305  ATG       0
+     10649     11434       +   AATAA   10643  ATG       0
+     11434     12594       +   AATAA   11428  ATG       0
+     12762     13481       +   AATAA   12756  ATG       0
+     13495     13977       +   AATAA   13489  GTG       0
+     14141     14359       +   AATAA   14135  ATG       2
+     14268     16007       +   AATAA   14262  ATG       0
+     16098     17057       -   GAGTA   48591  ATG       3
+     17399     17854       -   GAGTA   47794  ATG       0
+     17883     18008       -   GAGTA   47640  ATG       0
+     18297     21137       -   GAGTA   44511  ATG       0
+     21518     28942       -   GAGTA   36706  ATG       0
+     28998     29129       +   AATAA   28992  ATG       0
+     29181     29273       +   AATAA   29175  ATG       0
+     29313     30392       -   GAGTA   35256  ATG       0
+     30488     33088       -   GAGTA   32560  ATG       0
+     33522     35318       +   AATAA   33516  ATG       0
+     35387     36325       +   AATAA   35381  GTG       0
+     36496     37161       +   AATAA   36490  ATG       0
+     37331     38515       +   AATAA   37325  ATG       0
+     38602     39522       +   AATAA   38596  ATG       0
+     39545     40546       +   AATAA   39539  GTG       0
+     40605     41534       -   GAGTA   24114  ATG       1
+     41872     42054       +   AATAA   41866  ATG       5
+     42055     42270       -   GAGTA   23378  ATG       0
+     42337     42834       -   GAGTA   22814  ATG       0
+     42872     43822       -   GAGTA   21826  ATG       0
+     43824     44033       -   GAGTA   21615  ATG       0
+     44030     44377       -   GAGTA   21271  ATG       0
+     44377     46797       -   GAGTA   18851  ATG       0
+     46779     46910       -   GAGTA   18738  TTG       0
+     46907     47164       -   GAGTA   18484  ATG       0
+     47296     48195       -   GAGTA   17453  ATG       0
+     48291     48797       -   GAGTA   16851  ATG       0
+     48813     49988       -   GAGTA   15660  ATG       0
+     50230     50331       -   GAGTA   15317  ATG       0
+     50306     51682       -   GAGTA   13966  ATG       1
+     51679     51873       -   GAGTA   13775  ATG       0
+     51878     53074       -   GAGTA   12574  ATG       0
+     53080     55008       -   GAGTA   10640  ATG       0
+     55015     55698       -   GAGTA    9950  ATG       0
+     55974     56108       -   GAGTA    9540  ATG       0
+     56080     56571       +   AATAA   56074  ATG       0
+     56656     57465       +   AATAA   56650  ATG       0
+     57500     58306       +   AATAA   57494  ATG       0
+     58339     58830       +   AATAA   58333  ATG       0
+     59010     60011       +   AATAA   59004  ATG       4
+     60896     62167       +   AATAA   60890  ATG       5
+     62279     62377       +   AATAA   62273  ATG       0
+     62447     62566       -   GAGTA    3082  TTG       0
+     63097     63192       -   GAGTA    2456  ATG       0
+     63195     63317       -   GAGTA    2331  TTG       0
+     63421     63645       -   GAGTA    2003  ATG       2
+     63779     64555       -   GAGTA    1093  GTG       0
+     64532     64660       +   AATAA   64526  ATG       0
+     64647     65126       -   GAGTA     522  ATG       0
+     65477     65584       +   AATAA   65471  ATG       0

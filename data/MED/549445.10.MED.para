@@ -1,0 +1,148 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.55469
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.280          0.210          0.280          0.228
+          0.228          0.245          0.421          0.105
+          0.333          0.157          0.052          0.456
+          0.245          0.350          0.228          0.175
+          0.799              0          0.200              0
+              0              0              0          0.999
+              0              0          0.999              0
+          0.578          0.070          0.228          0.122
+          0.263          0.280          0.157          0.298
+          0.175          0.368          0.210          0.245
+          0.438          0.140          0.280          0.140
+          0.263          0.245          0.228          0.263
+          0.140          0.315          0.385          0.157
+          0.333          0.280          0.263          0.122
+          0.368          0.228          0.140          0.263
+          0.157          0.298          0.140          0.403
+          0.245          0.298          0.298          0.157
+          0.403          0.192          0.210          0.192
+          0.210          0.263          0.315          0.210
+          0.228          0.122          0.438          0.210
+          0.438          0.070          0.035          0.456
+          0.157          0.315          0.228          0.298
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.550
+         2          0.194
+         3          0.079
+         4          0.083
+         5          0.060
+         6          0.031
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -16          0.052
+        -6          0.052
+        -3          0.315
+         0          0.263
+         2          0.105
+         3          0.052
+         5          0.052
+        20          0.052
+        31          0.052
+    others          0.052
+Weight for motif in region [-35,-15) and [-20, 0 )
+         0.4967         0.5033
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        19       141       +       -       -  ATG       0
+        84      1529       +   CGTTT      78  GTG       0
+      1566      1949       -   AACAA   62473  ATG       0
+      1946      2164       -   AACAA   62258  ATG       0
+      2374      2568       +   CGTTT    2368  ATG       4
+      2558      2956       -   AACAA   61466  ATG       0
+      2959      3738       -   AACAA   60684  ATG       1
+      3824      4261       -   AACAA   60161  ATG       2
+      4278      4865       -   AACAA   59557  ATG       0
+      4849      4989       -   AACAA   59433  GTG       1
+      4967      5899       -   AACAA   58523  ATG       0
+      5896      6006       -   AACAA   58416  TTG       0
+      6003      6356       -   AACAA   58066  GTG       0
+      6358      6615       -   AACAA   57807  ATG       0
+      6599      6889       -   AACAA   57533  ATG       4
+      6916      7299       -   AACAA   57123  GTG       0
+      7330      7422       -   AACAA   57000  ATG       0
+      7411      7905       +   CGTTT    7405  GTG       0
+      7949      8083       -   AACAA   56339  TTG       0
+      8160     10349       +   CGTTT    8154  ATG       1
+     10466     11185       +   CGTTT   10460  ATG       4
+     11204     11410       +   CGTTT   11198  ATG       0
+     11407     11547       +   CGTTT   11401  ATG       0
+     11537     11671       +   CGTTT   11531  TTG       0
+     11687     11785       +   CGTTT   11681  ATG       0
+     11830     11946       -   AACAA   52476  TTG       0
+     11995     12105       -   AACAA   52317  ATG       0
+     12737     15304       -   AACAA   49118  GTG       1
+     15301     15699       -   AACAA   48723  GTG       1
+     16178     16705       +   CGTTT   16172  GTG       2
+     16683     17264       +   CGTTT   16677  ATG       4
+     17261     17842       +   CGTTT   17255  ATG       0
+     17823     19928       -   AACAA   44494  ATG       0
+     19883     20206       +   CGTTT   19877  ATG       0
+     20266     20553       +   CGTTT   20260  ATG       3
+     20440     20997       -   AACAA   43425  ATG       3
+     20996     21499       +   CGTTT   20990  ATG       0
+     21499     22038       +   CGTTT   21493  ATG       0
+     21996     22136       -   AACAA   42286  TTG       4
+     22525     22626       +   CGTTT   22519  ATG       0
+     23082     25658       +   CGTTT   23076  ATG       0
+     25658     26521       +   CGTTT   25652  ATG       0
+     26521     27054       +   CGTTT   26515  ATG       0
+     27212     27775       +   CGTTT   27206  ATG       1
+     27832     29085       +   CGTTT   27826  ATG       0
+     29082     30596       +   CGTTT   29076  ATG       0
+     30601     33495       +   CGTTT   30595  GTG       0
+     33497     33925       +   CGTTT   33491  ATG       0
+     33925     34587       +   CGTTT   33919  ATG       0
+     34612     34863       -   AACAA   29559  ATG       0
+     35144     35992       -   AACAA   28430  ATG       3
+     36109     36663       -   AACAA   27759  ATG       0
+     36660     37265       -   AACAA   27157  ATG       1
+     37706     38278       +   CGTTT   37700  ATG       2
+     38307     38927       -   AACAA   25495  ATG       1
+     39022     40581       -   AACAA   23841  ATG       0
+     40566     41066       +   CGTTT   40560  ATG       0
+     40981     44088       -   AACAA   20334  ATG       0
+     44358     45938       +   CGTTT   44352  GTG       0
+     45930     46847       -   AACAA   17575  ATG       0
+     46847     47053       -   AACAA   17369  ATG       1
+     47061     47285       -   AACAA   17137  ATG       0
+     47459     47554       +   CGTTT   47453  ATG       1
+     47520     47738       -   AACAA   16684  ATG       2
+     47738     47842       -   AACAA   16580  ATG       1
+     47943     48041       +   CGTTT   47937  GTG       3
+     48056     49057       -   AACAA   15365  ATG       1
+     49162     50046       -   AACAA   14376  ATG       0
+     50193     50285       +   CGTTT   50187  ATG       1
+     50208     51053       -   AACAA   13369  ATG       3
+     51490     52056       +   CGTTT   51484  GTG       0
+     52152     52757       +   CGTTT   52146  ATG       2
+     52759     54072       +   CGTTT   52753  GTG       1
+     54135     54545       +   CGTTT   54129  ATG       1
+     54626     55618       +   CGTTT   54620  ATG       3
+     55624     55809       +   CGTTT   55618  ATG       0
+     55957     57696       +   CGTTT   55951  ATG       0
+     57720     57860       -   AACAA    6562  TTG       0
+     57818     57967       +   CGTTT   57812  GTG       0
+     57987     58469       +   CGTTT   57981  GTG       0
+     58483     58593       -   AACAA    5829  GTG       2
+     58661     59233       +   CGTTT   58655  ATG       1
+     59587     60072       +   CGTTT   59581  ATG       3
+     60207     60815       -   AACAA    3607  ATG       0
+     60805     60945       +   CGTTT   60799  ATG       3
+     61111     61287       +   CGTTT   61105  ATG       2
+     61284     61427       +   CGTTT   61278  GTG       1
+     61421     61663       -   AACAA    2759  ATG       1
+     62346     62993       -   AACAA    1429  ATG       2
+     63236     63730       +   CGTTT   63230  ATG       2
+     63638     63838       -   AACAA     584  ATG       1
+     63933     64244       +   CGTTT   63927  GTG       2
+     64245     64406       -       -       -  ATG       0

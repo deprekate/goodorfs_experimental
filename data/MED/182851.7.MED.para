@@ -1,0 +1,253 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.658806
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.406          0.270          0.128          0.194
+          0.344          0.255          0.222          0.177
+          0.213          0.296          0.246          0.242
+          0.254          0.314          0.243          0.186
+          0.594              0          0.277          0.127
+          0.25.          0.25.          0.25.          0.25.
+          0.25.          0.25.          0.25.          0.25.
+          0.358          0.292          0.183          0.166
+          0.179          0.335          0.274          0.210
+          0.264          0.253          0.244          0.237
+          0.409          0.151          0.288          0.151
+          0.254          0.166          0.417          0.161
+          0.361          0.184          0.170          0.283
+          0.258          0.271          0.202          0.267
+          0.229          0.297          0.260          0.212
+          0.392          0.171          0.132          0.304
+          0.319          0.216          0.254          0.209
+          0.200          0.315          0.333          0.150
+          0.325          0.170          0.185          0.318
+          0.192          0.425          0.185          0.196
+          0.368          0.218          0.237          0.175
+          0.329          0.163          0.148          0.358
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.657
+         2          0.129
+         3          0.082
+         4          0.041
+         5          0.041
+         6          0.048
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+         0          0.299
+         4          0.099
+        11          0.099
+        22          0.099
+        26          0.099
+        34          0.099
+        41          0.099
+        44          0.099
+    others          0.099
+GB distribution for coding region downstream of TIS
+   GB          Prob.
+   58          0.006
+   62          0.006
+   63          0.006
+   64          0.025
+   65          0.019
+   66          0.032
+   67          0.032
+   68          0.070
+   69          0.077
+   70          0.083
+   71          0.058
+   72          0.077
+   73          0.045
+   74          0.103
+   75          0.064
+   76          0.058
+   77          0.058
+   78          0.064
+   79          0.012
+   80          0.038
+   81          0.012
+   82          0.012
+   83          0.006
+   84          0.012
+   86          0.012
+GB distribution for non-coding region upstream of TIS
+   GB          Prob.
+   56          0.05.
+   58          0.05.
+   59          0.05.
+   62          0.05.
+   63          0.05.
+   64          0.075
+   65          0.075
+   66          0.175
+   67          0.075
+   68          0.025
+   69          0.125
+   70          0.075
+   71          0.05.
+   74          0.05.
+   76          0.025
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.46047        0.53953
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        76       219       +   CTGCA      70  ATG       0
+       230       388       +   CTGCA     224  GTG       0
+       487       603       +   CTGCA     481  TTG       0
+       596      1075       -   CTCGT   93790  ATG       0
+      1080      3938       -   CTCGT   90927  GTG       0
+      3904      3999       +   CTGCA    3898  ATG       0
+      3960      4061       -   CTCGT   90804  GTG       0
+      4086      4358       -   CTCGT   90507  ATG       0
+      4221      4529       +   CTGCA    4215  GTG       0
+      4476      4682       -   CTCGT   90183  GTG       2
+      4675      5724       -   CTCGT   89141  ATG       0
+      5724      7040       -   CTCGT   87825  ATG       0
+      7044     10277       -   CTCGT   84588  GTG       0
+     10360     10581       -   CTCGT   84284  ATG       2
+     10647     11198       -   CTCGT   83667  GTG       0
+     11009     11461       -   CTCGT   83404  GTG       0
+     11428     11973       -   CTCGT   82892  GTG       0
+     11977     12831       -   CTCGT   82034  TTG       0
+     12952     13059       +   CTGCA   12946  ATG       0
+     13204     13920       +   CTGCA   13198  ATG       0
+     13975     15339       +   CTGCA   13969  ATG       0
+     15406     15747       -   CTCGT   79118  ATG       0
+     15985     16734       -   CTCGT   78131  ATG       0
+     16734     17444       -   CTCGT   77421  GTG       0
+     17541     18263       -   CTCGT   76602  ATG       0
+     18274     19128       -   CTCGT   75737  ATG       0
+     19243     21213       -   CTCGT   73652  TTG       0
+     21281     21463       -   CTCGT   73402  ATG       0
+     21466     24219       -   CTCGT   70646  ATG       0
+     24212     26203       -   CTCGT   68662  GTG       0
+     26252     26611       -   CTCGT   68254  ATG       0
+     26674     28269       -   CTCGT   66596  GTG       0
+     28266     28838       -   CTCGT   66027  GTG       0
+     28895     29056       -   CTCGT   65809  ATG       0
+     29065     29478       +   CTGCA   29059  ATG       0
+     29543     29857       -   CTCGT   65008  ATG       2
+     29951     30817       -   CTCGT   64048  GTG       0
+     30896     31324       -   CTCGT   63541  TTG       0
+     31346     31744       -   CTCGT   63121  ATG       0
+     31744     32049       -   CTCGT   62816  GTG       0
+     32215     33123       -   CTCGT   61742  ATG       0
+     32566     32796       +   CTGCA   32560  GTG       0
+     32907     33263       -   CTCGT   61602  TTG       0
+     33260     33463       -   CTCGT   61402  ATG       0
+     33376     33564       -   CTCGT   61301  GTG       0
+     33968     35029       -   CTCGT   59836  GTG       0
+     35115     37676       -   CTCGT   57189  ATG       0
+     37673     37825       -   CTCGT   57040  ATG       0
+     37785     38171       -   CTCGT   56694  ATG       1
+     38292     39758       +   CTGCA   38286  TTG       0
+     39976     40344       +   CTGCA   39970  GTG       0
+     40377     40553       +   CTGCA   40371  TTG       1
+     41035     41538       +   CTGCA   41029  GTG       0
+     41560     41775       +   CTGCA   41554  ATG       1
+     41772     42020       +   CTGCA   41766  GTG       0
+     41968     42252       -   CTCGT   52613  ATG       0
+     42303     43130       +   CTGCA   42297  ATG       1
+     43127     43405       +   CTGCA   43121  ATG       1
+     43464     43730       +   CTGCA   43458  ATG       5
+     43727     44086       +   CTGCA   43721  GTG       0
+     44089     44274       +   CTGCA   44083  GTG       0
+     44385     44783       +   CTGCA   44379  ATG       1
+     44799     46016       +   CTGCA   44793  ATG       0
+     45928     46155       -   CTCGT   48710  GTG       2
+     46161     46517       -   CTCGT   48348  TTG       0
+     46338     46598       +   CTGCA   46332  ATG       0
+     46673     46876       +   CTGCA   46667  ATG       2
+     46920     47393       +   CTGCA   46914  TTG       0
+     47494     47754       +   CTGCA   47488  GTG       0
+     47870     48478       +   CTGCA   47864  ATG       0
+     48475     48705       +   CTGCA   48469  GTG       0
+     48633     48989       +   CTGCA   48627  GTG       1
+     48812     49504       +   CTGCA   48806  ATG       0
+     49504     50253       +   CTGCA   49498  ATG       0
+     50324     50554       -   CTCGT   44311  ATG       0
+     50641     51015       -   CTCGT   43850  GTG       0
+     51056     51976       -   CTCGT   42889  GTG       0
+     51635     52051       +   CTGCA   51629  GTG       0
+     52139     52906       -   CTCGT   41959  ATG       0
+     53074     53448       +   CTGCA   53068  ATG       0
+     54001     54432       +   CTGCA   53995  GTG       0
+     54061     54246       -   CTCGT   40619  TTG       0
+     55026     55346       -   CTCGT   39519  ATG       0
+     55499     55705       -   CTCGT   39160  TTG       0
+     55665     57068       -   CTCGT   37797  ATG       2
+     57152     57556       -   CTCGT   37309  GTG       0
+     57553     58965       -   CTCGT   35900  ATG       0
+     58964     59236       +   CTGCA   58958  ATG       0
+     59155     60438       +   CTGCA   59149  GTG       0
+     60435     61157       +   CTGCA   60429  GTG       0
+     60959     61363       +   CTGCA   60953  GTG       0
+     61376     62227       +   CTGCA   61370  ATG       0
+     61993     62532       +   CTGCA   61987  TTG       0
+     62202     62735       +   CTGCA   62196  ATG       2
+     62651     63277       +   CTGCA   62645  GTG       0
+     63274     63531       +   CTGCA   63268  GTG       0
+     63406     63825       -   CTCGT   31040  ATG       0
+     63867     65081       +   CTGCA   63861  GTG       0
+     65175     65273       +   CTGCA   65169  GTG       1
+     65344     65646       +   CTGCA   65338  GTG       0
+     65858     66124       +   CTGCA   65852  GTG       1
+     65960     66103       -   CTCGT   28762  GTG       0
+     66262     66378       +   CTGCA   66256  GTG       0
+     66356     67255       +   CTGCA   66350  TTG       0
+     67355     69199       +   CTGCA   67349  GTG       0
+     69196     69804       +   CTGCA   69190  GTG       0
+     69758     69889       +   CTGCA   69752  TTG       0
+     69841     69978       -   CTCGT   24887  GTG       0
+     69929     70180       -   CTCGT   24685  GTG       0
+     70255     70569       +   CTGCA   70249  GTG       0
+     70580     71176       -   CTCGT   23689  ATG       0
+     70943     71182       +   CTGCA   70937  GTG       4
+     71255     71557       -   CTCGT   23308  GTG       0
+     71638     72159       -   CTCGT   22706  ATG       0
+     72479     72799       +   CTGCA   72473  ATG       0
+     72966     73970       +   CTGCA   72960  ATG       0
+     74004     75098       +   CTGCA   73998  GTG       0
+     75095     75430       +   CTGCA   75089  GTG       0
+     75540     75770       +   CTGCA   75534  ATG       1
+     75764     76012       +   CTGCA   75758  GTG       0
+     76009     76284       +   CTGCA   76003  GTG       0
+     76327     76758       +   CTGCA   76321  GTG       0
+     76755     77222       +   CTGCA   76749  GTG       0
+     77108     77332       +   CTGCA   77102  ATG       0
+     77230     77727       +   CTGCA   77224  GTG       0
+     77358     77951       +   CTGCA   77352  ATG       0
+     77869     78519       +   CTGCA   77863  ATG       0
+     78575     78781       -   CTCGT   16084  GTG       0
+     79181     80128       +   CTGCA   79175  ATG       1
+     80147     80368       +   CTGCA   80141  TTG       0
+     80492     84244       +   CTGCA   80486  GTG       0
+     84231     84578       +   CTGCA   84225  GTG       1
+     84628     84732       -   CTCGT   10133  ATG       1
+     85125     85589       +   CTGCA   85119  TTG       0
+     85623     86144       +   CTGCA   85617  TTG       0
+     86452     86733       -   CTCGT    8132  GTG       0
+     86694     87332       -   CTCGT    7533  GTG       0
+     87284     87472       -   CTCGT    7393  ATG       0
+     87469     88329       -   CTCGT    6536  TTG       0
+     88286     88384       +   CTGCA   88280  TTG       0
+     88397     88738       +   CTGCA   88391  GTG       0
+     88594     88914       +   CTGCA   88588  ATG       0
+     88911     89129       +   CTGCA   88905  ATG       0
+     89371     89943       +   CTGCA   89365  ATG       0
+     90167     90277       +   CTGCA   90161  ATG       0
+     90240     90791       -   CTCGT    4074  ATG       0
+     90792     91079       -   CTCGT    3786  GTG       0
+     91093     91824       -   CTCGT    3041  ATG       0
+     91839     92699       +   CTGCA   91833  GTG       0
+     91850     92140       -   CTCGT    2725  GTG       0
+     92181     93233       -   CTCGT    1632  GTG       0
+     93103     94176       +   CTGCA   93097  TTG       0
+     93238     93546       -   CTCGT    1319  GTG       0
+     93589     93939       -   CTCGT     926  TTG       0
+     93918     94715       -   CTCGT     150  ATG       0

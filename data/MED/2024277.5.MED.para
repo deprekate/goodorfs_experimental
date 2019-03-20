@@ -1,0 +1,211 @@
+
+TUI TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.45126
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.511          0.186          0.046          0.255
+          0.302          0.232          0.093          0.372
+          0.348          0.116          0.162          0.372
+          0.395          0.162          0.162          0.279
+          0.799              0          0.200              0
+              0              0              0          0.999
+              0              0          0.999              0
+          0.604          0.046          0.255          0.093
+          0.302          0.372          0.209          0.116
+          0.209          0.116          0.116          0.558
+          0.488          0.116          0.302          0.093
+          0.302          0.372          0.093          0.232
+          0.325          0.186          0.093          0.395
+          0.465          0.209          0.186          0.139
+          0.325          0.232          0.139          0.302
+          0.279          0.209          0.186          0.325
+          0.348          0.162          0.325          0.162
+          0.372          0.348          0.023          0.255
+          0.372          0.209          0.069          0.348
+          0.209          0.139          0.511          0.139
+          0.395          0.209          0.186          0.209
+          0.418          0.116          0.116          0.348
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.646
+         2          0.118
+         3          0.109
+         4          0.042
+         5          0.046
+         6          0.036
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -34          0.030
+       -16          0.030
+       -13          0.030
+        -7          0.060
+        -3          0.212
+         0          0.090
+         1          0.030
+         4          0.030
+         9          0.060
+        10          0.030
+        13          0.030
+        14          0.030
+        15          0.060
+        20          0.060
+        23          0.030
+        26          0.030
+        29          0.030
+        30          0.030
+        31          0.030
+        35          0.030
+        39          0.030
+    others          0.030
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.34787        0.65213
+TUL TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.45126
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.285          0.142          0.285          0.285
+          0.428          0.214          0.071          0.285
+          0.071              0          0.499          0.428
+          0.571          0.071          0.071          0.285
+          0.254              0          0.338          0.406
+              0              0              0          0.999
+              0              0          0.999              0
+          0.285          0.071          0.214          0.428
+          0.214          0.214          0.142          0.428
+          0.285          0.142          0.071          0.499
+          0.214          0.285          0.428          0.071
+          0.571              0          0.285          0.142
+          0.428          0.285          0.214          0.071
+          0.142          0.214          0.214          0.428
+          0.285          0.428          0.071          0.214
+          0.285          0.285              0          0.428
+          0.428          0.357          0.142          0.071
+          0.214          0.214          0.142          0.428
+          0.214          0.142          0.357          0.285
+          0.214          0.071          0.142          0.571
+          0.071          0.357          0.357          0.214
+          0.214          0.071          0.499          0.214
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.444
+         2          0.111
+         3          0.111
+         4          0.111
+         5          0.111
+         6          0.111
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+    others          0.066
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.51046        0.48954
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        70       285       +   CCCCA      64  ATG       0
+       372       557       -   AGGCC   57646  TTG       1
+       910      1083       +   CCCCA     904  ATG       2
+      1076      1483       +   CCCCA    1070  ATG       0
+      1506      2432       +   CCCCA    1500  ATG       0
+      2458      2826       +   CCCCA    2452  ATG       0
+      2819      3826       +   CCCCA    2813  ATG       0
+      3841      5601       +   CCCCA    3835  TTG       1
+      5610      6119       +   CCCCA    5604  ATG       0
+      6134      7444       +   CCCCA    6128  GTG       0
+      7441      8052       +   CCCCA    7435  GTG       0
+      8036     10012       +   CCCCA    8030  ATG       0
+     10032     10367       +   CCCCA   10026  ATG       0
+     10513     10644       +   CCCCA   10507  ATG       2
+     10657     11523       +   CCCCA   10651  ATG       0
+     11189     12106       +   CCCCA   11183  TTG       0
+     12125     12928       +   CCCCA   12119  ATG       0
+     12928     14772       +   CCCCA   12922  ATG       1
+     14761     14865       -   AGGCC   43338  TTG       0
+     14828     16666       +   CCCCA   14822  TTG       0
+     16923     17066       +   CCCCA   16917  GTG       2
+     17063     21541       +   CCCCA   17057  ATG       1
+     21541     22392       +   CCCCA   21535  ATG       0
+     22393     23454       +   CCCCA   22387  ATG       0
+     23488     23934       +   CCCCA   23482  ATG       2
+     23938     24219       +   CCCCA   23932  TTG       0
+     24229     24645       +   CCCCA   24223  GTG       0
+     24803     24961       -   AGGCC   33242  ATG       1
+     25141     25374       +   CCCCA   25135  ATG       0
+     25469     25669       +   CCCCA   25463  ATG       1
+     25745     25978       +   CCCCA   25739  GTG       0
+     25981     26178       +   CCCCA   25975  ATG       0
+     26168     26386       +   CCCCA   26162  ATG       0
+     26426     26614       +   CCCCA   26420  ATG       0
+     26681     27001       +   CCCCA   26675  ATG       0
+     27073     27282       +   CCCCA   27067  TTG       1
+     27189     27506       +   CCCCA   27183  TTG       0
+     27603     27824       +   CCCCA   27597  ATG       0
+     28048     28581       +   CCCCA   28042  TTG       0
+     28658     29005       -   AGGCC   29198  GTG       0
+     29045     29161       +   CCCCA   29039  ATG       0
+     29158     29916       +   CCCCA   29152  ATG       0
+     29931     30296       +   CCCCA   29925  ATG       0
+     30331     30600       +   CCCCA   30325  TTG       3
+     30441     31028       -   AGGCC   27175  TTG       2
+     30913     31284       +   CCCCA   30907  TTG       0
+     31299     31895       +   CCCCA   31293  TTG       0
+     31859     31987       +   CCCCA   31853  GTG       0
+     31984     32343       -   AGGCC   25860  GTG       0
+     32314     32505       +   CCCCA   32308  ATG       0
+     32515     32664       +   CCCCA   32509  TTG       0
+     32642     32752       -   AGGCC   25451  TTG       1
+     32769     33458       +   CCCCA   32763  GTG       0
+     33451     33669       +   CCCCA   33445  TTG       2
+     33718     33810       +   CCCCA   33712  ATG       1
+     33869     34111       +   CCCCA   33863  ATG       2
+     34111     35022       +   CCCCA   34105  ATG       0
+     35053     35415       +   CCCCA   35047  ATG       0
+     35574     36188       +   CCCCA   35568  ATG       1
+     36175     36738       +   CCCCA   36169  GTG       0
+     37008     40709       +   CCCCA   37002  ATG       3
+     40706     40840       +   CCCCA   40700  ATG       0
+     40827     40931       +   CCCCA   40821  ATG       0
+     40931     41113       +   CCCCA   40925  ATG       1
+     41061     41531       +   CCCCA   41055  ATG       0
+     41420     41641       +   CCCCA   41414  TTG       0
+     41774     42145       +   CCCCA   41768  ATG       2
+     42127     42747       -   AGGCC   15456  ATG       0
+     42694     42972       +   CCCCA   42688  ATG       0
+     42986     43354       +   CCCCA   42980  ATG       0
+     43444     43722       +   CCCCA   43438  ATG       0
+     43731     44042       +   CCCCA   43725  ATG       0
+     44042     44356       +   CCCCA   44036  ATG       0
+     44435     44566       +   CCCCA   44429  ATG       4
+     44591     44863       +   CCCCA   44585  ATG       0
+     44957     45469       +   CCCCA   44951  GTG       1
+     45354     45743       +   CCCCA   45348  GTG       0
+     45743     46030       +   CCCCA   45737  ATG       0
+     46034     47344       +   CCCCA   46028  ATG       0
+     47373     48191       +   CCCCA   47367  ATG       0
+     48188     48394       +   CCCCA   48182  GTG       0
+     48590     48904       +   CCCCA   48584  ATG       3
+     48889     49125       +   CCCCA   48883  TTG       0
+     49160     49834       +   CCCCA   49154  ATG       0
+     49831     50235       +   CCCCA   49825  ATG       0
+     50232     51038       +   CCCCA   50226  ATG       0
+     51035     51286       -   AGGCC    6917  ATG       0
+     51271     51549       +   CCCCA   51265  ATG       0
+     51588     51947       +   CCCCA   51582  ATG       0
+     51947     52255       +   CCCCA   51941  ATG       1
+     52252     52491       +   CCCCA   52246  ATG       0
+     52612     52956       +   CCCCA   52606  TTG       0
+     52953     53441       +   CCCCA   52947  ATG       0
+     53495     53689       +   CCCCA   53489  TTG       1
+     53686     53928       +   CCCCA   53680  ATG       0
+     53925     54032       -   AGGCC    4171  TTG       0
+     54033     54170       +   CCCCA   54027  TTG       0
+     54188     54310       +   CCCCA   54182  GTG       0
+     54340     54669       +   CCCCA   54334  GTG       0
+     54635     55213       +   CCCCA   54629  GTG       0
+     55210     57885       +   CCCCA   55204  ATG       0
+     57897     58154       +   CCCCA   57891  ATG       0

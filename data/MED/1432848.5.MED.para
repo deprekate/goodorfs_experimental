@@ -1,0 +1,130 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.3897
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.564          0.102          0.128          0.205
+          0.410          0.051          0.256          0.282
+          0.512          0.153          0.051          0.282
+          0.538          0.128          0.076          0.256
+          0.850              0          0.035          0.113
+              0              0              0          0.999
+              0              0          0.999              0
+          0.564          0.051          0.307          0.076
+          0.461          0.256          0.102          0.179
+          0.512          0.153          0.102          0.230
+          0.358          0.230          0.282          0.128
+          0.461          0.102          0.051          0.384
+          0.487          0.025          0.076          0.410
+          0.641          0.076          0.102          0.179
+          0.564          0.179          0.025          0.230
+          0.487          0.051          0.282          0.179
+          0.384          0.076          0.410          0.128
+          0.487          0.153          0.051          0.307
+          0.461          0.128          0.102          0.307
+          0.512          0.102          0.179          0.205
+          0.487          0.128          0.128          0.256
+          0.410          0.179          0.153          0.256
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.727
+         2          0.091
+         3          0.043
+         4          0.071
+         5          0.036
+         6          0.029
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -16          0.076
+       -10          0.076
+        -3          0.230
+         0          0.038
+         3          0.076
+        11          0.038
+        12          0.038
+        17          0.038
+        19          0.115
+        20          0.038
+        21          0.038
+        22          0.038
+        32          0.038
+        36          0.038
+        38          0.038
+        48          0.038
+    others          0.038
+Weight for motif in region [-35,-15) and [-20, 0 )
+         0.2734         0.7266
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        44       148       +   GCGGA      38  GTG       0
+       131       229       -   TGCGA   43220  GTG       0
+       231      1274       -   TGCGA   42175  ATG       0
+      1265      1459       +   GCGGA    1259  TTG       0
+      1392      1679       -   TGCGA   41770  ATG       0
+      1684      1995       -   TGCGA   41454  ATG       0
+      2064      2216       -   TGCGA   41233  TTG       0
+      2245      2490       +   GCGGA    2239  ATG       0
+      2832      2999       -   TGCGA   40450  TTG       0
+      2999      3394       +   GCGGA    2993  ATG       0
+      3413      4339       +   GCGGA    3407  ATG       0
+      4336      5052       +   GCGGA    4330  ATG       0
+      5042      5614       +   GCGGA    5036  ATG       0
+      5626      6552       +   GCGGA    5620  ATG       0
+      6549      6710       +   GCGGA    6543  ATG       0
+      6707      7075       +   GCGGA    6701  ATG       0
+      7072      7575       +   GCGGA    7066  TTG       0
+      7733      8521       +   GCGGA    7727  TTG       0
+      8558      8695       -   TGCGA   34754  TTG       0
+      8692      8835       -   TGCGA   34614  TTG       0
+      8868      9167       +   GCGGA    8862  ATG       2
+      9286      9462       -   TGCGA   33987  TTG       0
+      9443      9562       +   GCGGA    9437  ATG       0
+      9559     10764       +   GCGGA    9553  ATG       0
+     10868     11149       +   GCGGA   10862  TTG       0
+     11222     11452       +   GCGGA   11216  ATG       0
+     11449     11655       -   TGCGA   31794  ATG       0
+     11787     12281       +   GCGGA   11781  ATG       2
+     12319     13080       +   GCGGA   12313  GTG       0
+     13070     14365       +   GCGGA   13064  ATG       0
+     14385     15857       +   GCGGA   14379  ATG       0
+     15817     16110       +   GCGGA   15811  ATG       2
+     16113     17291       +   GCGGA   16107  ATG       0
+     17455     18114       +   GCGGA   17449  ATG       1
+     18132     18488       +   GCGGA   18126  ATG       1
+     18520     19560       +   GCGGA   18514  ATG       0
+     19579     19884       +   GCGGA   19573  ATG       0
+     19881     20240       +   GCGGA   19875  ATG       0
+     20224     20784       +   GCGGA   20218  GTG       0
+     20781     21152       +   GCGGA   20775  ATG       0
+     21155     21619       +   GCGGA   21149  ATG       0
+     21681     22082       +   GCGGA   21675  ATG       0
+     22172     22435       +   GCGGA   22166  ATG       0
+     22471     27087       +   GCGGA   22465  ATG       0
+     27104     27469       +   GCGGA   27098  TTG       0
+     27491     32458       +   GCGGA   27485  TTG       0
+     32479     32787       +   GCGGA   32473  ATG       0
+     32765     33184       +   GCGGA   32759  ATG       1
+     33184     33558       +   GCGGA   33178  ATG       0
+     33641     34933       +   GCGGA   33635  TTG       0
+     34944     35309       +   GCGGA   34938  ATG       0
+     35444     35875       +   GCGGA   35438  ATG       0
+     35939     36181       +   GCGGA   35933  ATG       0
+     36251     37009       +   GCGGA   36245  ATG       0
+     37037     37330       -   TGCGA    6119  ATG       3
+     37553     37714       -   TGCGA    5735  ATG       0
+     37755     37859       -   TGCGA    5590  TTG       0
+     37864     37980       +   GCGGA   37858  ATG       0
+     38410     38556       -   TGCGA    4893  ATG       0
+     38568     38693       -   TGCGA    4756  TTG       0
+     38766     38930       +   GCGGA   38760  TTG       0
+     39002     39412       -   TGCGA    4037  ATG       0
+     39615     40952       +   GCGGA   39609  TTG       0
+     40971     41921       +   GCGGA   40965  ATG       0
+     42228     42659       +   GCGGA   42222  ATG       0
+     42665     42952       +   GCGGA   42659  TTG       0
+     43058     43156       -   TGCGA     293  ATG       1
+     43170     43274       -   TGCGA     175  ATG       0

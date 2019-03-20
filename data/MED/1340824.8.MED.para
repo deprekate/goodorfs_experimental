@@ -1,0 +1,193 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.617584
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.307          0.258          0.170          0.263
+          0.188          0.373          0.350          0.087
+          0.295          0.150          0.195          0.358
+          0.239          0.282          0.334          0.143
+          0.754          0.001          0.001          0.242
+          0.25.          0.25.          0.25.          0.25.
+          0.25.          0.25.          0.25.          0.25.
+          0.276          0.219          0.427          0.076
+          0.219          0.348          0.342          0.089
+          0.183          0.317          0.128          0.371
+          0.289          0.295          0.173          0.241
+          0.246          0.203          0.400          0.150
+          0.211          0.367          0.153          0.266
+          0.370          0.207          0.178          0.243
+          0.436          0.186          0.134          0.242
+          0.400          0.166          0.084          0.348
+          0.24.          0.257          0.241          0.261
+          0.362          0.301          0.241          0.094
+          0.245          0.225          0.159          0.369
+          0.170          0.235          0.401          0.192
+          0.288          0.125          0.405          0.180
+          0.236          0.240          0.230          0.292
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.476
+         2          0.136
+         3          0.119
+         4          0.108
+         5          0.079
+         6          0.079
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+        19          0.666
+        23          0.333
+    others          0.333
+GB distribution for coding region downstream of TIS
+   GB          Prob.
+   63          0.017
+   64          0.043
+   65          0.017
+   66          0.043
+   67          0.060
+   68          0.086
+   69          0.043
+   70          0.113
+   71          0.043
+   72          0.104
+   73          0.060
+   74          0.034
+   75          0.086
+   76          0.069
+   77          0.052
+   78          0.008
+   79          0.017
+   80          0.069
+   82          0.017
+   88          0.008
+GB distribution for non-coding region upstream of TIS
+   GB          Prob.
+   63          0.1.0
+   64          0.1.0
+   65          0.2.0
+   70          0.3.0
+   74          0.1.0
+   75          0.2.0
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.47938        0.52062
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+       110       565       +   TGCAG     104  ATG       0
+       588      2225       +   TGCAG     582  ATG       0
+      2256      3626       +   TGCAG    2250  TTG       0
+      3613      4368       +   TGCAG    3607  ATG       0
+      4394      5044       +   TGCAG    4388  ATG       2
+      5063      5884       +   TGCAG    5057  ATG       0
+      5956      6276       -   GCGCC   50874  ATG       0
+      6339      6575       -   GCGCC   50575  ATG       0
+      6884      7111       +   TGCAG    6878  ATG       2
+      7098      7505       +   TGCAG    7092  ATG       2
+      7400      7612       -   GCGCC   49538  ATG       4
+      7647      8444       +   TGCAG    7641  ATG       1
+      8583      9134       +   TGCAG    8577  ATG       1
+      9016      9519       +   TGCAG    9010  ATG       4
+      9538     13017       +   TGCAG    9532  ATG       0
+     13018     14727       +   TGCAG   13012  ATG       0
+     14617     14847       -   GCGCC   42303  TTG       2
+     14968     16521       +   TGCAG   14962  ATG       3
+     16672     17406       +   TGCAG   16666  TTG       5
+     17403     19940       +   TGCAG   17397  ATG       1
+     19937     21823       +   TGCAG   19931  ATG       1
+     21886     22986       +   TGCAG   21880  TTG       3
+     22623     23078       -   GCGCC   34072  ATG       0
+     22950     23345       +   TGCAG   22944  ATG       1
+     23368     23622       +   TGCAG   23362  TTG       0
+     23638     24276       +   TGCAG   23632  ATG       0
+     24357     25241       +   TGCAG   24351  TTG       3
+     25245     25427       -   GCGCC   31723  ATG       1
+     25448     25591       -   GCGCC   31559  TTG       0
+     25595     25891       +   TGCAG   25589  ATG       0
+     25747     26133       -   GCGCC   31017  ATG       2
+     26564     27646       +   TGCAG   26558  ATG       2
+     27723     28427       -   GCGCC   28723  ATG       0
+     28436     29479       +   TGCAG   28430  TTG       3
+     29756     30130       +   TGCAG   29750  ATG       0
+     29843     30205       -   GCGCC   26945  ATG       0
+     30163     30387       +   TGCAG   30157  TTG       2
+     30374     31195       +   TGCAG   30368  ATG       0
+     31192     31503       +   TGCAG   31186  TTG       0
+     31614     31748       -   GCGCC   25402  ATG       2
+     31691     31837       -   GCGCC   25313  ATG       2
+     31837     31989       -   GCGCC   25161  ATG       2
+     31992     32189       -   GCGCC   24961  GTG       0
+     32190     32468       -   GCGCC   24682  ATG       0
+     32429     32602       -   GCGCC   24548  ATG       1
+     32468     32773       +   TGCAG   32462  TTG       1
+     32980     34269       +   TGCAG   32974  ATG       0
+     34191     34424       -   GCGCC   22726  GTG       0
+     34346     34801       -   GCGCC   22349  ATG       0
+     34774     34911       +   TGCAG   34768  GTG       0
+     35064     35597       -   GCGCC   21553  TTG       0
+     35709     36056       +   TGCAG   35703  TTG       0
+     36115     37119       +   TGCAG   36109  ATG       0
+     37116     37331       +   TGCAG   37110  ATG       0
+     37328     37420       +   TGCAG   37322  ATG       0
+     37417     37614       +   TGCAG   37411  ATG       0
+     37689     37799       +   TGCAG   37683  TTG       3
+     37832     38026       +   TGCAG   37826  ATG       2
+     38041     38607       +   TGCAG   38035  TTG       1
+     38658     39029       +   TGCAG   38652  ATG       0
+     38927     39334       +   TGCAG   38921  ATG       1
+     39331     39519       +   TGCAG   39325  ATG       0
+     39637     39858       +   TGCAG   39631  ATG       3
+     39882     40259       +   TGCAG   39876  TTG       3
+     40307     40759       +   TGCAG   40301  ATG       3
+     40756     41121       +   TGCAG   40750  ATG       0
+     40858     41295       -   GCGCC   15855  ATG       3
+     41121     41276       +   TGCAG   41115  ATG       2
+     41273     41503       +   TGCAG   41267  ATG       0
+     41500     41745       +   TGCAG   41494  ATG       1
+     41759     42337       +   TGCAG   41753  ATG       0
+     42334     42690       +   TGCAG   42328  ATG       0
+     42757     42849       +   TGCAG   42751  ATG       2
+     42884     43192       +   TGCAG   42878  ATG       2
+     43123     44649       +   TGCAG   43117  GTG       0
+     43655     43882       +   TGCAG   43649  ATG       3
+     44352     44564       -   GCGCC   12586  ATG       4
+     44618     44779       -   GCGCC   12371  ATG       0
+     44772     45149       -   GCGCC   12001  ATG       0
+     45156     45473       -   GCGCC   11677  ATG       1
+     45521     45643       +   TGCAG   45515  ATG       0
+     45640     45987       +   TGCAG   45634  ATG       0
+     46160     46708       +   TGCAG   46154  ATG       5
+     46645     47127       -   GCGCC   10023  TTG       0
+     46705     46839       +   TGCAG   46699  ATG       1
+     46891     47694       +   TGCAG   46885  ATG       3
+     47717     47965       -   GCGCC    9185  ATG       3
+     47815     47961       +   TGCAG   47809  TTG       1
+     47954     48241       +   TGCAG   47948  ATG       1
+     48238     48432       +   TGCAG   48232  ATG       0
+     48429     48590       +   TGCAG   48423  ATG       0
+     48611     48871       +   TGCAG   48605  ATG       1
+     48864     49142       +   TGCAG   48858  ATG       0
+     49139     49306       +   TGCAG   49133  ATG       0
+     49238     49411       -   GCGCC    7739  ATG       2
+     49537     49995       +   TGCAG   49531  ATG       0
+     49940     50086       -   GCGCC    7064  ATG       0
+     50134     50346       -   GCGCC    6804  ATG       1
+     50141     50248       +   TGCAG   50135  TTG       3
+     50173     50436       +   TGCAG   50167  TTG       1
+     50412     50612       +   TGCAG   50406  ATG       5
+     50612     50749       +   TGCAG   50606  ATG       1
+     50971     51084       +   TGCAG   50965  ATG       2
+     51212     51526       +   TGCAG   51206  ATG       5
+     51523     51786       +   TGCAG   51517  ATG       0
+     51834     52418       +   TGCAG   51828  ATG       2
+     52528     52752       +   TGCAG   52522  ATG       0
+     52749     52916       +   TGCAG   52743  GTG       0
+     52929     53126       +   TGCAG   52923  ATG       0
+     53123     53536       +   TGCAG   53117  ATG       2
+     53643     55382       +   TGCAG   53637  TTG       0
+     54920     55858       +   TGCAG   54914  ATG       0
+     55822     56067       +   TGCAG   55816  ATG       0
+     55893     56687       +   TGCAG   55887  ATG       2
+     56549     57013       +   TGCAG   56543  ATG       1

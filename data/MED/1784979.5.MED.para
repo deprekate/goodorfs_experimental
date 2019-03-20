@@ -1,0 +1,194 @@
+
+TUI TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.598298
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.413          0.432          0.061          0.091
+          0.607          0.174          0.174          0.043
+          0.099          0.367          0.334          0.199
+          0.142          0.445          0.127          0.284
+          0.994          0.001          0.001          0.001
+          0.25.          0.25.          0.25.          0.25.
+          0.25.          0.25.          0.25.          0.25.
+          0.640          0.043          0.197          0.118
+          0.165          0.072          0.496          0.265
+          0.300          0.330          0.060          0.309
+          0.197          0.549          0.164          0.087
+          0.162          0.206          0.541          0.090
+          0.714          0.076          0.148          0.059
+          0.252          0.378          0.201          0.168
+          0.243          0.340          0.202          0.212
+          0.093          0.168          0.038          0.699
+          0.253          0.202          0.398          0.144
+          0.260          0.166          0.416          0.156
+          0.756          0.108          0.054          0.081
+          0.140          0.390          0.234          0.234
+          0.106          0.093          0.32.          0.479
+          0.269          0.103          0.060          0.566
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.516
+         2          0.086
+         3          0.086
+         4          0.117
+         5          0.108
+         6          0.086
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+         0          0.200
+         4          0.200
+        10          0.4.0
+        23          0.200
+    others          0.200
+GB distribution for coding region downstream of TIS
+   GB          Prob.
+   62          0.074
+   68          0.074
+   69          0.074
+   72          0.148
+   73          0.111
+   74          0.037
+   75          0.074
+   76          0.074
+   77          0.074
+   78          0.037
+   79          0.037
+   82          0.111
+   83          0.037
+   85          0.037
+GB distribution for non-coding region upstream of TIS
+   GB          Prob.
+   61          0.142
+   66          0.285
+   68          0.142
+   71          0.142
+   73          0.142
+   74          0.142
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.39784        0.60216
+TUL TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.598298
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.238          0.401          0.240          0.119
+          0.516          0.138          0.138          0.206
+          0.248          0.417          0.333              0
+          0.238          0.481          0.160          0.119
+          0.25.          0.25.          0.25.          0.25.
+          0.25.          0.25.          0.25.          0.25.
+          0.25.          0.25.          0.25.          0.25.
+              0              0          0.999              0
+          0.2.0          0.1.0          0.3.0          0.399
+              0              0              0          0.999
+          0.32.          0.16.          0.16.          0.36.
+              0              0          0.999              0
+          0.377          0.471          0.150              0
+          0.136          0.409          0.181          0.272
+          0.166          0.277          0.444          0.111
+              0              0              0          0.999
+              0              0              0              0
+          0.999              0              0              0
+          0.086          0.391          0.130          0.391
+              0              0              0          0.999
+          0.461          0.461              0          0.076
+          0.346          0.230          0.307          0.115
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.166
+         2          0.166
+         3          0.166
+         4          0.166
+         5          0.166
+         6          0.166
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+    others          0.090
+GB distribution for coding region downstream of TIS
+   GB          Prob.
+   58          0.090
+   60          0.090
+   62          0.090
+   64          0.181
+   74          0.090
+   76          0.181
+   78          0.090
+   80          0.090
+   82          0.090
+GB distribution for non-coding region upstream of TIS
+   GB          Prob.
+   76          1.000
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.57326        0.42674
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        69       260       +   TTCCA      63  TTG       0
+       386       904       -   CGGTG   42942  GTG       5
+       891      1517       +   TTCCA     885  TTG       0
+       998      1279       +   TTCCA     992  GTG       0
+      1212      1400       -   CGGTG   42446  ATG       2
+      1409      1657       -   CGGTG   42189  GTG       0
+      1654      2115       -   CGGTG   41731  ATG       0
+      2191      2529       -   CGGTG   41317  ATG       0
+      2526      2957       -   CGGTG   40889  GTG       0
+      2912      3190       -   CGGTG   40656  ATG       0
+      3183      3401       -   CGGTG   40445  TTG       5
+      3724      3969       -   CGGTG   39877  ATG       0
+      3938      4063       -   CGGTG   39783  ATG       0
+      4069      4161       +   TTCCA    4063  TTG       0
+      4128      4292       -   CGGTG   39554  GTG       1
+      4189      4410       +   TTCCA    4183  ATG       0
+      4329      4844       -   CGGTG   39002  ATG       2
+      4990      5163       -   CGGTG   38683  GTG       1
+      5256      5393       -   CGGTG   38453  GTG       0
+      5368      5475       -   CGGTG   38371  TTG       2
+      5853      5948       +   TTCCA    5847  GTG       0
+      6505      6606       -   CGGTG   37240  TTG       0
+      6603      6740       -   CGGTG   37106  ATG       1
+      6763      6909       +   TTCCA    6757  GTG       0
+      7177      7434       +   TTCCA    7171  ATG       1
+      7494      7874       -   CGGTG   35972  TTG       0
+      7687      8013       -   CGGTG   35833  GTG       2
+      7992      8546       -   CGGTG   35300  ATG       0
+      8556      8819       -   CGGTG   35027  ATG       0
+      8823     10631       -   CGGTG   33215  ATG       0
+     10624     10974       -   CGGTG   32872  ATG       0
+     10895     11110       -   CGGTG   32736  GTG       1
+     11107     11673       -   CGGTG   32173  ATG       0
+     11670     12605       -   CGGTG   31241  ATG       0
+     12602     13813       -   CGGTG   30033  ATG       0
+     13816     14820       -   CGGTG   29026  ATG       4
+     14999     19909       -   CGGTG   23937  ATG       0
+     19921     22284       -   CGGTG   21562  ATG       0
+     22278     23162       -   CGGTG   20684  ATG       0
+     23172     25676       -   CGGTG   18170  ATG       0
+     25686     26255       -   CGGTG   17591  ATG       4
+     26361     26576       -   CGGTG   17270  ATG       0
+     26655     27659       -   CGGTG   16187  ATG       0
+     27682     28524       -   CGGTG   15322  ATG       0
+     28521     29987       -   CGGTG   13859  ATG       2
+     30061     30408       -   CGGTG   13438  ATG       0
+     30412     30612       -   CGGTG   13234  ATG       4
+     30848     30946       -   CGGTG   12900  TTG       4
+     31173     33629       -   CGGTG   10217  ATG       3
+     33683     33823       -   CGGTG   10023  ATG       2
+     33871     34728       -   CGGTG    9118  ATG       2
+     34845     35060       -   CGGTG    8786  GTG       2
+     35129     35656       -   CGGTG    8190  GTG       1
+     35684     36550       -   CGGTG    7296  GTG       0
+     36547     36933       -   CGGTG    6913  ATG       0
+     36930     37925       -   CGGTG    5921  TTG       0
+     37862     38017       -   CGGTG    5829  ATG       0
+     38017     38916       -   CGGTG    4930  ATG       1
+     38919     39389       -   CGGTG    4457  ATG       0
+     39313     41793       -   CGGTG    2053  GTG       0
+     41778     42149       -   CGGTG    1697  GTG       0
+     42146     42607       -   CGGTG    1239  ATG       0
+     42604     42921       -   CGGTG     925  ATG       0
+     42918     43787       -   CGGTG      59  ATG       1

@@ -1,0 +1,195 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.664984
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.235          0.308          0.237          0.219
+          0.212          0.337          0.271          0.179
+          0.426          0.235          0.117          0.220
+          0.279          0.464          0.157          0.098
+          0.855              0          0.143              0
+          0.250          0.250          0.250          0.248
+          0.250          0.250          0.248          0.250
+          0.353          0.103          0.365          0.176
+          0.352          0.352          0.176          0.117
+          0.189          0.162          0.094          0.553
+          0.088          0.327          0.323          0.260
+          0.263          0.176          0.285          0.273
+          0.258          0.120          0.231          0.388
+          0.348          0.355          0.118          0.177
+          0.253          0.211          0.399          0.135
+          0.269          0.154          0.180          0.395
+          0.188          0.167          0.078          0.565
+          0.264          0.333          0.262          0.140
+          0.351          0.215          0.179          0.254
+          0.350          0.225          0.279          0.144
+          0.395          0.258          0.158          0.187
+          0.676          0.107          0.114          0.102
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.645
+         2          0.120
+         3          0.049
+         4          0.049
+         5          0.075
+         6          0.058
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+         0          0.142
+         2          0.142
+        10          0.285
+        12          0.142
+        30          0.142
+        40          0.142
+    others          0.142
+GB distribution for coding region downstream of TIS
+   GB          Prob.
+   56          0.010
+   60          0.010
+   61          0.030
+   62          0.010
+   63          0.010
+   65          0.030
+   66          0.030
+   67          0.020
+   68          0.030
+   69          0.070
+   70          0.070
+   71          0.060
+   72          0.090
+   73          0.080
+   74          0.050
+   75          0.131
+   76          0.050
+   77          0.060
+   78          0.050
+   79          0.010
+   80          0.020
+   81          0.020
+   82          0.010
+   83          0.010
+   84          0.020
+   87          0.010
+GB distribution for non-coding region upstream of TIS
+   GB          Prob.
+   55          0.047
+   60          0.047
+   61          0.142
+   62          0.047
+   63          0.047
+   64          0.047
+   66          0.095
+   67          0.047
+   68          0.047
+   70          0.047
+   72          0.142
+   73          0.142
+   77          0.047
+   80          0.047
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.47707        0.52293
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+         1       567       +       -       -  ATG       0
+       762      2351       +   ATGCT     756  ATG       5
+      2399      2872       -   GTTAC   65478  GTG       5
+      2436      2651       +   ATGCT    2430  ATG       0
+      2633      3013       +   ATGCT    2627  GTG       0
+      3081      3218       +   ATGCT    3075  ATG       0
+      3364      3768       -   GTTAC   64582  ATG       3
+      3878      4411       +   ATGCT    3872  GTG       0
+      4441      6360       +   ATGCT    4435  ATG       0
+      6231      8933       +   ATGCT    6225  ATG       0
+      8943      9377       +   ATGCT    8937  ATG       0
+      9470      9751       -   GTTAC   58599  TTG       0
+      9506      9643       +   ATGCT    9500  ATG       0
+      9757     11502       +   ATGCT    9751  ATG       0
+     11602     12399       +   ATGCT   11596  ATG       0
+     12114     13247       +   ATGCT   12108  ATG       0
+     13247     13636       +   ATGCT   13241  ATG       0
+     13644     13994       +   ATGCT   13638  GTG       0
+     13991     14605       +   ATGCT   13985  ATG       0
+     14693     15493       +   ATGCT   14687  ATG       0
+     15552     15782       -   GTTAC   52568  ATG       0
+     15859     16359       -   GTTAC   51991  ATG       5
+     16691     16978       -   GTTAC   51372  ATG       1
+     17064     17801       +   ATGCT   17058  GTG       0
+     17483     18319       +   ATGCT   17477  GTG       5
+     18329     18664       +   ATGCT   18323  ATG       0
+     18971     19705       +   ATGCT   18965  GTG       0
+     19768     20145       -   GTTAC   48205  ATG       0
+     20229     26210       +   ATGCT   20223  GTG       0
+     26220     27653       +   ATGCT   26214  GTG       0
+     27650     28762       +   ATGCT   27644  ATG       0
+     28960     31014       +   ATGCT   28954  GTG       3
+     31057     32364       +   ATGCT   31051  ATG       1
+     32367     33527       +   ATGCT   32361  GTG       0
+     33465     33605       -   GTTAC   34745  GTG       0
+     33558     33947       +   ATGCT   33552  ATG       0
+     33956     34342       +   ATGCT   33950  ATG       2
+     34192     34989       +   ATGCT   34186  TTG       0
+     34881     35585       +   ATGCT   34875  GTG       4
+     35582     36205       +   ATGCT   35576  ATG       1
+     36500     36607       +   ATGCT   36494  ATG       4
+     36670     36918       +   ATGCT   36664  ATG       2
+     36958     37365       +   ATGCT   36952  ATG       0
+     37365     38486       +   ATGCT   37359  ATG       0
+     38468     38686       -   GTTAC   29664  ATG       3
+     38688     39047       -   GTTAC   29303  GTG       0
+     38978     39193       -   GTTAC   29157  ATG       1
+     39169     40329       +   ATGCT   39163  GTG       0
+     39190     39477       -   GTTAC   28873  ATG       4
+     39721     40365       -   GTTAC   27985  ATG       0
+     40341     41696       +   ATGCT   40335  ATG       0
+     41706     43058       +   ATGCT   41700  ATG       0
+     43160     43780       -   GTTAC   24570  ATG       0
+     43838     45451       -   GTTAC   22899  ATG       3
+     45244     46947       -   GTTAC   21403  ATG       0
+     47080     47220       -   GTTAC   21130  ATG       4
+     47292     48683       -   GTTAC   19667  ATG       0
+     48332     48622       -   GTTAC   19728  ATG       0
+     48700     51507       -   GTTAC   16843  ATG       0
+     51478     51570       +   ATGCT   51472  GTG       2
+     51587     52210       -   GTTAC   16140  ATG       1
+     52195     54078       -   GTTAC   14272  ATG       0
+     54051     54509       -   GTTAC   13841  ATG       0
+     54754     55398       -   GTTAC   12952  GTG       0
+     54896     55600       +   ATGCT   54890  GTG       0
+     55223     55414       -   GTTAC   12936  ATG       4
+     55638     55736       -   GTTAC   12614  TTG       0
+     55741     55872       +   ATGCT   55735  ATG       1
+     56052     56813       +   ATGCT   56046  ATG       0
+     56826     57098       +   ATGCT   56820  ATG       0
+     57214     57312       +   ATGCT   57208  ATG       4
+     57343     58050       +   ATGCT   57337  ATG       0
+     57809     58627       +   ATGCT   57803  GTG       0
+     58624     59046       +   ATGCT   58618  ATG       0
+     59286     59594       +   ATGCT   59280  ATG       4
+     59596     60198       +   ATGCT   59590  ATG       0
+     60568     60777       -   GTTAC    7573  ATG       0
+     60858     61214       -   GTTAC    7136  ATG       1
+     61313     61456       -   GTTAC    6894  ATG       0
+     61568     61744       +   ATGCT   61562  GTG       2
+     61932     62162       -   GTTAC    6188  ATG       0
+     62155     62541       -   GTTAC    5809  ATG       1
+     62585     62968       -   GTTAC    5382  GTG       0
+     62884     62994       -   GTTAC    5356  ATG       0
+     62991     63221       -   GTTAC    5129  ATG       0
+     63182     63358       -   GTTAC    4992  ATG       4
+     63633     63884       -   GTTAC    4466  ATG       0
+     63851     64099       -   GTTAC    4251  GTG       0
+     64033     64254       -   GTTAC    4096  ATG       0
+     64375     64677       -   GTTAC    3673  ATG       0
+     64709     64906       -   GTTAC    3444  ATG       0
+     64974     65249       -   GTTAC    3101  ATG       0
+     65530     65886       -   GTTAC    2464  ATG       1
+     65892     65996       +   ATGCT   65886  TTG       0
+     66049     66588       -   GTTAC    1762  ATG       4
+     66777     66956       -   GTTAC    1394  ATG       0
+     67242     67679       -   GTTAC     671  GTG       0
+     67646     68158       -   GTTAC     192  ATG       0
+     68049     68246       -   GTTAC     104  ATG       1

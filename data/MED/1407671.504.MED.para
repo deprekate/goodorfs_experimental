@@ -1,0 +1,121 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.35227
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.483          0.064          0.064          0.387
+          0.774              0          0.096          0.129
+          0.451          0.225              0          0.322
+          0.387              0          0.129          0.483
+          0.966              0              0          0.032
+              0              0              0          0.999
+              0              0          0.999              0
+          0.290          0.032          0.612          0.064
+          0.483          0.354          0.161              0
+          0.419          0.064          0.161          0.354
+          0.645          0.032          0.225          0.096
+          0.483          0.129          0.064          0.322
+          0.516              0          0.225          0.258
+          0.451          0.129          0.258          0.161
+          0.322          0.387          0.064          0.225
+          0.645          0.032          0.096          0.225
+          0.580          0.064          0.129          0.225
+          0.451          0.161          0.161          0.225
+          0.419          0.096          0.096          0.387
+          0.677          0.032          0.129          0.161
+          0.645          0.032          0.129          0.193
+          0.580          0.064          0.096          0.258
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.746
+         2          0.072
+         3          0.090
+         4          0.029
+         5          0.029
+         6          0.029
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -19          0.045
+       -13          0.045
+        -7          0.045
+         0          0.045
+         2          0.181
+         3          0.090
+         4          0.045
+         5          0.045
+         7          0.090
+        13          0.090
+        20          0.045
+        22          0.045
+        26          0.045
+        41          0.045
+        42          0.045
+        45          0.045
+    others          0.045
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.51958        0.48042
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        12       461       +       -       -  TTG       0
+       466      1809       +   TTGGT     460  ATG       0
+      1816      9912       +   TTGGT    1810  ATG       0
+      9915     13253       +   TTGGT    9909  ATG       0
+     13237     13533       +   TTGGT   13231  ATG       0
+     13575     14627       +   TTGGT   13569  ATG       0
+     14653     15684       +   TTGGT   14647  ATG       0
+     15766     16290       +   TTGGT   15760  ATG       0
+     16312     16980       +   TTGGT   16306  ATG       0
+     17042     18343       +   TTGGT   17036  TTG       0
+     18324     18929       +   TTGGT   18318  ATG       0
+     18910     19095       +   TTGGT   18904  ATG       1
+     19097     19864       +   TTGGT   19091  ATG       0
+     19866     20159       +   TTGGT   19860  ATG       0
+     20161     20562       +   TTGGT   20155  ATG       0
+     20624     20746       +   TTGGT   20618  ATG       1
+     20724     21014       +   TTGGT   20718  ATG       0
+     20993     21736       -   TTTTC   16193  ATG       0
+     21838     22254       -   TTTTC   15675  ATG       0
+     22404     22745       -   TTTTC   15184  ATG       2
+     22796     22984       -   TTTTC   14945  ATG       0
+     22998     23939       -   TTTTC   13990  ATG       0
+     23932     24582       -   TTTTC   13347  ATG       0
+     24595     24840       -   TTTTC   13089  ATG       0
+     24809     25147       -   TTTTC   12782  ATG       2
+     25200     25484       -   TTTTC   12445  TTG       0
+     25402     25614       -   TTTTC   12315  ATG       2
+     25696     26031       -   TTTTC   11898  ATG       0
+     26038     26196       -   TTTTC   11733  ATG       2
+     26337     27086       -   TTTTC   10843  ATG       0
+     27073     27672       -   TTTTC   10257  ATG       0
+     27757     27984       -   TTTTC    9945  ATG       0
+     28015     28302       -   TTTTC    9627  ATG       0
+     28314     28670       -   TTTTC    9259  ATG       2
+     28657     28845       -   TTTTC    9084  ATG       0
+     28842     29117       -   TTTTC    8812  ATG       0
+     29104     29208       -   TTTTC    8721  ATG       0
+     29195     29494       -   TTTTC    8435  ATG       0
+     29500     29805       -   TTTTC    8124  ATG       0
+     29818     30033       -   TTTTC    7896  ATG       0
+     30038     30160       -   TTTTC    7769  GTG       0
+     30150     30395       -   TTTTC    7534  ATG       0
+     30407     30580       -   TTTTC    7349  ATG       0
+     30585     31166       -   TTTTC    6763  ATG       1
+     31242     31544       -   TTTTC    6385  ATG       0
+     31575     31808       +   TTGGT   31569  TTG       1
+     31839     32357       -   TTTTC    5572  ATG       0
+     32370     32474       +   TTGGT   32364  TTG       0
+     32433     32654       -   TTTTC    5275  TTG       1
+     32724     32822       +   TTGGT   32718  TTG       0
+     32909     33007       +   TTGGT   32903  TTG       0
+     32965     33090       +   TTGGT   32959  ATG       0
+     33151     33249       +   TTGGT   33145  TTG       0
+     33251     33589       +   TTGGT   33245  ATG       0
+     33591     33953       +   TTGGT   33585  ATG       0
+     33956     34321       +   TTGGT   33950  ATG       0
+     34321     35784       +   TTGGT   34315  ATG       0
+     35788     36576       +   TTGGT   35782  ATG       0
+     36617     37816       +   TTGGT   36611  ATG       0

@@ -1,0 +1,157 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.378374
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.404          0.170          0.127          0.297
+          0.553          0.085          0.127          0.234
+          0.361          0.063          0.127          0.446
+          0.319          0.148          0.063          0.468
+          0.805              0          0.193              0
+              0              0              0          0.999
+              0              0          0.999              0
+          0.489          0.021          0.340          0.148
+          0.468          0.297          0.085          0.148
+          0.340          0.127          0.127          0.404
+          0.489          0.127          0.191          0.191
+          0.553          0.170          0.021          0.255
+          0.382          0.063          0.085          0.468
+          0.446          0.212          0.234          0.106
+          0.340          0.127          0.148          0.382
+          0.276          0.148          0.191          0.382
+          0.489          0.148          0.042          0.319
+          0.425          0.042          0.085          0.446
+          0.425          0.170          0.148          0.255
+          0.425          0.191          0.255          0.127
+          0.340          0.127          0.085          0.446
+          0.361          0.106          0.085          0.446
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.710
+         2          0.085
+         3          0.083
+         4          0.047
+         5          0.041
+         6          0.032
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -40          0.030
+       -19          0.030
+       -13          0.030
+        -7          0.060
+        -6          0.060
+        -3          0.272
+         0          0.060
+         2          0.030
+         3          0.090
+         4          0.060
+         8          0.030
+        10          0.090
+        11          0.060
+        13          0.030
+        35          0.030
+        45          0.030
+    others          0.030
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.32626        0.67374
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        67       159       +   CCTTC      61  ATG       0
+       470      1258       +   CCTTC     464  ATG       2
+      1313      1582       +   CCTTC    1307  GTG       0
+      1675      2007       +   CCTTC    1669  ATG       0
+      2085      2189       +   CCTTC    2079  GTG       3
+      2186      3085       +   CCTTC    2180  ATG       0
+      3082      3837       +   CCTTC    3076  ATG       0
+      3838      4131       +   CCTTC    3832  ATG       0
+      4128      4310       +   CCTTC    4122  ATG       0
+      4307      4468       +   CCTTC    4301  ATG       0
+      4471      4977       +   CCTTC    4465  ATG       2
+      4901      5200       +   CCTTC    4895  ATG       0
+      5299      5811       -   CGTTC   39557  ATG       0
+      5773      6384       +   CCTTC    5767  ATG       0
+      6404      6667       -   CGTTC   38701  ATG       0
+      6651      6986       -   CGTTC   38382  GTG       0
+      7047      9377       -   CGTTC   35991  ATG       0
+      9379     10209       -   CGTTC   35159  GTG       0
+     10202     10828       -   CGTTC   34540  ATG       0
+     10828     12012       -   CGTTC   33356  ATG       0
+     12009     12362       -   CGTTC   33006  ATG       0
+     12359     12505       -   CGTTC   32863  ATG       0
+     12508     13041       -   CGTTC   32327  GTG       2
+     13133     14023       -   CGTTC   31345  GTG       0
+     14058     14366       -   CGTTC   31002  GTG       0
+     14347     14454       -   CGTTC   30914  ATG       0
+     14451     14726       -   CGTTC   30642  ATG       0
+     14723     15340       -   CGTTC   30028  ATG       0
+     15348     17396       -   CGTTC   27972  ATG       0
+     17399     17563       -   CGTTC   27805  GTG       2
+     17641     18066       -   CGTTC   27302  ATG       0
+     18111     18560       -   CGTTC   26808  ATG       0
+     18573     19499       -   CGTTC   25869  GTG       4
+     20026     20520       -   CGTTC   24848  ATG       0
+     20517     20954       -   CGTTC   24414  ATG       0
+     20958     21146       -   CGTTC   24222  ATG       0
+     21143     21649       -   CGTTC   23719  GTG       0
+     22156     22380       +   CCTTC   22150  ATG       0
+     22558     23010       -   CGTTC   22358  ATG       0
+     23020     23373       -   CGTTC   21995  ATG       0
+     23453     24460       -   CGTTC   20908  ATG       0
+     24471     24965       -   CGTTC   20403  ATG       0
+     24975     26303       -   CGTTC   19065  ATG       0
+     26363     26548       -   CGTTC   18820  ATG       0
+     26538     26687       -   CGTTC   18681  ATG       3
+     26810     26908       -   CGTTC   18460  ATG       0
+     26912     27274       -   CGTTC   18094  ATG       0
+     27271     27696       -   CGTTC   17672  GTG       0
+     27656     28006       -   CGTTC   17362  ATG       4
+     28068     28421       -   CGTTC   16947  ATG       0
+     28503     28649       -   CGTTC   16719  ATG       0
+     28650     28814       -   CGTTC   16554  ATG       0
+     29107     29238       -   CGTTC   16130  GTG       2
+     29263     29376       -   CGTTC   15992  TTG       0
+     29383     29475       -   CGTTC   15893  GTG       0
+     29504     30274       -   CGTTC   15094  ATG       0
+     30277     30600       -   CGTTC   14768  ATG       0
+     30593     32020       -   CGTTC   13348  ATG       0
+     32023     33396       -   CGTTC   11972  ATG       0
+     33396     33836       -   CGTTC   11532  ATG       0
+     33840     34076       -   CGTTC   11292  ATG       1
+     34132     34302       -   CGTTC   11066  ATG       0
+     34313     34480       -   CGTTC   10888  ATG       0
+     34470     34712       -   CGTTC   10656  ATG       0
+     34709     34906       -   CGTTC   10462  ATG       0
+     34909     35238       -   CGTTC   10130  GTG       0
+     35235     35450       -   CGTTC    9918  GTG       1
+     35443     35565       -   CGTTC    9803  ATG       0
+     35562     35900       -   CGTTC    9468  ATG       2
+     35973     36212       -   CGTTC    9156  ATG       0
+     36353     36595       -   CGTTC    8773  GTG       2
+     36621     36881       -   CGTTC    8487  ATG       1
+     36878     37264       -   CGTTC    8104  ATG       0
+     37251     37496       -   CGTTC    7872  ATG       1
+     37501     37989       -   CGTTC    7379  ATG       5
+     38118     38213       +   CCTTC   38112  GTG       0
+     38177     38350       -   CGTTC    7018  ATG       0
+     38347     38922       -   CGTTC    6446  ATG       1
+     38919     39680       -   CGTTC    5688  ATG       2
+     39680     39793       -   CGTTC    5575  ATG       0
+     39790     40002       -   CGTTC    5366  ATG       0
+     40074     40364       -   CGTTC    5004  ATG       0
+     40361     40660       -   CGTTC    4708  ATG       0
+     40661     41962       -   CGTTC    3406  ATG       1
+     41962     42705       -   CGTTC    2663  ATG       0
+     42716     42928       -   CGTTC    2440  ATG       1
+     42946     43044       +   CCTTC   42940  ATG       0
+     43032     43124       -   CGTTC    2244  ATG       4
+     43256     43438       -   CGTTC    1930  ATG       0
+     43487     43606       -   CGTTC    1762  ATG       0
+     43575     43742       -   CGTTC    1626  ATG       0
+     43743     44459       -   CGTTC     909  ATG       0
+     44469     44714       -   CGTTC     654  TTG       0
+     44908     45027       +   CCTTC   44902  ATG       3
+     44939     45187       -   CGTTC     181  ATG       1

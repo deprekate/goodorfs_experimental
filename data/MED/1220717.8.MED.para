@@ -1,0 +1,290 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.603232
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.336          0.264          0.204          0.194
+          0.378          0.214          0.227          0.179
+          0.345          0.138          0.219          0.296
+          0.393          0.361          0.133          0.111
+          0.942              0          0.055              0
+          0.25.          0.25.          0.25.          0.25.
+          0.25.          0.25.          0.25.          0.25.
+          0.272          0.135          0.353          0.239
+          0.286          0.356          0.245          0.111
+          0.309          0.205          0.103          0.381
+          0.265          0.260          0.218          0.255
+          0.308          0.214          0.178          0.299
+          0.299          0.199          0.190          0.309
+          0.278          0.255          0.180          0.285
+          0.187          0.281          0.237          0.293
+          0.439          0.193          0.115          0.251
+          0.387          0.201          0.209          0.201
+          0.288          0.157          0.235          0.318
+          0.402          0.123          0.134          0.340
+          0.253          0.307          0.165          0.273
+          0.156          0.254          0.201          0.388
+          0.229          0.218          0.174          0.377
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.671
+         2          0.117
+         3          0.075
+         4          0.050
+         5          0.047
+         6          0.037
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+         0          0.125
+         1          0.249
+         4          0.249
+        22          0.125
+        24          0.125
+        27          0.125
+    others          0.125
+GB distribution for coding region downstream of TIS
+   GB          Prob.
+   51          0.005
+   58          0.015
+   63          0.020
+   64          0.005
+   66          0.020
+   67          0.036
+   68          0.062
+   69          0.031
+   70          0.046
+   71          0.026
+   72          0.067
+   73          0.072
+   74          0.031
+   75          0.130
+   76          0.088
+   77          0.062
+   78          0.046
+   79          0.036
+   80          0.057
+   81          0.052
+   82          0.031
+   83          0.015
+   84          0.026
+   85          0.005
+   86          0.005
+GB distribution for non-coding region upstream of TIS
+   GB          Prob.
+   61          0.066
+   62          0.066
+   63          0.1.0
+   64          0.133
+   65          0.066
+   66          0.033
+   67          0.033
+   68          0.033
+   70          0.066
+   71          0.066
+   72          0.1.0
+   73          0.033
+   75          0.033
+   78          0.033
+   80          0.033
+   82          0.066
+   83          0.033
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.46657        0.53343
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        33       461       +       -       -  ATG       0
+       536      1099       +   CCGGC     530  ATG       1
+      1099      2730       +   CCGGC    1093  ATG       0
+      2700      2801       -   CACGC  112236  ATG       0
+      2827      3822       +   CCGGC    2821  ATG       1
+      3826      4662       +   CCGGC    3820  ATG       0
+      4659      5420       +   CCGGC    4653  ATG       0
+      5407      5748       +   CCGGC    5401  ATG       0
+      5745      6176       +   CCGGC    5739  ATG       0
+      6407      6583       +   CCGGC    6401  ATG       2
+      6632      6742       +   CCGGC    6626  TTG       0
+      6643      7551       +   CCGGC    6637  ATG       0
+      7644      8003       +   CCGGC    7638  ATG       0
+      7895      8107       -   CACGC  106930  ATG       3
+      8111      8350       +   CCGGC    8105  ATG       2
+      8377     13131       +   CCGGC    8371  ATG       0
+     13132     13488       +   CCGGC   13126  ATG       0
+     13567     14277       +   CCGGC   13561  ATG       1
+     14274     15029       +   CCGGC   14268  ATG       0
+     15022     15618       +   CCGGC   15016  ATG       0
+     15622     19941       +   CCGGC   15616  ATG       0
+     19945     20364       +   CCGGC   19939  ATG       0
+     20453     20713       +   CCGGC   20447  ATG       2
+     20713     21102       +   CCGGC   20707  ATG       2
+     20940     21587       +   CCGGC   20934  GTG       0
+     21835     22008       +   CCGGC   21829  ATG       4
+     22045     22407       +   CCGGC   22039  ATG       1
+     22409     22642       +   CCGGC   22403  ATG       1
+     22629     23249       +   CCGGC   22623  ATG       0
+     23027     23698       -   CACGC   91339  ATG       1
+     23490     23828       +   CCGGC   23484  ATG       1
+     23883     25745       +   CCGGC   23877  ATG       0
+     25801     26673       +   CCGGC   25795  ATG       2
+     26651     27370       +   CCGGC   26645  ATG       0
+     27389     27490       -   CACGC   87547  ATG       0
+     27489     28853       +   CCGGC   27483  ATG       1
+     28931     30001       +   CCGGC   28925  ATG       1
+     29959     30054       +   CCGGC   29953  ATG       0
+     30081     30629       +   CCGGC   30075  ATG       4
+     30629     30895       +   CCGGC   30623  ATG       0
+     30970     31470       +   CCGGC   30964  ATG       2
+     31646     33022       +   CCGGC   31640  ATG       2
+     33019     33234       +   CCGGC   33013  GTG       0
+     33311     34315       -   CACGC   80722  ATG       1
+     34354     34473       +   CCGGC   34348  ATG       0
+     34424     34537       +   CCGGC   34418  TTG       0
+     34587     34793       -   CACGC   80244  ATG       0
+     34956     35081       -   CACGC   79956  TTG       0
+     35021     35158       +   CCGGC   35015  ATG       0
+     35193     35594       +   CCGGC   35187  ATG       0
+     35294     35881       -   CACGC   79156  GTG       2
+     35987     38497       +   CCGGC   35981  ATG       0
+     38487     38591       -   CACGC   76446  TTG       0
+     38551     38667       -   CACGC   76370  ATG       0
+     38609     39829       +   CCGGC   38603  ATG       0
+     39826     40461       +   CCGGC   39820  ATG       0
+     40458     40988       +   CCGGC   40452  ATG       0
+     40988     41254       +   CCGGC   40982  ATG       0
+     41226     44639       +   CCGGC   41220  ATG       0
+     44699     45238       +   CCGGC   44693  ATG       0
+     45316     45567       +   CCGGC   45310  ATG       0
+     45701     46642       +   CCGGC   45695  ATG       0
+     46790     47746       +   CCGGC   46784  ATG       2
+     47803     47946       +   CCGGC   47797  GTG       1
+     47936     48481       +   CCGGC   47930  ATG       0
+     48492     49595       +   CCGGC   48486  ATG       4
+     49672     50181       +   CCGGC   49666  ATG       0
+     50078     50497       +   CCGGC   50072  ATG       0
+     50563     51846       +   CCGGC   50557  ATG       0
+     51910     52260       +   CCGGC   51904  ATG       0
+     52140     52514       -   CACGC   62523  ATG       1
+     52569     52802       +   CCGGC   52563  ATG       1
+     52799     54745       +   CCGGC   52793  ATG       0
+     54742     54906       +   CCGGC   54736  ATG       0
+     54903     55283       +   CCGGC   54897  ATG       0
+     55280     55684       +   CCGGC   55274  ATG       0
+     55730     55978       -   CACGC   59059  ATG       0
+     56100     56219       +   CCGGC   56094  ATG       4
+     56287     56793       +   CCGGC   56281  ATG       0
+     56797     57369       +   CCGGC   56791  ATG       0
+     57400     57492       -   CACGC   57545  ATG       0
+     57454     58416       +   CCGGC   57448  ATG       0
+     58431     60113       +   CCGGC   58425  ATG       0
+     60116     60364       +   CCGGC   60110  ATG       2
+     60407     60499       +   CCGGC   60401  ATG       0
+     60810     61082       +   CCGGC   60804  ATG       0
+     61079     61267       +   CCGGC   61073  ATG       0
+     61185     61466       +   CCGGC   61179  ATG       0
+     61654     62499       +   CCGGC   61648  ATG       5
+     62457     62627       -   CACGC   52410  ATG       3
+     62608     62874       +   CCGGC   62602  GTG       0
+     62886     63002       +   CCGGC   62880  ATG       0
+     63002     63856       +   CCGGC   62996  ATG       0
+     63937     64143       +   CCGGC   63931  ATG       2
+     64145     64612       +   CCGGC   64139  ATG       2
+     64750     65232       +   CCGGC   64744  ATG       1
+     65326     67689       +   CCGGC   65320  ATG       1
+     67686     69161       +   CCGGC   67680  ATG       0
+     69005     69385       -   CACGC   45652  ATG       1
+     69384     69986       +   CCGGC   69378  ATG       3
+     70023     70367       +   CCGGC   70017  ATG       0
+     70331     70612       +   CCGGC   70325  GTG       0
+     70609     71184       +   CCGGC   70603  GTG       0
+     71297     71593       +   CCGGC   71291  ATG       4
+     71593     71886       +   CCGGC   71587  ATG       0
+     71873     72442       +   CCGGC   71867  ATG       0
+     72466     73326       +   CCGGC   72460  ATG       0
+     73438     73719       +   CCGGC   73432  ATG       0
+     73732     74082       +   CCGGC   73726  ATG       0
+     74066     74542       +   CCGGC   74060  ATG       0
+     74753     74884       -   CACGC   40153  GTG       0
+     74944     76401       +   CCGGC   74938  GTG       0
+     76356     76517       +   CCGGC   76350  GTG       0
+     76634     76867       +   CCGGC   76628  ATG       3
+     76880     77110       -   CACGC   37927  ATG       0
+     77078     77302       +   CCGGC   77072  ATG       0
+     77331     78017       -   CACGC   37020  ATG       3
+     78086     78334       +   CCGGC   78080  GTG       0
+     78415     78966       +   CCGGC   78409  ATG       0
+     79040     79597       +   CCGGC   79034  ATG       1
+     79581     79793       +   CCGGC   79575  ATG       0
+     79790     80155       +   CCGGC   79784  ATG       0
+     80095     80349       +   CCGGC   80089  ATG       0
+     80247     80786       +   CCGGC   80241  GTG       0
+     80678     81115       +   CCGGC   80672  GTG       0
+     81190     81444       +   CCGGC   81184  ATG       0
+     81511     81720       +   CCGGC   81505  ATG       2
+     81657     82136       +   CCGGC   81651  GTG       0
+     81908     82303       +   CCGGC   81902  ATG       0
+     82396     82821       +   CCGGC   82390  ATG       3
+     82629     83204       +   CCGGC   82623  GTG       0
+     83132     83659       -   CACGC   31378  ATG       2
+     83767     84087       +   CCGGC   83761  ATG       0
+     84184     84474       +   CCGGC   84178  ATG       0
+     84495     84947       +   CCGGC   84489  ATG       3
+     84661     85362       +   CCGGC   84655  ATG       0
+     85347     85754       +   CCGGC   85341  GTG       0
+     85751     85981       +   CCGGC   85745  ATG       0
+     85968     86141       +   CCGGC   85962  ATG       0
+     86138     86335       +   CCGGC   86132  ATG       0
+     86335     86577       +   CCGGC   86329  ATG       0
+     86406     86996       -   CACGC   28041  ATG       4
+     86574     86759       +   CCGGC   86568  ATG       0
+     86919     87227       +   CCGGC   86913  ATG       0
+     87032     87271       -   CACGC   27766  ATG       1
+     87378     87482       -   CACGC   27555  TTG       0
+     87551     88021       -   CACGC   27016  GTG       0
+     88126     88662       +   CCGGC   88120  ATG       0
+     88789     89058       +   CCGGC   88783  ATG       2
+     89055     89372       +   CCGGC   89049  ATG       0
+     89373     92990       +   CCGGC   89367  ATG       0
+     93086     93379       +   CCGGC   93080  ATG       0
+     93446     93976       +   CCGGC   93440  ATG       0
+     93986     94264       +   CCGGC   93980  ATG       0
+     94261     94773       +   CCGGC   94255  ATG       0
+     94838     95287       -   CACGC   19750  GTG       0
+     95718     96113       +   CCGGC   95712  ATG       2
+     96243     96953       +   CCGGC   96237  ATG       1
+     96893     97204       -   CACGC   17833  ATG       4
+     97278     97583       +   CCGGC   97272  ATG       0
+     97594     97884       +   CCGGC   97588  ATG       0
+     98079     98411       +   CCGGC   98073  ATG       0
+     98512     98640       -   CACGC   16397  ATG       1
+     98584     98865       +   CCGGC   98578  ATG       0
+     98923     99117       -   CACGC   15920  ATG       0
+     99195     99761       -   CACGC   15276  ATG       1
+     99993    100247       +   CCGGC   99987  GTG       0
+    100269    101141       +   CCGGC  100263  ATG       0
+    101179    101559       +   CCGGC  101173  ATG       0
+    101556    102008       +   CCGGC  101550  ATG       0
+    101871    102299       -   CACGC   12738  GTG       0
+    102263    102541       -   CACGC   12496  ATG       0
+    102538    103179       -   CACGC   11858  ATG       0
+    103226    103477       +   CCGGC  103220  ATG       0
+    103390    103716       -   CACGC   11321  GTG       1
+    103743    104309       -   CACGC   10728  GTG       1
+    104387    104701       -   CACGC   10336  ATG       0
+    104557    106155       -   CACGC    8882  ATG       0
+    106154    106246       +   CCGGC  106148  ATG       1
+    106215    106349       -   CACGC    8688  ATG       4
+    106690    107109       -   CACGC    7928  GTG       0
+    107254    107820       +   CCGGC  107248  ATG       3
+    107817    108236       +   CCGGC  107811  ATG       0
+    108233    108877       +   CCGGC  108227  ATG       1
+    108874    109176       +   CCGGC  108868  ATG       1
+    109176    109376       +   CCGGC  109170  ATG       1
+    109470    110354       +   CCGGC  109464  GTG       0
+    110355    110597       +   CCGGC  110349  ATG       0
+    110732    111418       +   CCGGC  110726  ATG       1
+    111415    112689       +   CCGGC  111409  GTG       0
+    112746    114320       +   CCGGC  112740  ATG       0
+    114340    114885       -   CACGC     152  GTG       0

@@ -1,0 +1,194 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.659568
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.287          0.418          0.226          0.067
+          0.373          0.177          0.269          0.179
+          0.317          0.312          0.081          0.288
+          0.357          0.293          0.284          0.064
+          0.891              0          0.059          0.048
+          0.25.          0.25.          0.25.          0.25.
+          0.25.          0.25.          0.25.          0.25.
+          0.397          0.284          0.317              0
+          0.207          0.251          0.395          0.144
+          0.439          0.096          0.025          0.439
+          0.084          0.501          0.248          0.165
+          0.213          0.264          0.349          0.172
+          0.320          0.141          0.203          0.335
+          0.318          0.261          0.137          0.282
+          0.164          0.234          0.187          0.413
+          0.226          0.259          0.121          0.391
+          0.244          0.200          0.280          0.275
+          0.249          0.419          0.188          0.143
+          0.421          0.182          0.122          0.273
+          0.150          0.239          0.110          0.499
+          0.159          0.405          0.217          0.217
+          0.763          0.082          0.088          0.066
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.718
+         2          0.044
+         3          0.090
+         4          0.044
+         5          0.056
+         6          0.044
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+         0          0.099
+         5          0.099
+        18          0.099
+        19          0.099
+        23          0.099
+        29          0.099
+        33          0.200
+        41          0.099
+        43          0.099
+    others          0.099
+GB distribution for coding region downstream of TIS
+   GB          Prob.
+   62          0.010
+   63          0.010
+   65          0.010
+   66          0.063
+   67          0.010
+   68          0.042
+   69          0.021
+   70          0.073
+   71          0.031
+   72          0.084
+   73          0.063
+   74          0.052
+   75          0.115
+   76          0.105
+   77          0.031
+   78          0.073
+   79          0.021
+   80          0.063
+   81          0.021
+   82          0.052
+   83          0.010
+   85          0.021
+   86          0.010
+GB distribution for non-coding region upstream of TIS
+   GB          Prob.
+   51          0.047
+   58          0.047
+   59          0.047
+   63          0.047
+   65          0.047
+   67          0.047
+   69          0.047
+   71          0.142
+   72          0.047
+   73          0.095
+   74          0.047
+   75          0.047
+   76          0.047
+   77          0.047
+   78          0.095
+   81          0.047
+   87          0.047
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.43686        0.56314
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        33       518       +       -       -  ATG       0
+       541      1041       +   CACAG     535  GTG       0
+      1049      1438       +   CACAG    1043  ATG       0
+      1435      1704       +   CACAG    1429  ATG       0
+      1665      2234       -   TCAGA   65378  TTG       0
+      2259      2990       +   CACAG    2253  ATG       0
+      3216      5333       +   CACAG    3210  ATG       0
+      5527      5994       +   CACAG    5521  ATG       1
+      5991      6422       +   CACAG    5985  ATG       0
+      6338      8170       +   CACAG    6332  ATG       0
+      8232      9800       +   CACAG    8226  TTG       2
+      9797     11185       +   CACAG    9791  GTG       0
+     11056     11877       +   CACAG   11050  GTG       0
+     11895     12320       +   CACAG   11889  ATG       0
+     12594     13430       +   CACAG   12588  ATG       3
+     13355     13885       +   CACAG   13349  GTG       0
+     13932     14387       +   CACAG   13926  ATG       1
+     14387     14779       +   CACAG   14381  ATG       1
+     14772     15137       +   CACAG   14766  GTG       0
+     15134     15649       +   CACAG   15128  TTG       0
+     15678     16361       +   CACAG   15672  ATG       0
+     16404     16829       +   CACAG   16398  TTG       0
+     16862     17176       +   CACAG   16856  ATG       0
+     17335     17667       +   CACAG   17329  ATG       0
+     18099     23138       +   CACAG   18093  ATG       2
+     23138     24079       +   CACAG   23132  ATG       0
+     24084     25697       +   CACAG   24078  ATG       0
+     25738     26865       +   CACAG   25732  ATG       0
+     26866     29232       +   CACAG   26860  GTG       0
+     29067     30287       +   CACAG   29061  GTG       0
+     30569     30913       +   CACAG   30563  ATG       0
+     31052     31603       +   CACAG   31046  ATG       4
+     31600     32625       +   CACAG   31594  ATG       0
+     32699     33436       +   CACAG   32693  GTG       0
+     33411     33839       +   CACAG   33405  ATG       2
+     33836     36385       -   TCAGA   31227  TTG       0
+     36397     36837       -   TCAGA   30775  GTG       0
+     36758     37105       -   TCAGA   30507  GTG       0
+     37102     37374       -   TCAGA   30238  GTG       0
+     37371     37847       -   TCAGA   29765  ATG       0
+     37878     38519       -   TCAGA   29093  ATG       3
+     38830     42282       -   TCAGA   25330  ATG       2
+     38852     38962       +   CACAG   38846  GTG       4
+     42428     42637       -   TCAGA   24975  ATG       1
+     42710     42940       -   TCAGA   24672  GTG       0
+     42947     43411       -   TCAGA   24201  ATG       0
+     43535     44425       -   TCAGA   23187  ATG       0
+     44458     44844       -   TCAGA   22768  ATG       4
+     45335     46534       -   TCAGA   21078  GTG       0
+     46531     46842       -   TCAGA   20770  ATG       0
+     46757     47131       +   CACAG   46751  ATG       1
+     46880     47056       -   TCAGA   20556  GTG       0
+     47053     47292       -   TCAGA   20320  ATG       4
+     47385     47633       -   TCAGA   19979  ATG       0
+     47633     49903       -   TCAGA   17709  GTG       0
+     49612     50142       -   TCAGA   17470  GTG       2
+     50184     50369       -   TCAGA   17243  GTG       0
+     50412     50618       -   TCAGA   16994  ATG       1
+     50618     50743       -   TCAGA   16869  ATG       0
+     50740     51156       -   TCAGA   16456  ATG       2
+     51213     51398       -   TCAGA   16214  ATG       4
+     51696     52721       -   TCAGA   14891  ATG       0
+     52749     53228       +   CACAG   52743  ATG       0
+     53292     54173       +   CACAG   53286  ATG       0
+     53999     54565       +   CACAG   53993  GTG       1
+     54601     54894       +   CACAG   54595  ATG       3
+     54913     55671       +   CACAG   54907  ATG       0
+     55760     56416       +   CACAG   55754  ATG       0
+     56376     56585       +   CACAG   56370  GTG       0
+     56582     57067       +   CACAG   56576  ATG       0
+     57064     57753       +   CACAG   57058  GTG       0
+     57647     58288       +   CACAG   57641  ATG       0
+     58285     58428       +   CACAG   58279  GTG       0
+     58496     58765       +   CACAG   58490  ATG       0
+     58947     59156       -   TCAGA    8456  ATG       0
+     59343     60392       +   CACAG   59337  ATG       5
+     59604     59789       -   TCAGA    7823  ATG       0
+     59867     59986       +   CACAG   59861  ATG       0
+     60024     60266       -   TCAGA    7346  ATG       2
+     60227     60334       -   TCAGA    7278  TTG       0
+     60392     60949       +   CACAG   60386  ATG       2
+     61256     61360       +   CACAG   61250  GTG       1
+     61537     61938       +   CACAG   61531  ATG       0
+     61935     63851       +   CACAG   61929  ATG       0
+     63971     64687       +   CACAG   63965  ATG       2
+     64882     64983       +   CACAG   64876  ATG       3
+     64976     65326       +   CACAG   64970  ATG       0
+     65140     65595       +   CACAG   65134  GTG       0
+     65585     65725       +   CACAG   65579  GTG       0
+     65676     66227       -   TCAGA    1385  ATG       0
+     65718     65939       +   CACAG   65712  ATG       0
+     66184     66642       +   CACAG   66178  ATG       2
+     66801     66941       +   CACAG   66795  ATG       3
+     66902     67309       +   CACAG   66896  GTG       0
+     67084     67617       +   CACAG   67078  GTG       0

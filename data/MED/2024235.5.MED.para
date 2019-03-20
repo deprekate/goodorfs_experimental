@@ -1,0 +1,432 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.387468
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Signal: GGAGG
+              A              C              G              T
+          0.474          0.101          0.225          0.198
+          0.465          0.059          0.322          0.152
+          0.663          0.059          0.170          0.105
+          0.073          0.027          0.889          0.009
+          0.023          0.004          0.972              0
+          0.875          0.009          0.069          0.046
+          0.027              0          0.898          0.073
+          0.198          0.027          0.718          0.055
+          0.447          0.046          0.230          0.276
+          0.382          0.064          0.345          0.207
+Signal: AGGAG
+              A              C              G              T
+          0.533          0.114          0.154          0.198
+          0.422          0.096          0.325          0.154
+          0.396          0.039          0.414          0.149
+          0.823          0.026          0.105          0.044
+          0.035          0.017          0.933          0.013
+          0.022          0.004          0.969          0.004
+          0.872          0.013          0.079          0.035
+          0.083          0.013          0.832          0.070
+          0.281          0.061          0.546          0.110
+          0.400          0.066          0.237          0.295
+Signal: GAGGA
+              A              C              G              T
+          0.400          0.092          0.278          0.227
+          0.573          0.084          0.181          0.160
+          0.337          0.063          0.493          0.105
+          0.202          0.029          0.683          0.084
+          0.898          0.012          0.071          0.016
+          0.037          0.016          0.911          0.033
+          0.046          0.012          0.940              0
+          0.822          0.008          0.080          0.088
+          0.261          0.054          0.531          0.151
+          0.333          0.059          0.421          0.185
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.434          0.074          0.118          0.372
+          0.503          0.167          0.118          0.211
+          0.496          0.093          0.130          0.279
+          0.490          0.167          0.062          0.279
+          0.945              0          0.026          0.028
+              0              0              0              0
+              0              0              0              0
+          0.571          0.062          0.236          0.130
+          0.298          0.372          0.130          0.198
+          0.546          0.080          0.043          0.329
+          0.552          0.099          0.242          0.105
+          0.521          0.167          0.099          0.211
+          0.472          0.111          0.155          0.260
+          0.453          0.136          0.242          0.167
+          0.360          0.161          0.099          0.378
+          0.403          0.105          0.155          0.335
+          0.503          0.130          0.229          0.136
+          0.484          0.093          0.086          0.335
+          0.440          0.118          0.105          0.335
+          0.341          0.093          0.397          0.167
+          0.385          0.130          0.155          0.329
+          0.397          0.099          0.186          0.316
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.795
+         2          0.116
+         3          0.040
+         4          0.023
+         5          0.009
+         6          0.014
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -37          0.010
+       -31          0.020
+       -27          0.020
+       -24          0.010
+       -22          0.010
+       -16          0.010
+       -13          0.031
+       -10          0.010
+        -7          0.041
+        -6          0.020
+        -3          0.125
+        -1          0.010
+         0          0.145
+         1          0.020
+         2          0.031
+         3          0.010
+         4          0.010
+         5          0.010
+        10          0.010
+        11          0.010
+        12          0.062
+        13          0.052
+        14          0.020
+        15          0.010
+        16          0.020
+        17          0.010
+        19          0.010
+        20          0.020
+        21          0.020
+        23          0.020
+        25          0.010
+        26          0.010
+        28          0.010
+        30          0.031
+        33          0.010
+        35          0.010
+        37          0.010
+        39          0.020
+        40          0.010
+        41          0.010
+        44          0.010
+        47          0.020
+        49          0.010
+    others          0.010
+Weight for motif in region [-35,-15) and [-20, 0 )
+       0.085511        0.91449
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+      1046      1147       -   AGGAG       7  TTG       2
+      1379      2116       +   GGATG      10  ATG       1
+      2180      2515       +   AGGAT       8  ATG       0
+      2709      2882       -   GGGGG       8  GTG       1
+      2908      3099       -   GGAGG       8  ATG       0
+      3133      3336       -   GGGGG       7  ATG       0
+      3333      3563       -   GGGGG       7  ATG       0
+      3624      3815       -   GGAGG       8  ATG       0
+      3815      3919       -   GGGAG       7  ATG       0
+      3939      4391       -   AGGAG       7  ATG       0
+      4403      4684       -   GGAGA       7  ATG       0
+      4681      4890       -   GGAGG       8  ATG       0
+      4887      5006       -   AAGAT       9  ATG       0
+      5006      5410       -   GGGGG       7  ATG       0
+      5403      5795       -   ATAGG       9  ATG       1
+      5792      6196       -   GGAGG       7  ATG       0
+      6193      6591       -   AGGGG       8  ATG       0
+      6646      7074       -   GGAGG       7  ATG       0
+      7194      7436       -   AGACA      12  ATG       0
+      7554      7661       -   GTAGG       7  ATG       1
+      7693      7932       -   GGAGC      12  ATG       0
+      7913      8116       -   CGACT       9  ATG       1
+      8110      8265       -   AGGAG       8  ATG       0
+      8277      8648       -   GGAGG       7  ATG       0
+      8648      8806       -   GTAGA      11  ATG       0
+      8822      9025       -   GTTGG      10  ATG       0
+      9022      9114       -   AGGAG       9  ATG       0
+      9128      9514       -   GGAGG       9  ATG       0
+      9492      9899       -   GAGGA       7  ATG       0
+      9938     10363       -   AGGAG       7  ATG       0
+     10360     10746       -   GGAGG       8  ATG       0
+     10832     11110       -   GAGGA       8  GTG       1
+     11298     11666       -   AGGAG       7  GTG       1
+     11644     12093       -   GGGGA       7  ATG       1
+     12090     12305       -   GGAGC       6  ATG       0
+     12307     12663       -   AGGAG       9  ATG       0
+     12665     13108       -   GGAGG       7  ATG       0
+     13120     13557       -   AGGAG      10  ATG       0
+     13550     13951       -   GAGGA       6  ATG       0
+     13992     14348       -   GTACG      12  ATG       0
+     14345     14539       -   AAGGA       8  ATG       0
+     14532     14756       -   GAGTG       7  ATG       0
+     14695     14973       -   AGGAG       8  ATG       0
+     14973     15254       -   GAGGA       8  ATG       0
+     15256     15480       -   GAGGA       7  ATG       2
+     15558     15806       -   GGGAT       6  ATG       0
+     15803     15973       -   GGAGG       7  ATG       0
+     15970     16446       -   AGGAG       9  ATG       0
+     16336     16554       +   GGGTT       6  ATG       0
+     16575     16676       +   GTACA       7  ATG       1
+     16627     16785       -   GGTGG       7  ATG       0
+     16785     16943       -   GGGGT       9  ATG       0
+     16943     17530       -   GGAGG       8  ATG       0
+     17637     17951       -   AGGAG       9  TTG       0
+     18035     18232       -   AGGTG      10  ATG       1
+     18237     18737       -   AGGAG       8  TTG       0
+     18740     19099       -   GAGGA       8  ATG       2
+     19189     19497       -   GGAGG       9  ATG       0
+     19497     20156       -   GGAGG       7  ATG       0
+     20156     20293       -   GGAGG       7  ATG       0
+     20290     20460       -   GAGGT       6  ATG       0
+     20457     21359       -   AGGAG       7  ATG       0
+     21372     21614       -   GGACG       4  ATG       0
+     21602     21814       -   GGGGA       8  ATG       2
+     21816     22055       -   GGAGA       6  ATG       0
+     22141     22542       -   GGTGG      10  ATG       0
+     22542     23078       -   GGAGA       7  ATG       3
+     23278     23490       -   GAGGT       6  ATG       0
+     23521     23841       -   GAGGA       7  ATG       0
+     23862     24272       -   GGGGA       6  ATG       1
+     24313     25800       -   GAGGA       7  ATG       0
+     25878     26714       -   GGAGG       8  ATG       0
+     26832     27665       -   GGATG       8  ATG       1
+     27734     28126       -   AGGAG       9  ATG       0
+     28202     30001       -   AGGAA       8  GTG       0
+     29977     30195       -   GAGGA       9  ATG       0
+     30195     30623       -   AGGAG       9  ATG       0
+     30607     30897       -   GTTCA      12  ATG       0
+     30887     31363       -   GGAGG       8  ATG       0
+     31377     31619       -   GGAGG      10  ATG       1
+     31736     32029       +   GAAGG       7  ATG       0
+     32106     32423       +   GGAGG       6  ATG       0
+     32437     32667       +   AGGAG      10  ATG       0
+     33060     33203       -   GAGGA       7  TTG       4
+     33489     34325       +   GGGGG       6  ATG       0
+     34452     34721       +   GAGGT       8  TTG       0
+     34741     36432       +   GGTGG       7  ATG       0
+     36432     36530       +   CGAGG       9  ATG       0
+     36594     37400       +   AAGGA       8  ATG       0
+     37397     38347       +   AGGAG       8  ATG       0
+     38514     39947       +   AGGAA       9  ATG       0
+     40131     40355       +   GAGGA       7  ATG       0
+     40368     41249       +   GGAGG       7  ATG       0
+     41263     42048       +   GGAGG       8  ATG       0
+     42251     42679       +   AGCGG       9  ATG       2
+     42694     43566       +   GGAGG       6  ATG       0
+     43584     43814       +   GAGGA       8  ATG       0
+     43837     45567       +   AGGAG      11  ATG       0
+     45617     46045       +   AGGAG       9  ATG       1
+     46132     46476       +   GGAGG       8  ATG       0
+     46553     46954       +   AGGAG       9  ATG       0
+     46973     47701       +   GGAGG       7  ATG       0
+     47793     48221       +   GGAGG       7  ATG       1
+     48268     48852       +   AAGGA       7  ATG       0
+     48899     52702       +   GGATG       7  ATG       0
+     52774     54951       +   GGAGG       7  ATG       0
+     54991     61023       +   AGGAG      11  ATG       0
+     61036     63669       +   GGAGG       7  ATG       0
+     63666     64046       +   GGAGG       7  ATG       1
+     64059     64265       +   AGGAG       8  GTG       0
+     64326     64724       +   AAGTT       3  ATG       1
+     64849     65625       +   GGAGG       7  ATG       0
+     65627     66160       +   GGTGG       7  ATG       0
+     66161     66913       +   GGAGG       8  TTG       0
+     66923     67969       +   CTAGG       8  ATG       0
+     67980     72737       +   AGGAG       7  ATG       0
+     72749     76360       +   AGGAG       8  ATG       0
+     76371     76559       +   GGAGG       6  ATG       0
+     76631     78400       +   AGGAG       8  ATG       0
+     78497     79330       +   GGGGA       8  ATG       3
+     79478     81277       +   AGGAG       8  ATG       0
+     81271     81534       +   CGGAG       8  ATG       0
+     81588     83066       +   GGGGA       6  ATG       0
+     83068     83370       +   GGAGG       8  ATG       1
+     83360     84457       +   GGAGG       9  ATG       0
+     84459     84824       +   GAGTA       2  ATG       2
+     84781     84903       +   GTATC       8  ATG       1
+     84896     85078       +   GGAGG       6  ATG       0
+     85075     86964       +   GAGGG       7  ATG       0
+     86965     87552       +   GGAGA      11  ATG       0
+     87545     87718       +   CAGGT       7  ATG       1
+     87734     88810       +   GGGTG       7  ATG       0
+     88822     89082       +   GGAGG       7  ATG       1
+     89152     89964       +   GAGGA       6  ATG       0
+     89964     90272       +   GGTGA       4  ATG       0
+     90274     90705       +   AGGAG      10  ATG       0
+     90733     91110       +   GGAGG       6  ATG       0
+     91110     91673       +   GAGTG       9  ATG       0
+     91689     91871       +   GAGGA       6  ATG       0
+     91946     94264       +   AAGAA       7  ATG       2
+     94325     94615       +   GGAGA       6  ATG       1
+     94685     94990       +   GAGGA       6  ATG       0
+     95002     96111       +   TAGGA       9  ATG       0
+     96111     96590       +   GAAGA      12  ATG       0
+     96553     96792       +   GGAGG       6  ATG       0
+     96779     97180       +   GGGGA       9  ATG       0
+     97180     97458       +   GGAGG       7  ATG       0
+     97486     97764       +   GGAGG       7  ATG       0
+     97751     98116       +   AGGAG      10  ATG       3
+     98116     98340       +   AGGCG       8  ATG       0
+     98282     98548       +   GGGAG       7  ATG       0
+     98545     98706       +   GAGTT       7  ATG       0
+     98788     99558       +   AGGAG       8  ATG       0
+     99555     99881       +   GGATG       7  ATG       0
+     99856    100089       +   GAGTG       5  ATG       0
+    100174    100671       +   GAGGG      10  ATG       1
+    100673    101167       +   GAGGA       8  ATG       2
+    101167    101385       +   GGGGA       6  ATG       0
+    101385    101867       +   GAGGA       9  ATG       0
+    101869    102045       +   AGGAG       7  ATG       1
+    102008    102319       +   GGAGG       9  ATG       0
+    102386    104506       +   GAGGA       6  ATG       0
+    104619    104720       +   GACTA       4  ATG       0
+    104693    105259       +   GGAGG       5  ATG       0
+    106036    106341       +   AGAGA       8  ATG       4
+    106322    106519       +   GGAGG       9  ATG       1
+    106507    106659       +   GTGGG       7  ATG       1
+    106656    106862       +   GAGGT       9  ATG       0
+    106942    107304       +   GAGGA       7  ATG       0
+    107304    107957       +   CGAAG       8  ATG       0
+    107950    108204       +   GGAGG       6  ATG       0
+    108180    108473       +   GAGGA       9  ATG       0
+    108475    108780       +   GAGTG       6  ATG       1
+    108782    109057       +   GGTGG       8  ATG       1
+    109070    109231       +   GGGGG       7  ATG       0
+    109225    109836       +   GGAGG       4  ATG       0
+    109833    110324       +   GGAGG       7  GTG       0
+    110314    110526       +   GAGTG       9  ATG       1
+    110492    110722       +   AGGCG      10  ATG       0
+    110738    111139       +   AGGAG       9  ATG       0
+    111139    111279       +   GTGGC       8  ATG       0
+    111285    111425       +   GAATG       6  ATG       2
+    111597    112667       +   GGAGA       8  ATG       0
+    112726    113979       +   GAGGA       6  ATG       0
+    114023    114382       +   GGAGG       6  ATG       0
+    114516    114677       +   CTAGA       4  ATG       1
+    114670    115317       +   GGGTA       9  ATG       1
+    115314    115637       +   GGAGC       7  ATG       0
+    115681    115974       +   GGATG       6  ATG       0
+    115974    116444       +   GGAGA       9  ATG       0
+    116538    116960       +   GAGGA       6  ATG       1
+    116997    117473       +   GAGGA       8  ATG       0
+    117473    118408       +   GGATG       9  ATG       2
+    118409    118582       +   CGGAG      12  ATG       0
+    118569    119846       +   GAGGA      10  ATG       0
+    119872    120222       +   GGAGG       7  ATG       0
+    120219    120602       +   GTATG       7  ATG       0
+    120679    120972       +   GAGGA       6  ATG       0
+    120947    121294       +   AGGAG      10  ATG       1
+    121299    121955       +   GGAGG       9  ATG       0
+    121936    122166       +   GTTGG       9  ATG       0
+    122163    122348       +   GAGGA       6  ATG       0
+    122429    122536       +   GTACT       7  ATG       1
+    122502    122759       +   GAGGA      11  ATG       0
+    122756    122893       +   TGGAG       7  ATG       0
+    122895    123176       +   GGAGA       6  ATG       0
+    123166    123885       +   GGAGG       6  ATG       1
+    123895    124041       +   AGGAG       6  ATG       0
+    124103    124405       +   GAGGA       6  ATG       0
+    124402    124959       +   AGGAG       8  ATG       1
+    124972    125475       +   GAGGA       7  ATG       0
+    125475    125816       +   GGAGG       7  ATG       2
+    125809    126003       +   GGAGG       6  ATG       3
+    126003    126245       +   GAGGT       9  ATG       0
+    126247    126513       +   GAGGA       8  ATG       0
+    126875    127006       +   GGACG       7  ATG       5
+    126975    127838       +   GGGGA       8  ATG       0
+    127841    128104       +   GAGGT       6  ATG       0
+    128101    128268       +   GGGCG       8  GTG       1
+    128355    128486       -   AAGAA       7  ATG       0
+    128566    129261       +   AGGAG       9  ATG       0
+    129356    129631       +   GAGGT       8  ATG       0
+    129643    129813       +   GGAGG       7  ATG       0
+    129806    130039       +   GGGAG       7  GTG       0
+    130036    130410       +   GGAGG       7  ATG       0
+    130410    130913       +   GGAGA       9  ATG       0
+    130913    131197       +   GGGGG       7  ATG       0
+    131190    131555       +   GGGGG       9  ATG       0
+    131622    132335       +   GGGGG      10  ATG       2
+    132332    132526       +   GGTGA       7  ATG       0
+    132567    132758       +   GAGTT       7  ATG       1
+    132751    133383       +   GAGGA       7  ATG       0
+    133480    134358       +   GGGGA       7  ATG       2
+    134426    134608       +   GGAGG       7  GTG       0
+    134712    134912       +   GGAGG       9  GTG       2
+    134909    135082       +   AGGAG       8  ATG       0
+    135082    135204       +   GGAGG       7  ATG       0
+    135208    135459       +   GGGTA       4  ATG       0
+    135459    135659       +   GAGTT       6  ATG       0
+    135671    136420       +   AGGAG       8  TTG       0
+    136399    136572       +   GGAGG       7  ATG       0
+    136574    136783       +   GAGGA       8  ATG       0
+    136785    136970       +   GGAGG       6  ATG       1
+    136983    137300       +   GGGGA       6  ATG       0
+    137287    137526       +   GAGGA       8  TTG       0
+    137526    138743       +   GAGGA       6  ATG       0
+    138764    139186       +   GGAGA       8  ATG       0
+    139315    139926       +   GGGGA       8  ATG       0
+    139899    140456       +   GAGGA       9  ATG       0
+    140456    140641       +   GGAGT       6  ATG       0
+    140638    141012       +   GGATG       8  ATG       0
+    141012    141182       +   GGAGG       8  ATG       0
+    141182    141529       +   GGGGG      10  ATG       0
+    141529    141762       +   GGATG       7  ATG       0
+    141749    142027       +   GGAGG       9  ATG       0
+    142024    142260       +   GGAGG       7  ATG       0
+    142257    142556       +   GAGTG       7  ATG       0
+    142543    143601       +   GGGGA       8  GTG       0
+    143703    144005       +   AGGAG       2  ATG       0
+    144002    144298       +   GGGGT       6  ATG       0
+    144318    144665       +   GGGAG       8  ATG       0
+    144665    144895       +   GGAGG       8  ATG       0
+    144920    145366       +   GAGGA       7  ATG       0
+    145396    145575       -   CATCG       4  ATG       0
+    145616    145822       +   GGAGG       7  GTG       0
+    145871    146458       +   GGTGG       9  ATG       0
+    146495    146629       +   GGAGG       9  ATG       1
+    146629    146829       +   AAGGT       9  ATG       0
+    146850    147113       +   AGGAG      10  ATG       0
+    147097    147300       +   GGGTT       8  ATG       0
+    147382    147648       +   GGTGG       9  ATG       1
+    147651    147857       +   GTAGG       9  ATG       0
+    147937    148218       +   GTAGG       9  ATG       1
+    148382    149524       +   GGTGG       9  ATG       0
+    149639    149818       +   GGTGG       9  ATG       0
+    149820    150023       +   AGGGG       9  ATG       0
+    150108    150560       +   GGTGG       9  ATG       0
+    150560    150748       +   GGGGG       9  ATG       0
+    150742    151083       +   AGGAG       5  ATG       0
+    151080    151175       +   AGGAG       8  ATG       1
+    151262    151801       +   GGTGG       9  ATG       1
+    151879    152346       +   AGGAG      10  ATG       0
+    152348    152623       +   GAGGG       8  ATG       0
+    152711    153064       +   GGATG      10  ATG       0
+    153057    153275       +   TGGAG       3  ATG       2
+    153244    153660       +   AGGAG       9  ATG       0
+    153666    154265       +   GGTGG       8  ATG       1
+    154262    154675       +   GGAGG       8  ATG       1
+    154677    155117       +   AGGCG      10  ATG       5
+    155117    155524       +   GGAGG      10  ATG       0
+    155517    155906       +   GGACA       9  ATG       3
+    155978    156292       +   AGGAG      10  ATG       5
+    156360    156785       +   GGTGG       9  ATG       0
+    156879    157199       +   GGAGG       9  ATG       0
+    157196    157420       +   GGAGG       9  ATG       0
+    157453    157821       +   GGATG      10  ATG       0
+    157818    158192       +   GGGGG       8  ATG       0
+    158196    158372       +   GGGGG       9  ATG       0
+    158395    158670       +   ATACG      10  ATG       0
+    158699    158938       +   AGGAG       8  ATG       2
+    158976    159101       +   GTAGG       5  ATG       1
+    159105    159605       +   AGGAG       9  ATG       0
+    159602    159892       +   AGGAG       8  ATG       0
+    159941    160138       -   CGACG      11  GTG       0
+    161077    161178       -   AGGAG       7  TTG       2
+    161410    162147       +   GGATG      10  ATG       1
+    162211    162546       +   AGGAT       8  ATG       0

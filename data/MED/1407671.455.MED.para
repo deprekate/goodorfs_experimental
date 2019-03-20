@@ -1,0 +1,121 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.343772
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.344          0.068          0.275          0.310
+          0.620          0.068          0.068          0.241
+          0.620          0.034          0.068          0.275
+          0.448          0.103          0.068          0.379
+          0.887              0          0.111              0
+              0              0              0          0.999
+              0              0          0.999              0
+          0.310          0.034          0.448          0.206
+          0.241          0.482          0.172          0.103
+          0.517          0.034          0.034          0.413
+          0.620          0.068          0.172          0.137
+          0.448          0.068          0.103          0.379
+          0.413          0.068          0.068          0.448
+          0.344          0.103          0.310          0.241
+          0.482          0.034          0.034          0.448
+          0.379          0.172          0.103          0.344
+          0.448          0.068          0.310          0.172
+          0.448          0.034          0.068          0.448
+          0.551          0.068          0.034          0.344
+          0.413          0.206          0.206          0.172
+          0.482          0.206          0.034          0.275
+          0.482          0.034          0.068          0.413
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.645
+         2          0.119
+         3          0.076
+         4          0.065
+         5          0.047
+         6          0.045
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -33          0.058
+       -16          0.058
+        -7          0.117
+        -3          0.294
+         0          0.117
+         1          0.058
+         2          0.117
+         3          0.058
+        11          0.058
+        33          0.058
+    others          0.058
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.38867        0.61133
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+       168       269       +   ATACA     162  TTG       0
+       311       526       -   TCTAA   35490  ATG       0
+       537      1457       -   TCTAA   34559  ATG       0
+      1514      3478       -   TCTAA   32538  ATG       0
+      3575      6157       -   TCTAA   29859  ATG       0
+      6154      9504       -   TCTAA   26512  ATG       0
+      9504     11606       -   TCTAA   24410  ATG       0
+     11617     12063       -   TCTAA   23953  ATG       0
+     12060     12512       -   TCTAA   23504  GTG       0
+     12505     15009       -   TCTAA   21007  ATG       0
+     15011     15592       -   TCTAA   20424  ATG       0
+     15575     15682       +   ATACA   15569  TTG       1
+     15654     15776       +   ATACA   15648  GTG       0
+     15739     15864       -   TCTAA   20152  ATG       0
+     15943     16815       -   TCTAA   19201  ATG       0
+     16830     16973       +   ATACA   16824  TTG       1
+     16962     17789       -   TCTAA   18227  ATG       0
+     17792     18004       -   TCTAA   18012  GTG       0
+     17997     19601       -   TCTAA   16415  ATG       0
+     19602     19814       -   TCTAA   16202  ATG       0
+     19816     20043       -   TCTAA   15973  ATG       0
+     20045     21322       -   TCTAA   14694  ATG       0
+     21322     21417       -   TCTAA   14599  ATG       0
+     21426     21617       -   TCTAA   14399  ATG       0
+     21614     21886       -   TCTAA   14130  ATG       0
+     21899     22057       +   ATACA   21893  ATG       2
+     22057     22170       +   ATACA   22051  ATG       1
+     22174     22698       -   TCTAA   13318  ATG       1
+     22678     22857       +   ATACA   22672  GTG       0
+     22811     23257       -   TCTAA   12759  ATG       0
+     23224     23481       -   TCTAA   12535  ATG       0
+     23514     23825       -   TCTAA   12191  ATG       2
+     23918     24517       -   TCTAA   11499  ATG       0
+     24514     24891       -   TCTAA   11125  ATG       1
+     24878     25087       -   TCTAA   10929  GTG       0
+     25065     25304       -   TCTAA   10712  ATG       0
+     25301     25597       -   TCTAA   10419  ATG       0
+     25563     25760       -   TCTAA   10256  ATG       1
+     25927     26613       +   ATACA   25921  ATG       0
+     26701     26802       +   ATACA   26695  ATG       4
+     26726     27697       +   ATACA   26720  ATG       0
+     27694     27804       +   ATACA   27688  ATG       1
+     27792     28010       +   ATACA   27786  ATG       0
+     28003     28572       +   ATACA   27997  ATG       0
+     28574     28900       +   ATACA   28568  ATG       0
+     28909     29124       +   ATACA   28903  ATG       0
+     29073     29408       +   ATACA   29067  ATG       0
+     29408     29653       +   ATACA   29402  GTG       0
+     29583     29789       +   ATACA   29577  ATG       0
+     29934     30356       +   ATACA   29928  ATG       0
+     30357     30527       +   ATACA   30351  ATG       0
+     30602     30751       +   ATACA   30596  ATG       1
+     30748     31911       +   ATACA   30742  ATG       0
+     31963     32160       +   ATACA   31957  ATG       0
+     32373     32558       -   TCTAA    3458  ATG       1
+     32534     32692       -   TCTAA    3324  ATG       0
+     32692     32883       -   TCTAA    3133  ATG       1
+     32910     33278       -   TCTAA    2738  GTG       0
+     33275     33418       -   TCTAA    2598  ATG       0
+     33418     33744       -   TCTAA    2272  ATG       2
+     33783     34220       -   TCTAA    1796  ATG       0
+     34366     34539       +   ATACA   34360  GTG       1
+     34492     34731       -   TCTAA    1285  ATG       0
+     34721     34930       -   TCTAA    1086  ATG       0
+     34933     35910       -   TCTAA     106  ATG       3

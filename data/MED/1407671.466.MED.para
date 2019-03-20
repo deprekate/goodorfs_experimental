@@ -1,0 +1,111 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.51302
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.484          0.121          0.151          0.242
+          0.454          0.181          0.363              0
+          0.242          0.272          0.181          0.303
+          0.363          0.303          0.030          0.303
+          0.816              0          0.144          0.038
+              0              0              0          0.999
+              0              0          0.999              0
+          0.303          0.090          0.393          0.212
+          0.121          0.424          0.212          0.242
+          0.151          0.151          0.303          0.393
+          0.424          0.272          0.242          0.060
+          0.393          0.242          0.212          0.151
+          0.333          0.212          0.272          0.181
+          0.484          0.242          0.181          0.090
+          0.424          0.242          0.121          0.212
+          0.515          0.121          0.212          0.151
+          0.606          0.090          0.212          0.090
+          0.393          0.303          0.121          0.181
+          0.484          0.090          0.212          0.212
+          0.393          0.363          0.121          0.121
+          0.212          0.303          0.181          0.303
+          0.363          0.303          0.151          0.181
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.684
+         2          0.146
+         3          0.038
+         4          0.038
+         5          0.047
+         6          0.045
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -25          0.052
+       -15          0.052
+        -3          0.052
+         0          0.105
+         2          0.052
+         3          0.052
+         4          0.157
+         9          0.052
+        10          0.105
+        11          0.052
+        13          0.052
+        15          0.052
+        19          0.052
+        20          0.052
+        21          0.052
+    others          0.052
+Weight for motif in region [-35,-15) and [-20, 0 )
+         0.4408         0.5592
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        15       299       +       -       -  TTG       0
+       303       899       +   GCACC     297  GTG       0
+       997      3162       +   GCACC     991  ATG       0
+      3227      3436       +   GCACC    3221  TTG       1
+      3433      4005       +   GCACC    3427  ATG       0
+      4016      4510       +   GCACC    4010  ATG       1
+      4489      4641       -   CAGAT   28074  ATG       0
+      4686      4817       +   GCACC    4680  TTG       0
+      4821      5225       +   GCACC    4815  ATG       0
+      5386      6813       +   GCACC    5380  ATG       0
+      6912      7112       +   GCACC    6906  ATG       3
+      7102      7311       +   GCACC    7096  ATG       0
+      7347      7706       +   GCACC    7341  ATG       1
+      7736      8209       -   CAGAT   24506  GTG       1
+      8250      8411       +   GCACC    8244  ATG       0
+      8411      8599       +   GCACC    8405  ATG       0
+      8562      8816       +   GCACC    8556  ATG       1
+      8820     10829       +   GCACC    8814  ATG       0
+     10886     11107       +   GCACC   10880  TTG       1
+     11126     12088       +   GCACC   11120  ATG       0
+     12109     13044       +   GCACC   12103  ATG       0
+     13088     13414       +   GCACC   13082  TTG       1
+     13414     14040       +   GCACC   13408  ATG       0
+     14042     14428       +   GCACC   14036  ATG       0
+     14441     15340       +   GCACC   14435  ATG       0
+     15325     16788       +   GCACC   15319  TTG       0
+     16984     17523       +   GCACC   16978  ATG       0
+     17552     18427       +   GCACC   17546  GTG       1
+     18438     19628       +   GCACC   18432  ATG       0
+     19637     21580       +   GCACC   19631  ATG       0
+     21590     23233       +   GCACC   21584  ATG       0
+     23233     24120       +   GCACC   23227  ATG       0
+     24223     24660       +   GCACC   24217  ATG       0
+     24585     25040       +   GCACC   24579  ATG       0
+     25075     25227       +   GCACC   25069  ATG       3
+     25237     25653       +   GCACC   25231  GTG       0
+     25646     26050       +   GCACC   25640  ATG       1
+     26113     26553       +   GCACC   26107  TTG       0
+     26624     26920       +   GCACC   26618  ATG       0
+     26969     27247       +   GCACC   26963  ATG       1
+     27250     28383       +   GCACC   27244  ATG       0
+     28494     28607       +   GCACC   28488  GTG       2
+     28526     28933       -   CAGAT    3782  GTG       0
+     28836     28955       -   CAGAT    3760  TTG       1
+     29122     29802       -   CAGAT    2913  GTG       0
+     30061     30222       +   GCACC   30055  ATG       1
+     30228     30689       +   GCACC   30222  GTG       1
+     30974     31693       +   GCACC   30968  ATG       4
+     31668     32459       +   GCACC   31662  ATG       0
+     32335     32583       -   CAGAT     132  ATG       0

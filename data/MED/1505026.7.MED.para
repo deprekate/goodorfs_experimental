@@ -1,0 +1,138 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.354106
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.380          0.071          0.309          0.238
+          0.380          0.214          0.142          0.261
+          0.5.0          0.285          0.047          0.166
+          0.619          0.023          0.119          0.238
+          0.832              0          0.049          0.117
+              0              0              0          0.999
+              0              0          0.999              0
+          0.547          0.071          0.190          0.190
+          0.333          0.404          0.190          0.071
+          0.5.0          0.071          0.047          0.380
+          0.452          0.023          0.404          0.119
+          0.428          0.071          0.119          0.380
+          0.452          0.190          0.142          0.214
+          0.285          0.166          0.166          0.380
+          0.309          0.238          0.023          0.428
+          0.5.0          0.095              0          0.404
+          0.547          0.071          0.190          0.190
+          0.523          0.095          0.023          0.357
+          0.404          0.119          0.238          0.238
+          0.428          0.095          0.285          0.190
+          0.452          0.357          0.071          0.119
+          0.476          0.095          0.142          0.285
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.569
+         2          0.212
+         3          0.047
+         4          0.066
+         5          0.072
+         6          0.031
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -28          0.071
+       -15          0.035
+        -7          0.178
+        -3          0.071
+         0          0.071
+         1          0.071
+         3          0.071
+         4          0.035
+         9          0.035
+        11          0.035
+        13          0.071
+        16          0.035
+        17          0.035
+        28          0.035
+        31          0.035
+        32          0.035
+        36          0.035
+        40          0.035
+    others          0.035
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.22592        0.77408
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        29       424       -   GCGTC   41502  ATG       0
+       611      1666       -   GCGTC   40260  ATG       0
+      1679      3553       -   GCGTC   38373  ATG       0
+      3787      3918       -   GCGTC   38008  ATG       1
+      4028      4210       -   GCGTC   37716  ATG       0
+      4211      4588       -   GCGTC   37338  ATG       1
+      4588      6411       -   GCGTC   35515  ATG       0
+      6411      8309       -   GCGTC   33617  ATG       0
+      8322     10208       -   GCGTC   31718  ATG       0
+     10219     10575       -   GCGTC   31351  ATG       4
+     11175     14045       -   GCGTC   27881  ATG       1
+     14064     14348       -   GCGTC   27578  TTG       0
+     14393     14899       -   GCGTC   27027  TTG       0
+     14962     15357       -   GCGTC   26569  ATG       0
+     15519     15944       -   GCGTC   25982  ATG       0
+     15947     16369       -   GCGTC   25557  ATG       1
+     16356     16532       -   GCGTC   25394  ATG       4
+     16703     17053       -   GCGTC   24873  ATG       1
+     17059     17160       -   GCGTC   24766  ATG       0
+     17213     17986       -   GCGTC   23940  ATG       4
+     18144     18644       -   GCGTC   23282  GTG       0
+     18823     19773       -   GCGTC   22153  ATG       2
+     19742     20827       -   GCGTC   21099  TTG       0
+     20824     21165       -   GCGTC   20761  ATG       0
+     21162     22385       -   GCGTC   19541  ATG       0
+     22378     22872       -   GCGTC   19054  TTG       0
+     22865     22966       -   GCGTC   18960  TTG       0
+     22997     23089       -   GCGTC   18837  TTG       0
+     23098     23295       +   AAAAC   23092  ATG       0
+     23225     23626       -   GCGTC   18300  ATG       0
+     23627     23800       -   GCGTC   18126  ATG       0
+     23797     24183       -   GCGTC   17743  ATG       1
+     24180     24386       -   GCGTC   17540  ATG       0
+     24383     24517       -   GCGTC   17409  ATG       2
+     24665     25201       -   GCGTC   16725  ATG       0
+     25194     25364       -   GCGTC   16562  ATG       1
+     25351     25458       -   GCGTC   16468  ATG       3
+     25620     25883       -   GCGTC   16043  TTG       0
+     25877     26077       -   GCGTC   15849  ATG       1
+     26080     26340       -   GCGTC   15586  ATG       0
+     26340     26957       -   GCGTC   14969  ATG       0
+     26958     27065       -   GCGTC   14861  GTG       1
+     27148     27459       -   GCGTC   14467  ATG       1
+     27562     27783       -   GCGTC   14143  ATG       1
+     27796     27954       -   GCGTC   13972  ATG       0
+     27951     28328       -   GCGTC   13598  ATG       4
+     28749     29582       -   GCGTC   12344  ATG       0
+     29554     29988       -   GCGTC   11938  ATG       3
+     30051     30245       -   GCGTC   11681  ATG       0
+     30258     30812       -   GCGTC   11114  ATG       0
+     30843     31622       -   GCGTC   10304  ATG       0
+     31626     32159       -   GCGTC    9767  ATG       0
+     32152     32403       -   GCGTC    9523  ATG       1
+     32413     32745       -   GCGTC    9181  TTG       2
+     32678     32980       -   GCGTC    8946  ATG       0
+     33072     33233       -   GCGTC    8693  ATG       0
+     33226     33504       -   GCGTC    8422  TTG       0
+     33455     33904       -   GCGTC    8022  ATG       0
+     33944     34168       -   GCGTC    7758  ATG       0
+     34169     34960       -   GCGTC    6966  ATG       0
+     35017     35256       +   AAAAC   35011  ATG       1
+     35246     35425       -   GCGTC    6501  ATG       0
+     35440     35853       -   GCGTC    6073  TTG       1
+     35865     35972       -   GCGTC    5954  TTG       1
+     36061     36204       -   GCGTC    5722  TTG       0
+     36304     36627       +   AAAAC   36298  ATG       0
+     36640     37101       +   AAAAC   36634  ATG       1
+     37119     37253       +   AAAAC   37113  ATG       1
+     37285     37806       +   AAAAC   37279  ATG       0
+     37799     38269       +   AAAAC   37793  ATG       0
+     38339     39385       +   AAAAC   38333  ATG       0
+     39495     39599       -   GCGTC    2327  ATG       0
+     39754     39861       +   AAAAC   39748  ATG       1
+     40270     41742       -   GCGTC     184  ATG       0

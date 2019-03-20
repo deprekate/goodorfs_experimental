@@ -1,0 +1,125 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.341446
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.472          0.111          0.166          0.25.
+          0.583          0.055          0.055          0.305
+          0.638          0.027          0.027          0.305
+          0.777              0          0.027          0.194
+          0.734              0          0.147          0.117
+              0              0              0          0.999
+              0              0          0.999              0
+          0.666          0.027          0.25.          0.055
+          0.444          0.25.          0.111          0.194
+          0.5.0          0.166          0.111          0.222
+          0.472          0.083          0.222          0.222
+          0.361          0.138          0.055          0.444
+          0.555              0          0.055          0.388
+          0.388          0.111          0.222          0.277
+          0.388          0.111          0.055          0.444
+          0.527          0.166          0.055          0.25.
+          0.5.0          0.111          0.222          0.166
+          0.666          0.111          0.055          0.166
+          0.444          0.138          0.083          0.333
+          0.527          0.055          0.277          0.138
+          0.472          0.25.          0.055          0.222
+          0.361          0.027          0.222          0.388
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.724
+         2          0.059
+         3          0.087
+         4          0.047
+         5          0.034
+         6          0.047
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -28          0.039
+       -25          0.039
+       -19          0.039
+       -13          0.039
+       -10          0.039
+        -3          0.200
+         0          0.200
+         1          0.039
+         3          0.039
+         4          0.039
+        12          0.039
+        13          0.080
+        15          0.039
+        20          0.039
+        22          0.039
+        23          0.039
+    others          0.039
+Weight for motif in region [-35,-15) and [-20, 0 )
+         0.3238         0.6762
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        87       203       -   CACAA   30570  ATG       0
+       221       745       +   CCCGG     215  ATG       0
+       746      2368       +   CCCGG     740  ATG       0
+      2358      2642       +   CCCGG    2352  ATG       0
+      2655      3791       +   CCCGG    2649  TTG       0
+      3772      4308       +   CCCGG    3766  ATG       0
+      4280      5482       +   CCCGG    4274  TTG       0
+      5503      5766       +   CCCGG    5497  ATG       0
+      5766      6080       +   CCCGG    5760  ATG       0
+      6077      6418       +   CCCGG    6071  ATG       0
+      6415      6774       +   CCCGG    6409  ATG       2
+      6787      7692       +   CCCGG    6781  ATG       0
+      8192      8314       +   CCCGG    8186  ATG       4
+      8334      8609       +   CCCGG    8328  ATG       0
+      8629      9141       +   CCCGG    8623  ATG       0
+      9141     11891       +   CCCGG    9135  ATG       0
+     11891     12787       +   CCCGG   11885  ATG       0
+     12787     13914       +   CCCGG   12781  ATG       0
+     13889     14197       +   CCCGG   13883  GTG       0
+     14187     14990       +   CCCGG   14181  ATG       0
+     15012     15365       +   CCCGG   15006  ATG       0
+     15362     16063       +   CCCGG   15356  ATG       0
+     16185     16574       -   CACAA   14199  ATG       2
+     16655     17191       -   CACAA   13582  GTG       0
+     17281     17622       -   CACAA   13151  ATG       0
+     17567     17839       -   CACAA   12934  TTG       0
+     17836     18105       -   CACAA   12668  ATG       0
+     18102     18203       -   CACAA   12570  TTG       0
+     18278     18625       -   CACAA   12148  ATG       0
+     18625     18792       -   CACAA   11981  ATG       3
+     18792     18989       -   CACAA   11784  GTG       0
+     18982     19173       -   CACAA   11600  ATG       2
+     19215     19472       -   CACAA   11301  ATG       0
+     19535     19723       -   CACAA   11050  ATG       1
+     19799     20233       -   CACAA   10540  ATG       2
+     20235     20540       -   CACAA   10233  ATG       2
+     20670     21026       -   CACAA    9747  TTG       0
+     21049     21294       -   CACAA    9479  ATG       0
+     21294     21560       -   CACAA    9213  ATG       0
+     21576     21908       -   CACAA    8865  ATG       0
+     21970     22482       -   CACAA    8291  TTG       0
+     22479     22646       -   CACAA    8127  ATG       1
+     22710     23069       -   CACAA    7704  ATG       0
+     23073     23639       -   CACAA    7134  ATG       1
+     23636     24136       -   CACAA    6637  ATG       0
+     24123     24536       -   CACAA    6237  TTG       0
+     24630     25007       -   CACAA    5766  GTG       0
+     25060     25323       -   CACAA    5450  ATG       0
+     25316     26212       -   CACAA    4561  GTG       0
+     26209     26559       -   CACAA    4214  ATG       0
+     26610     26876       -   CACAA    3897  TTG       0
+     26851     27081       -   CACAA    3692  ATG       0
+     27091     27249       -   CACAA    3524  ATG       1
+     27291     27455       -   CACAA    3318  ATG       0
+     27819     28010       +   CCCGG   27813  TTG       1
+     28139     28630       -   CACAA    2143  ATG       0
+     28798     28899       +   CCCGG   28792  ATG       1
+     28904     29035       +   CCCGG   28898  ATG       1
+     29032     29514       +   CCCGG   29026  ATG       0
+     29511     29678       +   CCCGG   29505  ATG       0
+     29962     30066       -   CACAA     707  ATG       0
+     30185     30313       +   CCCGG   30179  ATG       0
+     30328     30711       +   CCCGG   30322  ATG       0

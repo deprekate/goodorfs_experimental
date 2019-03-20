@@ -1,0 +1,88 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.350006
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.5.0          0.083          0.208          0.208
+          0.708          0.083          0.083          0.125
+          0.583          0.125              0          0.291
+          0.458          0.125          0.166          0.25.
+          0.545              0          0.390          0.063
+              0              0              0          0.999
+              0              0          0.999              0
+          0.208          0.208          0.5.0          0.083
+          0.416          0.083          0.208          0.291
+          0.375              0          0.291          0.333
+          0.416          0.208          0.25.          0.125
+          0.5.0          0.083          0.208          0.208
+          0.541          0.125          0.166          0.166
+          0.458          0.041          0.333          0.166
+          0.458          0.041          0.125          0.375
+          0.541              0          0.208          0.25.
+          0.333          0.083          0.333          0.25.
+          0.541          0.208          0.041          0.208
+          0.416              0          0.166          0.416
+          0.583              0          0.208          0.208
+          0.624          0.083          0.041          0.25.
+          0.375              0          0.208          0.416
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.500
+         2          0.107
+         3          0.158
+         4          0.085
+         5          0.062
+         6          0.085
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -31          0.083
+       -19          0.083
+        -7          0.083
+        -6          0.083
+         0          0.166
+         1          0.083
+         6          0.083
+        11          0.166
+        15          0.166
+    others          0.083
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.44047        0.55953
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+         1       171       +       -       -  ATG       0
+       177       662       +   ATGAA     171  ATG       0
+       830      1201       +   ATGAA     824  GTG       2
+      1269      1499       +   ATGAA    1263  ATG       0
+      2019      2627       +   ATGAA    2013  TTG       2
+      2838      2945       +   ATGAA    2832  GTG       3
+      2950      3192       +   ATGAA    2944  ATG       0
+      3345      3500       +   ATGAA    3339  GTG       5
+      3494      3817       +   ATGAA    3488  GTG       0
+      3925      4245       +   ATGAA    3919  GTG       0
+      4214      5911       +   ATGAA    4208  TTG       0
+      5926      7092       +   ATGAA    5920  GTG       0
+      7094      7819       +   ATGAA    7088  ATG       5
+      7830      8999       +   ATGAA    7824  TTG       0
+      9010      9315       +   ATGAA    9004  GTG       0
+      9296      9652       +   ATGAA    9290  ATG       0
+      9645     10046       +   ATGAA    9639  GTG       0
+     10084     10461       +   ATGAA   10078  ATG       1
+     10462     11046       +   ATGAA   10456  ATG       0
+     11097     11579       +   ATGAA   11091  ATG       0
+     11758     13338       +   ATGAA   11752  ATG       0
+     13765     13866       +   ATGAA   13759  ATG       3
+     13978     14757       +   ATGAA   13972  ATG       0
+     14992     17838       +   ATGAA   14986  ATG       0
+     18017     18523       +   ATGAA   18011  ATG       2
+     18523     20928       +   ATGAA   18517  ATG       0
+     20943     22124       +   ATGAA   20937  ATG       0
+     22330     22500       +   ATGAA   22324  ATG       1
+     22575     23000       +   ATGAA   22569  GTG       0
+     23000     23818       +   ATGAA   22994  ATG       0
+     23877     23969       -   CTTTT    2497  ATG       0
+     24198     24806       -   CTTTT    1660  ATG       2
+     26202     26294       +   ATGAA   26196  GTG       0

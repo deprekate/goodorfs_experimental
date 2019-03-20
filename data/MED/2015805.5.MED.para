@@ -1,0 +1,337 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.495632
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.486          0.225          0.099          0.189
+          0.405          0.171          0.261          0.162
+          0.351          0.225          0.225          0.198
+          0.405          0.288          0.117          0.189
+          0.933              0          0.036          0.029
+              0              0              0              0
+              0              0              0              0
+          0.432          0.144          0.261          0.162
+          0.234          0.405          0.297          0.063
+          0.234          0.216          0.279          0.270
+          0.441          0.099          0.297          0.162
+          0.414          0.162          0.171          0.252
+          0.189          0.288          0.180          0.342
+          0.360          0.261          0.270          0.108
+          0.333          0.252          0.126          0.288
+          0.261          0.243          0.243          0.252
+          0.378          0.270          0.207          0.144
+          0.288          0.252          0.126          0.333
+          0.225          0.234          0.288          0.252
+          0.369          0.117          0.369          0.144
+          0.315          0.243          0.198          0.243
+          0.216          0.234          0.288          0.261
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.636
+         2          0.187
+         3          0.099
+         4          0.039
+         5          0.024
+         6          0.012
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -28          0.034
+       -25          0.017
+       -22          0.086
+       -16          0.034
+        -7          0.034
+        -3          0.241
+         0          0.086
+         1          0.034
+         3          0.017
+        10          0.034
+        13          0.017
+        18          0.017
+        19          0.017
+        25          0.017
+        28          0.051
+        31          0.034
+        32          0.017
+        33          0.017
+        37          0.017
+        38          0.017
+        39          0.034
+        44          0.051
+        45          0.017
+        47          0.051
+    others          0.017
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.33496        0.66504
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+         8       220       +       -       -  ATG       0
+       204       305       -   ATACA  132686  ATG       0
+       716       829       +   GGCCA     710  ATG       3
+       918      1100       -   ATACA  131891  ATG       0
+      1180      1488       -   ATACA  131503  ATG       1
+      1623      2729       -   ATACA  130262  ATG       0
+      2820      3260       -   ATACA  129731  ATG       0
+      3395      3742       -   ATACA  129249  TTG       0
+      3720      3887       -   ATACA  129104  ATG       0
+      3897      4418       -   ATACA  128573  ATG       1
+      4554      5351       +   GGCCA    4548  ATG       0
+      5399      5542       +   GGCCA    5393  ATG       0
+      5494      6039       +   GGCCA    5488  ATG       1
+      6092      6394       -   ATACA  126597  ATG       1
+      6507      6785       -   ATACA  126206  GTG       0
+      6778      6888       +   GGCCA    6772  ATG       0
+      6909      7091       -   ATACA  125900  ATG       0
+      7218      7499       -   ATACA  125492  TTG       0
+      7594      7725       -   ATACA  125266  ATG       1
+      7749      7961       -   ATACA  125030  ATG       0
+      8094      8372       -   ATACA  124619  ATG       0
+      8466      8618       +   GGCCA    8460  ATG       1
+      8518      8916       -   ATACA  124075  ATG       0
+      8960      9283       -   ATACA  123708  ATG       0
+      9293      9436       -   ATACA  123555  ATG       3
+      9560      9874       -   ATACA  123117  ATG       0
+     10029     10145       +   GGCCA   10023  TTG       0
+     10123     10743       +   GGCCA   10117  ATG       0
+     10833     11270       +   GGCCA   10827  ATG       0
+     11300     11515       +   GGCCA   11294  TTG       0
+     11502     11729       -   ATACA  121262  ATG       0
+     11726     12415       -   ATACA  120576  TTG       0
+     12412     12597       -   ATACA  120394  ATG       1
+     12582     12848       -   ATACA  120143  TTG       0
+     12808     12975       -   ATACA  120016  ATG       0
+     12972     13106       -   ATACA  119885  ATG       0
+     13103     13342       -   ATACA  119649  ATG       3
+     13428     14297       -   ATACA  118694  GTG       0
+     14351     14737       -   ATACA  118254  ATG       1
+     14664     14963       -   ATACA  118028  ATG       0
+     15003     15167       -   ATACA  117824  ATG       0
+     15160     15615       -   ATACA  117376  ATG       2
+     15593     16249       -   ATACA  116742  ATG       0
+     16246     16872       -   ATACA  116119  ATG       1
+     16972     17445       -   ATACA  115546  ATG       0
+     17473     17997       -   ATACA  114994  ATG       1
+     18053     18220       -   ATACA  114771  ATG       0
+     18217     18393       -   ATACA  114598  ATG       0
+     18383     18547       -   ATACA  114444  GTG       0
+     18549     18695       -   ATACA  114296  ATG       0
+     18655     18867       +   GGCCA   18649  GTG       0
+     18928     19896       +   GGCCA   18922  ATG       0
+     20106     21920       +   GGCCA   20100  ATG       3
+     22005     23426       +   GGCCA   21999  ATG       0
+     23576     25312       +   GGCCA   23570  ATG       0
+     25376     25711       +   GGCCA   25370  ATG       0
+     25701     27278       +   GGCCA   25695  ATG       1
+     27275     27739       +   GGCCA   27269  ATG       0
+     27736     29013       +   GGCCA   27730  ATG       0
+     29045     30040       +   GGCCA   29039  ATG       0
+     30122     30523       +   GGCCA   30116  ATG       2
+     30582     31454       +   GGCCA   30576  ATG       0
+     31451     31942       +   GGCCA   31445  ATG       0
+     31942     32742       +   GGCCA   31936  ATG       0
+     32645     33280       +   GGCCA   32639  ATG       1
+     33372     33995       +   GGCCA   33366  ATG       0
+     34188     34436       +   GGCCA   34182  ATG       1
+     34466     34735       +   GGCCA   34460  ATG       0
+     34828     41139       +   GGCCA   34822  ATG       0
+     41139     41540       +   GGCCA   41133  ATG       0
+     41540     44734       +   GGCCA   41534  ATG       0
+     44771     45133       +   GGCCA   44765  ATG       0
+     45130     45927       +   GGCCA   45124  ATG       0
+     45924     51929       +   GGCCA   45918  ATG       0
+     52006     52209       +   GGCCA   52000  ATG       0
+     52184     52627       +   GGCCA   52178  ATG       0
+     52660     53028       +   GGCCA   52654  ATG       1
+     53028     53324       +   GGCCA   53022  ATG       0
+     53355     54110       +   GGCCA   53349  ATG       0
+     54162     54413       +   GGCCA   54156  TTG       0
+     54400     54579       +   GGCCA   54394  GTG       0
+     54657     55172       +   GGCCA   54651  ATG       1
+     55166     55465       +   GGCCA   55160  TTG       0
+     55446     55637       +   GGCCA   55440  ATG       1
+     55634     55999       +   GGCCA   55628  ATG       0
+     55971     57206       +   GGCCA   55965  ATG       0
+     57206     57502       +   GGCCA   57200  ATG       0
+     57433     58497       +   GGCCA   57427  TTG       0
+     58575     59342       +   GGCCA   58569  ATG       0
+     59428     62712       +   GGCCA   59422  ATG       0
+     62721     62900       +   GGCCA   62715  ATG       0
+     62893     63267       +   GGCCA   62887  ATG       0
+     63287     63487       +   GGCCA   63281  ATG       0
+     63459     64463       +   GGCCA   63453  ATG       0
+     64460     64660       +   GGCCA   64454  ATG       0
+     64660     64974       +   GGCCA   64654  ATG       0
+     64958     65152       +   GGCCA   64952  ATG       0
+     65145     65480       +   GGCCA   65139  ATG       1
+     65524     66297       +   GGCCA   65518  ATG       0
+     66328     66579       +   GGCCA   66322  ATG       1
+     66608     67135       +   GGCCA   66602  ATG       2
+     67138     67626       +   GGCCA   67132  ATG       0
+     67655     67753       +   GGCCA   67649  ATG       1
+     67777     68391       +   GGCCA   67771  ATG       2
+     68416     68736       +   GGCCA   68410  ATG       0
+     68729     69256       +   GGCCA   68723  TTG       0
+     69303     71123       +   GGCCA   69297  TTG       0
+     71141     71674       +   GGCCA   71135  ATG       1
+     71702     72304       +   GGCCA   71696  ATG       0
+     72591     72959       -   ATACA   60032  ATG       0
+     73167     73598       +   GGCCA   73161  ATG       0
+     73817     74086       -   ATACA   58905  TTG       0
+     74215     74736       +   GGCCA   74209  ATG       0
+     74727     74873       +   GGCCA   74721  GTG       0
+     74867     76675       +   GGCCA   74861  ATG       1
+     76677     76895       +   GGCCA   76671  ATG       0
+     77201     77368       +   GGCCA   77195  ATG       0
+     77369     77527       +   GGCCA   77363  ATG       0
+     77553     77873       -   ATACA   55118  ATG       0
+     77815     78003       +   GGCCA   77809  GTG       0
+     77996     78178       +   GGCCA   77990  ATG       1
+     78175     78567       +   GGCCA   78169  GTG       0
+     78605     80557       +   GGCCA   78599  ATG       0
+     80659     80916       +   GGCCA   80653  ATG       0
+     81145     81255       -   ATACA   51736  ATG       1
+     81441     81578       +   GGCCA   81435  ATG       2
+     81580     81768       +   GGCCA   81574  ATG       1
+     81890     81991       +   GGCCA   81884  ATG       1
+     81969     82298       +   GGCCA   81963  ATG       0
+     82295     82717       +   GGCCA   82289  ATG       0
+     82736     84385       +   GGCCA   82730  ATG       0
+     84455     84637       +   GGCCA   84449  ATG       0
+     84634     84840       +   GGCCA   84628  ATG       1
+     84837     85217       +   GGCCA   84831  TTG       0
+     85214     85741       +   GGCCA   85208  GTG       0
+     85750     85929       +   GGCCA   85744  ATG       0
+     85987     86268       +   GGCCA   85981  ATG       0
+     86540     86665       +   GGCCA   86534  ATG       3
+     86692     86790       -   ATACA   46201  TTG       0
+     86762     86965       +   GGCCA   86756  ATG       0
+     87066     87248       -   ATACA   45743  GTG       0
+     87357     87455       +   GGCCA   87351  ATG       0
+     88121     88264       +   GGCCA   88115  ATG       2
+     88373     88531       +   GGCCA   88367  ATG       1
+     88536     88691       +   GGCCA   88530  ATG       0
+     88678     88869       +   GGCCA   88672  TTG       0
+     88844     89041       -   ATACA   43950  ATG       0
+     89038     89178       -   ATACA   43813  GTG       1
+     89289     89840       +   GGCCA   89283  ATG       2
+     89797     90021       +   GGCCA   89791  ATG       0
+     90002     90211       +   GGCCA   89996  TTG       0
+     90277     90447       +   GGCCA   90271  ATG       0
+     90448     90669       +   GGCCA   90442  ATG       0
+     91114     91278       +   GGCCA   91108  ATG       0
+     91324     91626       +   GGCCA   91318  ATG       1
+     91595     91690       +   GGCCA   91589  TTG       1
+     91805     91951       +   GGCCA   91799  ATG       0
+     92006     92239       +   GGCCA   92000  ATG       0
+     92517     92627       +   GGCCA   92511  ATG       1
+     92822     92980       +   GGCCA   92816  TTG       0
+     92998     93786       +   GGCCA   92992  ATG       0
+     93868     93963       +   GGCCA   93862  GTG       0
+     94217     94348       +   GGCCA   94211  ATG       0
+     94363     94542       +   GGCCA   94357  ATG       0
+     94556     94783       +   GGCCA   94550  ATG       1
+     95260     95580       +   GGCCA   95254  ATG       3
+     95570     95821       +   GGCCA   95564  TTG       0
+     95787     95936       -   ATACA   37055  GTG       0
+     96348     96482       +   GGCCA   96342  TTG       0
+     96500     96661       +   GGCCA   96494  ATG       2
+     96658     97212       +   GGCCA   96652  ATG       0
+     97215     97412       +   GGCCA   97209  ATG       0
+     97436     97576       +   GGCCA   97430  TTG       0
+     97647     97784       +   GGCCA   97641  ATG       0
+     97809     97919       +   GGCCA   97803  TTG       0
+     97950     98408       +   GGCCA   97944  ATG       0
+     98483     98722       +   GGCCA   98477  ATG       2
+     98719     98895       +   GGCCA   98713  ATG       0
+     98897     99067       +   GGCCA   98891  ATG       0
+     99069     99476       +   GGCCA   99063  ATG       2
+     99482     99700       +   GGCCA   99476  ATG       2
+     99812     99904       -   ATACA   33087  TTG       0
+     99962    100306       +   GGCCA   99956  ATG       2
+    100598    100885       +   GGCCA  100592  ATG       0
+    100885    101067       +   GGCCA  100879  ATG       1
+    101069    101332       +   GGCCA  101063  ATG       1
+    101345    102445       +   GGCCA  101339  ATG       0
+    102470    102607       +   GGCCA  102464  TTG       0
+    102611    102814       +   GGCCA  102605  GTG       0
+    102820    102942       -   ATACA   30049  ATG       1
+    102992    103891       +   GGCCA  102986  ATG       0
+    103993    104247       +   GGCCA  103987  ATG       2
+    104311    104757       +   GGCCA  104305  ATG       1
+    104883    105074       +   GGCCA  104877  ATG       1
+    105127    105306       +   GGCCA  105121  ATG       3
+    105325    105444       -   ATACA   27547  GTG       0
+    105534    105887       -   ATACA   27104  ATG       0
+    105897    106121       +   GGCCA  105891  ATG       1
+    106214    106414       +   GGCCA  106208  ATG       1
+    106350    106589       +   GGCCA  106344  ATG       0
+    106660    106908       +   GGCCA  106654  ATG       1
+    106908    107189       +   GGCCA  106902  ATG       0
+    107137    107349       +   GGCCA  107131  ATG       1
+    107409    107576       +   GGCCA  107403  ATG       0
+    107576    107932       +   GGCCA  107570  ATG       1
+    107939    108178       +   GGCCA  107933  ATG       0
+    108239    108553       +   GGCCA  108233  ATG       0
+    108600    110513       +   GGCCA  108594  ATG       0
+    110514    111479       +   GGCCA  110508  ATG       0
+    111574    112341       +   GGCCA  111568  ATG       0
+    112393    112788       +   GGCCA  112387  ATG       0
+    112868    113107       +   GGCCA  112862  ATG       0
+    113004    113399       +   GGCCA  112998  GTG       0
+    113396    113707       +   GGCCA  113390  ATG       1
+    113664    113852       +   GGCCA  113658  ATG       0
+    113849    114079       +   GGCCA  113843  GTG       0
+    114217    114420       +   GGCCA  114211  TTG       1
+    114853    115164       +   GGCCA  114847  ATG       0
+    115195    115392       +   GGCCA  115189  ATG       0
+    115402    115635       +   GGCCA  115396  ATG       0
+    115635    115838       +   GGCCA  115629  ATG       1
+    115938    116174       +   GGCCA  115932  ATG       0
+    116141    116416       -   ATACA   16575  ATG       4
+    116429    117031       +   GGCCA  116423  ATG       0
+    117040    117228       +   GGCCA  117034  GTG       0
+    117229    117471       +   GGCCA  117223  ATG       0
+    117519    117728       +   GGCCA  117513  ATG       1
+    117756    118184       +   GGCCA  117750  GTG       0
+    118181    118489       +   GGCCA  118175  ATG       1
+    118665    118805       +   GGCCA  118659  ATG       1
+    118871    119374       +   GGCCA  118865  ATG       0
+    119379    119558       +   GGCCA  119373  ATG       0
+    119559    120059       +   GGCCA  119553  ATG       0
+    120271    120504       +   GGCCA  120265  ATG       4
+    120540    120776       +   GGCCA  120534  ATG       0
+    120777    121055       +   GGCCA  120771  ATG       0
+    121503    121646       +   GGCCA  121497  GTG       0
+    121633    121752       -   ATACA   11239  ATG       1
+    121742    121843       -   ATACA   11148  ATG       0
+    122254    122367       +   GGCCA  122248  ATG       3
+    122456    122638       -   ATACA   10353  ATG       0
+    122718    123026       -   ATACA    9965  ATG       1
+    123161    124267       -   ATACA    8724  ATG       0
+    124358    124798       -   ATACA    8193  ATG       0
+    124933    125280       -   ATACA    7711  TTG       0
+    125258    125425       -   ATACA    7566  ATG       0
+    125435    125956       -   ATACA    7035  ATG       1
+    126092    126889       +   GGCCA  126086  ATG       0
+    126937    127080       +   GGCCA  126931  ATG       0
+    127032    127577       +   GGCCA  127026  ATG       1
+    127630    127932       -   ATACA    5059  ATG       1
+    128045    128323       -   ATACA    4668  GTG       0
+    128316    128426       +   GGCCA  128310  ATG       0
+    128447    128629       -   ATACA    4362  ATG       0
+    128756    129037       -   ATACA    3954  TTG       0
+    129132    129263       -   ATACA    3728  ATG       1
+    129287    129499       -   ATACA    3492  ATG       0
+    129632    129910       -   ATACA    3081  ATG       0
+    130004    130156       +   GGCCA  129998  ATG       1
+    130056    130454       -   ATACA    2537  ATG       0
+    130498    130821       -   ATACA    2170  ATG       0
+    130831    130974       -   ATACA    2017  ATG       3
+    131098    131412       -   ATACA    1579  ATG       0
+    131567    131683       +   GGCCA  131561  TTG       0
+    131661    132281       +   GGCCA  131655  ATG       0
+    132371    132808       +   GGCCA  132365  ATG       0
+    132857    132967       +   GGCCA  132851  ATG       0

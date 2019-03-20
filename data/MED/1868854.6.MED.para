@@ -1,0 +1,121 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.358684
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.594          0.054          0.108          0.243
+          0.513          0.027          0.243          0.216
+          0.540          0.054          0.081          0.324
+          0.567          0.162          0.135          0.135
+          0.846              0          0.085          0.068
+              0              0              0          0.999
+              0              0          0.999              0
+          0.459          0.054          0.432          0.054
+          0.351          0.486          0.135          0.027
+          0.540          0.108          0.054          0.297
+          0.513          0.081          0.216          0.189
+          0.621          0.054          0.135          0.189
+          0.486          0.054          0.108          0.351
+          0.324          0.081          0.189          0.405
+          0.270          0.216          0.081          0.432
+          0.540          0.054          0.054          0.351
+          0.324          0.081          0.297          0.297
+          0.513          0.054          0.162          0.270
+          0.594              0              0          0.405
+          0.432          0.027          0.405          0.135
+          0.594          0.054          0.054          0.297
+          0.432          0.108          0.027          0.432
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.662
+         2          0.166
+         3          0.047
+         4          0.054
+         5          0.031
+         6          0.037
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -10          0.043
+        -4          0.043
+        -3          0.260
+         0          0.130
+         2          0.043
+        11          0.043
+        13          0.086
+        14          0.043
+        16          0.043
+        18          0.043
+        20          0.043
+        26          0.043
+        30          0.043
+        34          0.043
+        46          0.043
+    others          0.043
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.21365        0.78635
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+         1       393       -   AATAC   34237  ATG       0
+       622       813       +   TTAAC     616  ATG       1
+       843      1601       +   TTAAC     837  ATG       0
+      1615      2337       +   TTAAC    1609  ATG       1
+      2351      3064       +   TTAAC    2345  ATG       1
+      3077      3226       +   TTAAC    3071  ATG       0
+      3223      3351       +   TTAAC    3217  ATG       0
+      3363      3533       +   TTAAC    3357  ATG       0
+      3545      3709       -   AATAC   30921  ATG       1
+      3671      3877       +   TTAAC    3665  ATG       1
+      3907      4062       +   TTAAC    3901  TTG       0
+      4149      4886       +   TTAAC    4143  ATG       0
+      4888      5931       +   TTAAC    4882  ATG       0
+      6157      6945       +   TTAAC    6151  GTG       0
+      6945      7670       +   TTAAC    6939  ATG       0
+      7667      8086       +   TTAAC    7661  ATG       0
+      8087      8326       +   TTAAC    8081  ATG       0
+      8434      8640       +   TTAAC    8428  ATG       0
+      8878      9153       +   TTAAC    8872  ATG       0
+      9174      9338       +   TTAAC    9168  ATG       0
+      9313      9675       +   TTAAC    9307  ATG       1
+      9686      9856       +   TTAAC    9680  ATG       0
+      9869     10228       +   TTAAC    9863  ATG       0
+     10221     10802       +   TTAAC   10215  ATG       1
+     10789     11325       +   TTAAC   10783  ATG       1
+     11322     11741       +   TTAAC   11316  ATG       0
+     11745     12020       +   TTAAC   11739  ATG       0
+     12043     12204       +   TTAAC   12037  ATG       3
+     12197     12736       +   TTAAC   12191  ATG       3
+     12733     13068       +   TTAAC   12727  ATG       0
+     13062     13187       -   AATAC   21443  ATG       3
+     13351     13497       -   AATAC   21133  TTG       0
+     13547     13669       +   TTAAC   13541  ATG       0
+     13694     13804       +   TTAAC   13688  ATG       1
+     13838     14239       +   TTAAC   13832  ATG       0
+     14501     14962       +   TTAAC   14495  ATG       0
+     15018     15584       +   TTAAC   15012  ATG       0
+     15681     15794       +   TTAAC   15675  ATG       1
+     15870     17003       +   TTAAC   15864  ATG       0
+     17028     18344       +   TTAAC   17022  ATG       1
+     18435     19388       +   TTAAC   18429  ATG       3
+     19434     19766       +   TTAAC   19428  ATG       0
+     19825     20073       +   TTAAC   19819  ATG       2
+     20197     20793       +   TTAAC   20191  ATG       0
+     20811     21674       +   TTAAC   20805  ATG       0
+     21945     22277       +   TTAAC   21939  ATG       0
+     22274     22585       +   TTAAC   22268  TTG       0
+     22582     22908       +   TTAAC   22576  ATG       0
+     22905     23294       +   TTAAC   22899  ATG       0
+     23305     23802       +   TTAAC   23299  ATG       0
+     23765     23857       +   TTAAC   23759  TTG       1
+     23918     24268       +   TTAAC   23912  ATG       0
+     24310     24621       +   TTAAC   24304  TTG       0
+     24637     27261       +   TTAAC   24631  ATG       0
+     27275     28036       +   TTAAC   27269  ATG       0
+     28036     30825       +   TTAAC   28030  GTG       0
+     30838     32856       +   TTAAC   30832  ATG       0
+     33093     33212       +   TTAAC   33087  ATG       4
+     33226     33513       +   TTAAC   33220  ATG       0
+     33513     34292       +   TTAAC   33507  ATG       0

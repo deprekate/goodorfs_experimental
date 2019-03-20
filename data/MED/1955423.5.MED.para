@@ -1,0 +1,250 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.629888
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.324          0.208          0.190          0.276
+          0.346          0.276          0.203          0.173
+          0.441          0.212          0.180          0.165
+          0.386          0.323          0.149          0.139
+          0.727          0.001          0.104          0.167
+          0.25.          0.25.          0.25.          0.25.
+          0.25.          0.25.          0.25.          0.25.
+          0.574          0.111          0.147          0.166
+          0.095          0.320          0.462          0.120
+          0.266          0.265          0.132          0.335
+          0.330          0.259          0.229          0.180
+          0.322          0.188          0.331          0.157
+          0.407          0.192          0.080          0.320
+          0.331          0.205          0.190          0.272
+          0.253          0.232          0.286          0.227
+          0.274          0.180          0.291          0.252
+          0.355          0.327          0.198          0.119
+          0.317          0.209          0.290          0.182
+          0.530          0.091          0.103          0.275
+          0.360          0.234          0.211          0.193
+          0.315          0.344          0.097          0.241
+          0.303          0.247          0.191          0.257
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.544
+         2          0.165
+         3          0.068
+         4          0.068
+         5          0.085
+         6          0.068
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+         3          0.666
+        27          0.333
+    others          0.333
+GB distribution for coding region downstream of TIS
+   GB          Prob.
+   58          0.006
+   60          0.006
+   64          0.018
+   65          0.030
+   66          0.037
+   67          0.012
+   68          0.024
+   69          0.049
+   70          0.037
+   71          0.092
+   72          0.049
+   73          0.055
+   74          0.067
+   75          0.098
+   76          0.074
+   77          0.080
+   78          0.092
+   79          0.024
+   80          0.043
+   81          0.018
+   82          0.049
+   83          0.006
+   84          0.018
+   86          0.006
+GB distribution for non-coding region upstream of TIS
+   GB          Prob.
+   54          0.066
+   56          0.066
+   58          0.066
+   59          0.133
+   61          0.066
+   64          0.133
+   67          0.066
+   68          0.066
+   70          0.133
+   72          0.066
+   73          0.066
+   78          0.066
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.37454        0.62546
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        10       270       +       -       -  GTG       0
+       267       560       +   GGCTT     261  ATG       0
+       769      1032       +   GGCTT     763  ATG       1
+      1022      1159       +   GGCTT    1016  ATG       1
+      1152      1613       +   GGCTT    1146  ATG       0
+      1685      2011       -   TGACA   73199  ATG       0
+      1927      2226       -   TGACA   72984  ATG       2
+      2280      3950       +   GGCTT    2274  ATG       0
+      3962      4183       +   GGCTT    3956  TTG       0
+      4167      5726       +   GGCTT    4161  ATG       0
+      5729      6730       +   GGCTT    5723  ATG       0
+      6818      8311       +   GGCTT    6812  ATG       0
+      8334      8435       -   TGACA   66775  ATG       0
+      8434      8613       +   GGCTT    8428  ATG       0
+      8613      9179       +   GGCTT    8607  GTG       0
+      9160      9291       -   TGACA   65919  GTG       0
+      9194      9529       +   GGCTT    9188  ATG       0
+      9526      9906       +   GGCTT    9520  ATG       2
+     10124     10288       +   GGCTT   10118  ATG       5
+     10315     11289       +   GGCTT   10309  ATG       0
+     11349     11822       +   GGCTT   11343  ATG       0
+     11943     12404       +   GGCTT   11937  ATG       1
+     12647     12814       +   GGCTT   12641  TTG       3
+     12807     17534       +   GGCTT   12801  GTG       0
+     17564     19225       +   GGCTT   17558  ATG       0
+     19213     20892       +   GGCTT   19207  GTG       0
+     20580     21734       +   GGCTT   20574  ATG       0
+     21751     24147       +   GGCTT   21745  ATG       0
+     24144     26984       +   GGCTT   24138  ATG       0
+     26985     27947       +   GGCTT   26979  ATG       0
+     27903     28001       -   TGACA   47209  ATG       1
+     28017     28445       +   GGCTT   28011  ATG       0
+     28432     28617       -   TGACA   46593  GTG       0
+     28750     29034       +   GGCTT   28744  ATG       0
+     29108     30610       +   GGCTT   29102  TTG       0
+     30614     30997       +   GGCTT   30608  ATG       0
+     30990     31328       +   GGCTT   30984  GTG       0
+     31325     32182       +   GGCTT   31319  GTG       0
+     32179     32595       +   GGCTT   32173  ATG       1
+     32602     32847       +   GGCTT   32596  GTG       0
+     32887     33009       -   TGACA   42201  GTG       0
+     33027     33176       -   TGACA   42034  ATG       3
+     33461     33652       -   TGACA   41558  ATG       1
+     33655     34140       -   TGACA   41070  ATG       1
+     34116     34370       -   TGACA   40840  ATG       2
+     34367     34549       -   TGACA   40661  GTG       0
+     34546     34758       -   TGACA   40452  ATG       0
+     34755     35159       -   TGACA   40051  ATG       0
+     35156     35329       -   TGACA   39881  GTG       0
+     35326     35658       -   TGACA   39552  ATG       0
+     35454     35615       -   TGACA   39595  TTG       1
+     35618     35788       -   TGACA   39422  ATG       3
+     35835     36302       +   GGCTT   35829  ATG       2
+     35847     35972       -   TGACA   39238  TTG       2
+     36227     36622       -   TGACA   38588  ATG       0
+     36909     37232       -   TGACA   37978  GTG       0
+     37642     38343       +   GGCTT   37636  ATG       4
+     38349     38993       -   TGACA   36217  GTG       0
+     38374     38526       -   TGACA   36684  GTG       0
+     38482     38721       +   GGCTT   38476  ATG       0
+     38699     39472       -   TGACA   35738  ATG       0
+     39567     39998       -   TGACA   35212  ATG       1
+     39938     40150       -   TGACA   35060  GTG       0
+     40151     40456       +   GGCTT   40145  ATG       0
+     40453     41298       +   GGCTT   40447  ATG       0
+     41270     41377       -   TGACA   33833  GTG       0
+     41443     41721       +   GGCTT   41437  ATG       2
+     41706     41843       -   TGACA   33367  GTG       0
+     41956     42279       -   TGACA   32931  ATG       0
+     42265     42570       +   GGCTT   42259  ATG       0
+     42626     43003       +   GGCTT   42620  ATG       0
+     42936     43097       +   GGCTT   42930  ATG       0
+     43144     43944       +   GGCTT   43138  GTG       0
+     43286     43618       +   GGCTT   43280  ATG       3
+     43941     44909       +   GGCTT   43935  ATG       0
+     44906     45316       +   GGCTT   44900  ATG       0
+     45303     46031       +   GGCTT   45297  ATG       0
+     46024     46335       +   GGCTT   46018  ATG       0
+     46488     46805       +   GGCTT   46482  ATG       1
+     46862     47173       +   GGCTT   46856  ATG       3
+     47170     47544       +   GGCTT   47164  ATG       0
+     47375     47953       +   GGCTT   47369  ATG       0
+     47544     47723       +   GGCTT   47538  ATG       0
+     47950     48363       +   GGCTT   47944  GTG       0
+     48177     48677       +   GGCTT   48171  GTG       0
+     48667     48903       +   GGCTT   48661  ATG       1
+     48900     49550       +   GGCTT   48894  ATG       0
+     49532     49879       +   GGCTT   49526  ATG       1
+     49872     51134       +   GGCTT   49866  GTG       0
+     51235     51576       +   GGCTT   51229  GTG       0
+     51551     51772       +   GGCTT   51545  ATG       0
+     51717     52130       +   GGCTT   51711  TTG       0
+     52127     52489       +   GGCTT   52121  ATG       1
+     52525     52680       +   GGCTT   52519  ATG       4
+     52610     52753       -   TGACA   22457  ATG       0
+     52835     53782       +   GGCTT   52829  ATG       0
+     53725     53883       +   GGCTT   53719  GTG       0
+     53884     54252       +   GGCTT   53878  ATG       0
+     54225     54347       +   GGCTT   54219  ATG       0
+     54344     54616       +   GGCTT   54338  GTG       0
+     54613     55938       +   GGCTT   54607  ATG       0
+     56116     56796       +   GGCTT   56110  ATG       3
+     56793     57053       +   GGCTT   56787  ATG       0
+     56859     57719       -   TGACA   17491  TTG       3
+     57070     57228       +   GGCTT   57064  ATG       1
+     57198     57695       +   GGCTT   57192  GTG       0
+     57697     58032       +   GGCTT   57691  ATG       5
+     58029     58571       +   GGCTT   58023  TTG       0
+     58568     59791       +   GGCTT   58562  ATG       5
+     59784     60224       +   GGCTT   59778  GTG       0
+     60205     61119       +   GGCTT   60199  ATG       0
+     61116     61472       +   GGCTT   61110  ATG       3
+     61473     61763       +   GGCTT   61467  ATG       0
+     61768     62079       +   GGCTT   61762  TTG       3
+     62132     62422       +   GGCTT   62126  ATG       0
+     62355     62522       -   TGACA   12688  GTG       0
+     62615     62707       +   GGCTT   62609  GTG       1
+     62652     62816       -   TGACA   12394  TTG       0
+     62876     63100       +   GGCTT   62870  ATG       2
+     63097     63360       +   GGCTT   63091  GTG       0
+     63371     63745       +   GGCTT   63365  ATG       1
+     63748     64227       +   GGCTT   63742  TTG       0
+     64238     65023       +   GGCTT   64232  GTG       0
+     65128     65262       +   GGCTT   65122  ATG       2
+     65270     66232       +   GGCTT   65264  ATG       0
+     66169     66366       +   GGCTT   66163  GTG       0
+     66353     66526       +   GGCTT   66347  ATG       0
+     66501     66731       +   GGCTT   66495  ATG       0
+     66627     67061       -   TGACA    8149  GTG       1
+     66915     67376       +   GGCTT   66909  ATG       0
+     67256     67540       +   GGCTT   67250  ATG       0
+     67524     67724       +   GGCTT   67518  ATG       0
+     67726     68034       +   GGCTT   67720  GTG       0
+     67905     68177       -   TGACA    7033  ATG       3
+     68034     68165       +   GGCTT   68028  ATG       0
+     68149     68310       +   GGCTT   68143  ATG       0
+     68312     68425       +   GGCTT   68306  GTG       0
+     68418     68516       -   TGACA    6694  TTG       0
+     68690     68953       -   TGACA    6257  ATG       0
+     68950     69339       -   TGACA    5871  ATG       0
+     69299     69427       -   TGACA    5783  ATG       0
+     69458     69712       -   TGACA    5498  ATG       1
+     69780     70148       -   TGACA    5062  ATG       1
+     70145     70603       -   TGACA    4607  ATG       0
+     70618     70890       -   TGACA    4320  ATG       5
+     70949     71266       -   TGACA    3944  ATG       0
+     71272     71445       -   TGACA    3765  TTG       2
+     71387     71593       -   TGACA    3617  ATG       1
+     71639     72139       -   TGACA    3071  ATG       2
+     71711     72649       +   GGCTT   71705  TTG       0
+     72179     72562       -   TGACA    2648  ATG       0
+     72567     72740       -   TGACA    2470  ATG       0
+     72737     72982       -   TGACA    2228  ATG       1
+     72825     72917       -   TGACA    2293  ATG       0
+     72979     73191       -   TGACA    2019  GTG       0
+     73194     73298       -   TGACA    1912  ATG       5
+     73454     73645       -   TGACA    1565  ATG       4
+     73710     74057       +   GGCTT   73704  ATG       0
+     74101     74301       -   TGACA     909  ATG       1
+     74284     74580       +   GGCTT   74278  ATG       2
+     74577     74981       +   GGCTT   74571  TTG       0
+     74884     75114       -   TGACA      96  GTG       0

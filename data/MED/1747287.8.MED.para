@@ -1,0 +1,172 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.40019
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.410          0.107          0.125          0.357
+          0.464          0.142          0.160          0.232
+          0.571          0.142          0.089          0.196
+          0.5.0          0.125          0.053          0.321
+          0.999              0              0              0
+              0              0              0          0.999
+              0              0          0.999              0
+          0.410          0.142          0.303          0.142
+          0.285          0.321          0.107          0.285
+          0.446          0.107          0.107          0.339
+          0.5.0          0.142          0.214          0.142
+          0.446          0.089          0.160          0.303
+          0.517          0.053          0.142          0.285
+          0.410          0.089          0.25.          0.25.
+          0.357          0.25.          0.142          0.25.
+          0.571          0.071          0.071          0.285
+          0.357          0.089          0.339          0.214
+          0.482          0.107          0.071          0.339
+          0.464          0.232          0.089          0.214
+          0.357          0.142          0.321          0.178
+          0.446          0.089          0.178          0.285
+          0.357          0.142          0.160          0.339
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.750
+         2          0.115
+         3          0.058
+         4          0.033
+         5          0.019
+         6          0.022
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -18          0.028
+       -15          0.028
+       -10          0.028
+        -7          0.114
+        -3          0.057
+        -1          0.028
+         0          0.057
+         1          0.028
+         2          0.028
+         3          0.028
+        11          0.028
+        12          0.085
+        13          0.171
+        14          0.028
+        16          0.028
+        18          0.028
+        20          0.028
+        21          0.028
+        24          0.028
+        30          0.028
+        48          0.028
+        49          0.057
+    others          0.028
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.11893        0.88107
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+        26       160       +       -       -  ATG       0
+       584       811       +   GACAA     578  ATG       0
+       935      1258       +   GACAA     929  ATG       0
+      1251      1355       +   GACAA    1245  ATG       0
+      1371      1745       +   GACAA    1365  ATG       1
+      1738      2112       +   GACAA    1732  ATG       0
+      2190      2324       +   GACAA    2184  ATG       0
+      2393      2647       +   GACAA    2387  ATG       0
+      2783      3217       +   GACAA    2777  ATG       0
+      3204      3413       +   GACAA    3198  ATG       0
+      3553      3705       +   GACAA    3547  ATG       0
+      3702      4031       +   GACAA    3696  ATG       0
+      4087      4389       +   GACAA    4081  ATG       0
+      4564      4659       +   GACAA    4558  ATG       0
+      5517      5657       -   GAAAA   52338  GTG       0
+      5916      6548       -   GAAAA   51447  ATG       0
+      6623      6835       -   GAAAA   51160  ATG       0
+      6837      7055       -   GAAAA   50940  ATG       0
+      7056      7910       -   GAAAA   50085  ATG       0
+      8361      8732       -   GAAAA   49263  ATG       0
+      8752      9054       -   GAAAA   48941  ATG       0
+      9056      9268       -   GAAAA   48727  ATG       2
+      9313      9699       -   GAAAA   48296  ATG       0
+      9701     10087       -   GAAAA   47908  ATG       1
+     10087     10344       -   GAAAA   47651  ATG       0
+     10344     10661       -   GAAAA   47334  ATG       0
+     10939     11538       +   GACAA   10933  ATG       0
+     11552     11896       +   GACAA   11546  ATG       1
+     11915     12163       +   GACAA   11909  ATG       0
+     12226     13497       +   GACAA   12220  ATG       0
+     13554     15089       +   GACAA   13548  ATG       0
+     15101     15856       +   GACAA   15095  ATG       0
+     15967     16635       +   GACAA   15961  ATG       0
+     16684     17490       +   GACAA   16678  ATG       0
+     17645     18082       +   GACAA   17639  ATG       0
+     18145     18549       +   GACAA   18139  ATG       0
+     18565     18942       +   GACAA   18559  ATG       0
+     19029     19307       +   GACAA   19023  ATG       1
+     19320     19754       +   GACAA   19314  ATG       0
+     19775     20467       +   GACAA   19769  ATG       0
+     20608     21048       +   GACAA   20602  ATG       0
+     20879     21283       +   GACAA   20873  ATG       0
+     21296     24181       +   GACAA   21290  ATG       0
+     24195     28187       +   GACAA   24189  ATG       0
+     28200     31226       +   GACAA   28194  ATG       0
+     31239     31526       +   GACAA   31233  TTG       0
+     31574     32290       +   GACAA   31568  ATG       0
+     32339     32530       -   GAAAA   25465  GTG       0
+     32650     32883       -   GAAAA   25112  ATG       5
+     33582     34406       +   GACAA   33576  ATG       0
+     34459     34893       +   GACAA   34453  ATG       0
+     34896     35282       +   GACAA   34890  ATG       0
+     35282     35482       +   GACAA   35276  ATG       0
+     35604     35762       -   GAAAA   22233  ATG       0
+     35836     35946       +   GACAA   35830  ATG       5
+     36429     36569       -   GAAAA   21426  ATG       0
+     36736     37077       +   GACAA   36730  ATG       1
+     37077     37475       +   GACAA   37071  ATG       0
+     37475     37726       +   GACAA   37469  ATG       0
+     37735     37914       +   GACAA   37729  ATG       1
+     37926     38873       +   GACAA   37920  ATG       0
+     38946     39116       +   GACAA   38940  GTG       0
+     39203     39298       +   GACAA   39197  ATG       0
+     39347     40123       +   GACAA   39341  ATG       0
+     40156     41499       +   GACAA   40150  ATG       1
+     41798     42031       +   GACAA   41792  ATG       4
+     42018     42221       +   GACAA   42012  ATG       1
+     42294     42734       +   GACAA   42288  ATG       0
+     42727     43755       +   GACAA   42721  ATG       0
+     43755     44084       +   GACAA   43749  ATG       0
+     44350     44655       +   GACAA   44344  ATG       2
+     44652     45221       +   GACAA   44646  ATG       0
+     45214     45846       +   GACAA   45208  ATG       1
+     45938     46501       +   GACAA   45932  ATG       0
+     46504     46620       +   GACAA   46498  ATG       1
+     46633     46839       +   GACAA   46627  ATG       0
+     46853     47047       +   GACAA   46847  ATG       0
+     47062     47289       +   GACAA   47056  ATG       0
+     47282     47491       +   GACAA   47276  ATG       0
+     47494     47706       +   GACAA   47488  ATG       0
+     47707     48057       +   GACAA   47701  ATG       0
+     48057     48242       +   GACAA   48051  ATG       0
+     48217     48309       +   GACAA   48211  TTG       0
+     48321     50852       +   GACAA   48315  ATG       0
+     50927     51361       +   GACAA   50921  ATG       0
+     51363     51752       +   GACAA   51357  ATG       3
+     51745     52440       +   GACAA   51739  ATG       0
+     52499     52777       +   GACAA   52493  ATG       0
+     52761     52997       +   GACAA   52755  ATG       0
+     53009     53290       +   GACAA   53003  ATG       1
+     53314     53898       +   GACAA   53308  ATG       0
+     53911     54498       +   GACAA   53905  ATG       0
+     54509     54709       +   GACAA   54503  ATG       1
+     54727     55146       +   GACAA   54721  ATG       0
+     55226     55420       +   GACAA   55220  ATG       0
+     55417     55677       +   GACAA   55411  ATG       0
+     55677     55889       +   GACAA   55671  ATG       0
+     55902     56111       +   GACAA   55896  ATG       0
+     56256     56372       +   GACAA   56250  ATG       1
+     56296     56631       +   GACAA   56290  ATG       0
+     56633     56938       +   GACAA   56627  ATG       1
+     56951     57256       +   GACAA   56945  ATG       0
+     57448     57585       -   GAAAA     410  ATG       0
+     57588     57722       +   GACAA   57582  ATG       0

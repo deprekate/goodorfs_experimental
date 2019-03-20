@@ -1,0 +1,161 @@
+
+TUI TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.349706
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.444          0.148          0.074          0.333
+          0.481          0.037          0.074          0.407
+          0.407          0.111          0.185          0.296
+          0.814              0          0.074          0.111
+          0.928              0              0          0.071
+              0              0              0          0.999
+              0              0          0.999              0
+          0.703          0.037          0.185          0.074
+          0.370          0.259          0.074          0.296
+          0.555          0.185              0          0.259
+          0.444          0.037          0.222          0.296
+          0.407          0.074          0.074          0.444
+          0.518          0.185          0.037          0.259
+          0.370          0.037          0.222          0.370
+          0.444          0.148              0          0.407
+          0.555          0.074          0.074          0.296
+          0.444          0.074          0.259          0.222
+          0.555          0.185          0.074          0.185
+          0.407          0.148          0.037          0.407
+          0.481              0          0.333          0.185
+          0.444          0.185              0          0.370
+          0.370              0          0.148          0.481
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.759
+         2          0.083
+         3          0.034
+         4          0.047
+         5          0.034
+         6          0.040
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -19          0.039
+       -10          0.080
+        -7          0.039
+        -3          0.240
+         0          0.200
+         1          0.039
+         4          0.039
+        12          0.080
+        13          0.080
+        14          0.039
+        20          0.039
+        25          0.039
+        26          0.039
+    others          0.039
+Weight for motif in region [-35,-15) and [-20, 0 )
+          0.321          0.679
+TUL TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.349706
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.399          0.2.0          0.2.0          0.2.0
+          0.399          0.599              0              0
+          0.599          0.2.0          0.2.0              0
+          0.2.0              0          0.2.0          0.599
+          0.238          0.002          0.002          0.757
+              0              0              0          0.999
+              0              0          0.999              0
+          0.2.0              0          0.399          0.399
+          0.2.0              0          0.2.0          0.599
+          0.799              0              0          0.2.0
+          0.399              0          0.399          0.2.0
+          0.399              0              0          0.599
+              0          0.2.0          0.2.0          0.599
+          0.2.0          0.399          0.2.0          0.2.0
+          0.399              0              0          0.599
+          0.2.0          0.599              0          0.2.0
+          0.2.0          0.399          0.399              0
+          0.399              0          0.2.0          0.399
+          0.599              0              0          0.399
+          0.2.0          0.2.0              0          0.599
+          0.2.0          0.399          0.2.0          0.2.0
+          0.399              0          0.2.0          0.399
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.285
+         2          0.142
+         3          0.142
+         4          0.142
+         5          0.142
+         6          0.142
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+    others          0.200
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.53779        0.46221
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+       260       784       +   CACAA     254  ATG       0
+       781      1629       +   CACAA     775  ATG       0
+      1684      2247       +   CACAA    1678  ATG       1
+      2228      2356       +   CACAA    2222  ATG       0
+      2368      2790       +   CACAA    2362  ATG       0
+      2802      4424       +   CACAA    2796  ATG       0
+      4507      4698       +   CACAA    4501  ATG       2
+      4711      5847       +   CACAA    4705  TTG       0
+      5984      6364       +   CACAA    5978  TTG       3
+      6582      7538       +   CACAA    6576  ATG       3
+      7559      7822       +   CACAA    7553  ATG       0
+      7822      8136       +   CACAA    7816  ATG       0
+      8133      8630       +   CACAA    8127  ATG       0
+      8620      8958       +   CACAA    8614  ATG       0
+      8862      9314       +   CACAA    8856  TTG       0
+      9327     10232       +   CACAA    9321  ATG       0
+     10318     10857       +   CACAA   10312  TTG       0
+     10997     11152       +   CACAA   10991  ATG       3
+     11172     11684       +   CACAA   11166  ATG       0
+     11684     14683       +   CACAA   11678  ATG       0
+     14683     16158       +   CACAA   14677  ATG       0
+     16158     17285       +   CACAA   16152  ATG       0
+     17275     17568       +   CACAA   17269  ATG       1
+     17558     18364       +   CACAA   17552  ATG       0
+     18591     18731       +   CACAA   18585  TTG       5
+     18728     19444       +   CACAA   18722  ATG       0
+     19696     19854       -   AGAGA   11982  ATG       1
+     19985     20167       -   AGAGA   11669  ATG       1
+     20254     20520       -   AGAGA   11316  ATG       0
+     20521     20670       -   AGAGA   11166  ATG       0
+     20844     21191       -   AGAGA   10645  ATG       0
+     21191     21358       -   AGAGA   10478  ATG       2
+     21358     21534       -   AGAGA   10302  ATG       1
+     21536     21727       -   AGAGA   10109  ATG       0
+     21770     22027       -   AGAGA    9809  ATG       0
+     22203     22634       -   AGAGA    9202  ATG       1
+     22636     22941       -   AGAGA    8895  ATG       0
+     22942     23061       -   AGAGA    8775  ATG       0
+     23119     24132       -   AGAGA    7704  ATG       0
+     24125     24373       -   AGAGA    7463  ATG       0
+     24452     24961       -   AGAGA    6875  TTG       0
+     24958     25125       -   AGAGA    6711  ATG       2
+     25186     25452       -   AGAGA    6384  TTG       1
+     25549     26103       -   AGAGA    5733  ATG       0
+     26100     26210       -   AGAGA    5626  ATG       0
+     26197     26610       -   AGAGA    5226  TTG       0
+     26704     27093       -   AGAGA    4743  ATG       0
+     27094     27399       +   CACAA   27088  TTG       0
+     27400     28128       -   AGAGA    3708  GTG       5
+     28444     28671       -   AGAGA    3165  ATG       0
+     29166     29285       -   AGAGA    2551  ATG       0
+     29307     29423       -   AGAGA    2413  TTG       0
+     29513     29620       +   CACAA   29507  GTG       0
+     29640     29828       -   AGAGA    2008  ATG       0
+     29994     30086       +   CACAA   29988  TTG       1
+     30091     30222       +   CACAA   30085  ATG       0
+     30219     30701       +   CACAA   30213  ATG       0
+     30698     30841       +   CACAA   30692  ATG       0
+     30859     31026       +   CACAA   30853  ATG       0
+     31605     31709       +   CACAA   31599  ATG       0

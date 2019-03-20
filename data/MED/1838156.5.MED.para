@@ -1,0 +1,131 @@
+
+ TIS model parameters
+Minimal length of ORF: 300
+GC%: 0.421642
+Positional weight Matrix for signals in lower upstream region [-20, 0).
+Positional weight Matrix for signals in upper upstream region [-35, -15).
+Positional weight Matrix for TIS.
+              A              C              G              T
+          0.5.0          0.105          0.157          0.236
+          0.421          0.157          0.105          0.315
+          0.421          0.157          0.157          0.263
+          0.552              0          0.131          0.315
+          0.927              0          0.071              0
+              0              0              0          0.999
+              0              0          0.999              0
+          0.368          0.052          0.526          0.052
+          0.210          0.473          0.184          0.131
+          0.526          0.131          0.210          0.131
+          0.526          0.105          0.236          0.131
+          0.263          0.447          0.105          0.184
+          0.315          0.157          0.157          0.368
+          0.447          0.289          0.157          0.105
+          0.315          0.131          0.342          0.210
+          0.368          0.131          0.131          0.368
+          0.473          0.105          0.263          0.157
+          0.526          0.184          0.157          0.131
+          0.315          0.078          0.210          0.394
+          0.368          0.210          0.342          0.078
+          0.5.0          0.184          0.184          0.131
+          0.394          0.210          0.131          0.263
+Weight for the ith candidate start codon
+       ith         weight
+         1          0.773
+         2          0.049
+         3          0.057
+         4          0.049
+         5          0.036
+         6          0.033
+Distribution of distance from a TIS to its immediately upstream stop codon
+  distance              %
+       -37          0.033
+       -25          0.066
+       -16          0.099
+       -15          0.033
+       -10          0.033
+        -9          0.033
+        -3          0.200
+         0          0.099
+         1          0.066
+         2          0.033
+         4          0.066
+         8          0.033
+        10          0.033
+        11          0.033
+        20          0.033
+        21          0.033
+        26          0.033
+        45          0.033
+    others          0.033
+Weight for motif in region [-35,-15) and [-20, 0 )
+        0.33933        0.66067
+=====================================
+Detailed information for predicted TIS
+      rhs'      lhs'  Strand  Signal  Spacer  XTG   Index
+       195       329       -   ACTGA   39873  ATG       0
+       326      1117       -   ACTGA   39085  ATG       0
+      1186      1599       -   ACTGA   38603  ATG       0
+      1599      2243       -   ACTGA   37959  ATG       0
+      2234      2584       -   ACTGA   37618  ATG       0
+      2581      2778       -   ACTGA   37424  ATG       0
+      2853      2975       +   CAGAA    2847  ATG       1
+      3145      3696       -   ACTGA   36506  ATG       0
+      3680      3865       -   ACTGA   36337  ATG       0
+      3865      3987       -   ACTGA   36215  ATG       0
+      3980      4168       -   ACTGA   36034  ATG       0
+      4165      4398       -   ACTGA   35804  ATG       0
+      4395      4580       -   ACTGA   35622  ATG       1
+      4670      4903       -   ACTGA   35299  ATG       1
+      4882      5229       -   ACTGA   34973  ATG       2
+      5216      5395       -   ACTGA   34807  ATG       0
+      5469      5651       -   ACTGA   34551  ATG       0
+      5727      6131       -   ACTGA   34071  ATG       0
+      6212      6478       -   ACTGA   33724  ATG       3
+      6565      7233       -   ACTGA   32969  ATG       0
+      7503      7634       +   CAGAA    7497  ATG       0
+      7826      7996       -   ACTGA   32206  ATG       3
+      7970      9829       +   CAGAA    7964  ATG       0
+      9839     11590       +   CAGAA    9833  ATG       0
+     11592     12128       +   CAGAA   11586  ATG       0
+     12115     12558       +   CAGAA   12109  ATG       3
+     12555     12713       +   CAGAA   12549  GTG       0
+     12710     17923       +   CAGAA   12704  ATG       0
+     17924     19042       +   CAGAA   17918  ATG       0
+     19046     20617       +   CAGAA   19040  ATG       0
+     20662     21198       +   CAGAA   20656  GTG       0
+     21224     22234       +   CAGAA   21218  ATG       0
+     22299     22550       +   CAGAA   22293  ATG       0
+     22547     22876       +   CAGAA   22541  ATG       0
+     22880     23275       +   CAGAA   22874  GTG       0
+     23269     23373       +   CAGAA   23263  GTG       0
+     23373     23480       +   CAGAA   23367  ATG       0
+     23483     23674       +   CAGAA   23477  ATG       0
+     23674     23910       +   CAGAA   23668  ATG       0
+     23910     24176       +   CAGAA   23904  ATG       0
+     24173     25069       +   CAGAA   24167  ATG       0
+     25077     26957       +   CAGAA   25071  ATG       0
+     26976     27275       +   CAGAA   26970  ATG       0
+     27275     28405       +   CAGAA   27269  ATG       0
+     28426     29106       +   CAGAA   28420  ATG       0
+     29106     30017       +   CAGAA   29100  ATG       0
+     30018     30683       +   CAGAA   30012  GTG       0
+     30973     32172       +   CAGAA   30967  ATG       5
+     32169     32366       +   CAGAA   32163  ATG       0
+     32350     32634       +   CAGAA   32344  ATG       2
+     32579     33022       +   CAGAA   32573  ATG       4
+     33022     33228       +   CAGAA   33016  ATG       0
+     33221     33412       +   CAGAA   33215  ATG       0
+     33505     33684       -   ACTGA    6518  ATG       1
+     33802     33924       +   CAGAA   33796  ATG       0
+     33865     34455       -   ACTGA    5747  ATG       0
+     34430     35161       -   ACTGA    5041  ATG       0
+     35145     35642       -   ACTGA    4560  ATG       0
+     35626     36234       -   ACTGA    3968  ATG       2
+     36324     37094       -   ACTGA    3108  ATG       0
+     37079     37396       -   ACTGA    2806  ATG       0
+     37371     37715       -   ACTGA    2487  ATG       0
+     37712     38329       -   ACTGA    1873  ATG       0
+     38205     38537       -   ACTGA    1665  ATG       0
+     38557     38913       -   ACTGA    1289  ATG       0
+     38910     39002       -   ACTGA    1200  ATG       0
+     38999     40180       -       -       -  ATG       0
