@@ -56,11 +56,15 @@ parser.add_argument('-a','--annotate', action="store_true", dest="annotate", req
 args = parser.parse_args()
 
 #-----------------------READ IN THE DATA
-dat = pd.read_csv("aa/" + args.genome_id + ".aa", header=0,sep=' ' )
-end = pd.read_csv("ends/prodigal/" + args.genome_id + ".prod", header=None)
+dat = pd.read_csv("/home3/katelyn/goodorfs/data/aa/" + args.genome_id + ".tsv", header=0,sep='\t' )
+end = pd.read_csv("/home3/katelyn/goodorfs/data/ends/prodigal/" + args.genome_id + ".prod", header=None)
 
-with open('fna/' + args.genome_id + '.fna') as f:
+with open('/home3/katelyn/goodorfs/genomes/fna/' + args.genome_id + '.fna') as f:
 	first_line = f.readline()
+
+dat = dat[dat.CODON != 'CTG']
+dat['COUNT'] = dat.groupby(['STOP'])['START'].transform('count')
+
 import re
 name = re.search('\[.*\]', first_line).group(0)
 
@@ -80,10 +84,11 @@ if(args.data_type == 'se'):
 	title = 'shannon-entropy'
 else:
 	title = 'aminoacid-percent'
+X['n'] = dat['COUNT']
 X_std = StandardScaler().fit_transform(X)
 
 if(args.clust_type == 'km'):
-	dat['CLUSTER'] = KMeans(n_clusters=args.clust_num).fit(X_std).labels_
+	dat['CLUSTER'] = KMeans(n_clusters=args.clust_num, n_init=50).fit(X_std).labels_
 elif(args.clust_type == 'gm'):
 	dat['CLUSTER'] = GaussianMixture(n_components=2,covariance_type='tied').fit(X_std).predict(X_std)
 elif(args.clust_type == 'bgm'):
@@ -121,12 +126,15 @@ dat.fillna(0, inplace=True)
 #	print(args.genome_id, row.STOP, row.TYPE, row.GOOD/row.TOTAL)
 #exit()
 #########THIS MAKES THE BAR DATA###########
-#TP = len(dat[(dat.CLUSTER == index_min) & (dat.TYPE) & (dat.GOOD/dat.TOTAL > 0.5)].STOP.unique() )
-#FP = len(dat[(dat.CLUSTER == index_min) & (~dat.TYPE) & (dat.GOOD/dat.TOTAL > 0.5)].STOP.unique() )
-#TN = len(dat[~dat.TYPE].STOP.unique()) - FP
-#FN = len(dat[dat.TYPE].STOP.unique()) - TP
-#print(args.genome_id, TP, FP, FN, TN)
-#exit()
+TP = len(dat[(dat.CLUSTER == index_min) & (dat.TYPE) & (dat.GOOD/dat.TOTAL > 0.5)].STOP.unique() )
+FP = len(dat[(dat.CLUSTER == index_min) & (~dat.TYPE) & (dat.GOOD/dat.TOTAL > 0.5)].STOP.unique() )
+TN = len(dat[~dat.TYPE].STOP.unique()) - FP
+FN = len(dat[dat.TYPE].STOP.unique()) - TP
+print(args.genome_id, round(np.var(x0),4), round(np.var(x1),4), round(np.var(x2),4), TP, FP, FN, TN)
+exit()
+
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 fig = plt.figure()
 
@@ -151,10 +159,10 @@ if(args.annotate):
 
 plt.legend()
 #fig.set_size_inches(20, 10)
-#fig.savefig(args.genome_id + '.png', dpi=300)
-plt.show(block=False)
-time.sleep(4)
-plt.close("all") 
+fig.savefig(args.genome_id + '.png', dpi=100)
+#plt.show(block=False)
+#time.sleep(4)
+#plt.close("all") 
 exit()
 
 
