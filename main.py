@@ -57,7 +57,7 @@ args = parser.parse_args()
 
 #-----------------------READ IN THE DATA
 dat = pd.read_csv("/home3/katelyn/goodorfs/data/aa/" + args.genome_id + ".tsv", header=0,sep='\t' )
-end = pd.read_csv("/home3/katelyn/goodorfs/data/ends/prodigal/" + args.genome_id + ".prod", header=None)
+end = pd.read_csv("/home3/katelyn/goodorfs/data/ends/" + args.genome_id + ".tsv", header=None)
 
 with open('/home3/katelyn/goodorfs/genomes/fna/' + args.genome_id + '.fna') as f:
 	first_line = f.readline()
