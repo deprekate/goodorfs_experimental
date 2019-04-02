@@ -1,8 +1,10 @@
+import os
 import sys
 import time
 import argparse
 import numpy as np
 import pandas as pd 
+import gzip
 
 from matplotlib.mlab import PCA
 from sklearn.preprocessing import StandardScaler
@@ -16,6 +18,7 @@ from sklearn.cluster import AgglomerativeClustering
 
 import warnings
 warnings.filterwarnings('ignore')
+
 
 def argmed(a):
     if(len(a) == 2):
@@ -56,11 +59,12 @@ parser.add_argument('-a','--annotate', action="store_true", dest="annotate", req
 args = parser.parse_args()
 
 #-----------------------READ IN THE DATA
-dat = pd.read_csv("/home3/katelyn/goodorfs/data/aa/" + args.genome_id + ".tsv", header=0,sep='\t' )
-end = pd.read_csv("/home3/katelyn/goodorfs/data/ends/" + args.genome_id + ".tsv", header=None)
+path = os.path.dirname(os.path.realpath(__file__))
+dat = pd.read_csv(path + "/data/aa/" + args.genome_id + ".tsv.gz", compression='gzip', header=0,sep='\t' )
+end = pd.read_csv(path + "/data/ends/" + args.genome_id + ".tsv", header=None)
 
-with open('/home3/katelyn/goodorfs/genomes/fna/' + args.genome_id + '.fna') as f:
-	first_line = f.readline()
+with gzip.open(path + '/genomes/fna/' + args.genome_id + '.fna.gz') as f:
+	first_line = f.readline().decode("utf-8")
 
 dat = dat[dat.CODON != 'CTG']
 dat['COUNT'] = dat.groupby(['STOP'])['START'].transform('count')
