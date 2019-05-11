@@ -130,31 +130,31 @@ dat.fillna(0, inplace=True)
 #	print(args.genome_id, row.STOP, row.TYPE, row.GOOD/row.TOTAL)
 #exit()
 #########THIS MAKES THE BAR DATA###########
-TP = len(dat[(dat.CLUSTER == index_min) & (dat.TYPE) & (dat.GOOD/dat.TOTAL > 0.5)].STOP.unique() )
-FP = len(dat[(dat.CLUSTER == index_min) & (~dat.TYPE) & (dat.GOOD/dat.TOTAL > 0.5)].STOP.unique() )
-TN = len(dat[~dat.TYPE].STOP.unique()) - FP
-FN = len(dat[dat.TYPE].STOP.unique()) - TP
-print(args.genome_id, round(np.var(x0),4), round(np.var(x1),4), round(np.var(x2),4), TP, FP, FN, TN)
-exit()
+#TP = len(dat[(dat.CLUSTER == index_min) & (dat.TYPE) & (dat.GOOD/dat.TOTAL > 0.5)].STOP.unique() )
+#FP = len(dat[(dat.CLUSTER == index_min) & (~dat.TYPE) & (dat.GOOD/dat.TOTAL > 0.5)].STOP.unique() )
+#TN = len(dat[~dat.TYPE].STOP.unique()) - FP
+#FN = len(dat[dat.TYPE].STOP.unique()) - TP
+#print(args.genome_id, round(np.var(x0),4), round(np.var(x1),4), round(np.var(x2),4), TP, FP, FN, TN)
+#exit()
 
-import matplotlib
-matplotlib.use('Agg')
+#import matplotlib
+#matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 fig = plt.figure()
 
 #fig.suptitle(args.genome_id + " (" + title + ")", fontsize=20)
-fig.suptitle(name, fontsize=20)
+fig.suptitle('KMeans of 2', fontsize=20)
 p = P[~dat.TYPE]
-plt.scatter(p[:, 0], p[:, 1], c='r', alpha=0.5, edgecolors='none', label='fake')
+plt.scatter(p[:, 0], p[:, 1], c='#F2766E', alpha=0.7, edgecolors='none', label='non-coding')
 p = P[dat.TYPE]
-plt.scatter(p[:, 0], p[:, 1], c='g', alpha=0.5, edgecolors='none', label='real')
-plt.scatter(p0[:, 0], p0[:, 1], facecolor='none', cmap='Spectral', alpha=0.5, marker='d', edgecolor='black', label='Predicted')
+plt.scatter(p[:, 0], p[:, 1], c='#3CC9CF', alpha=0.7, edgecolors='none', label='coding')
 if(args.annotate):
 	p = dat[dat.CLUSTER==index_min]
 	for i, row in p.iterrows():
 		plt.annotate(str(row.STOP), (row.x, row.y), size=4)
 
 #print('             ', 'MAD', 'σ', 'AAD', sep='\t')
+plt.scatter(p0[:, 0], p0[:, 1], facecolor='none', cmap='Spectral', alpha=0.5, marker='d', edgecolor='black', label='Predicted')
 #print('black_diamond: ', round(np.mad(x0),4), round(np.var(x0),4), round(np.aad(x0),4), sep='\t')
 #plt.scatter(p1[:, 0], p1[:, 1], facecolor='none', cmap='Spectral', alpha=0.5, marker='D', edgecolor='b')
 #print(' blue_rectang: ', round(np.mad(x1),4), round(np.var(x1),4), round(np.aad(x1),4), sep='\t')
@@ -163,8 +163,8 @@ if(args.annotate):
 
 plt.legend()
 #fig.set_size_inches(20, 10)
-fig.savefig(args.genome_id + '.png', dpi=100)
-#plt.show(block=False)
+#fig.savefig(args.genome_id + '.png', dpi=100)
+plt.show() #block=False)
 #time.sleep(4)
 #plt.close("all") 
 exit()

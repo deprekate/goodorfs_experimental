@@ -33,11 +33,6 @@ data_subset <- subset(dataset, select = c("ID","TP","FP","FN","TN"))
 d <- arrange(data_subset, TP+FN)
 d$ID <- reorder(d$ID, rowSums(d[,c(2,4)]))
 
-ggplot(d, aes(x=log10(1+FP), y=log10(1+TP))) + geom_point() + xlim(c(0,3)) + ylim(c(0,3)) + geom_abline(intercept=0, slope=1)
-#+ scale_x_continuous(trans='log10') + scale_y_continuous(trans='log10')
-
-
-
 #d[,2:5] <- d[,2:5] * (matrix((nrow(d)-1):0) * (100/nrow(d)))
 d$FN <- -1*d$FN
 d$TN <- -1*d$TN
@@ -48,7 +43,6 @@ vplayout <- function(x, y) viewport(layout.pos.row = x, layout.pos.col = y)
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(1, 600))) # 3 rows, 5 columns
 
-
 s <- d[1:100,]
 md <- melt(s, id=(c("ID")))
 p1 <- ggplot(data=md, aes(x=ID, y=value, fill=factor(variable, levels=c("FP","TP","TN", "FN")))  ) + 
@@ -57,7 +51,8 @@ p1 <- ggplot(data=md, aes(x=ID, y=value, fill=factor(variable, levels=c("FP","TP
 	#scale_fill_manual(values = c("#CC79A7","#0072B2", "#E69F00","#56B4E9"), name="Type") +
 	geom_hline(yintercept = 0) +
 	theme(legend.position = "none") +
-	ylim(-max(s[,2]+s[,3],-s[,4]-s[,5]) , max(s[,2]+s[,3],-s[,4]-s[,5]) ) +
+	#ylim(-max(s[,2]+s[,3],-s[,4]-s[,5]) , max(s[,2]+s[,3],-s[,4]-s[,5]) ) +
+	coord_cartesian(ylim=c(-max(s[,2]+s[,3]), max(s[,2]+s[,3]))) +
 	ylab("orfs")
 
 s <- d[101:200,]
@@ -68,7 +63,8 @@ p2 <- ggplot(data=md, aes(x=ID, y=value, fill=factor(variable, levels=c("FP","TP
 	#scale_fill_manual(values = c("#CC79A7","#0072B2", "#E69F00","#56B4E9"), name="Type") +
 	geom_hline(yintercept = 0) +
 	theme(legend.position = "none") +
-	ylim(-max(s[,2]+s[,3],-s[,4]-s[,5]) , max(s[,2]+s[,3],-s[,4]-s[,5]) ) +
+	#ylim(-max(s[,2]+s[,3],-s[,4]-s[,5]) , max(s[,2]+s[,3],-s[,4]-s[,5]) ) +
+	coord_cartesian(ylim=c(-max(s[,2]+s[,3]), max(s[,2]+s[,3]))) +
 	theme(axis.title.y=element_blank()) #, axis.text.y=element_blank())
 	
 s <- d[201:600,]	
@@ -79,9 +75,9 @@ p3 <- ggplot(data=md, aes(x=ID, y=value, fill=factor(variable, levels=c("FP","TP
 	#scale_fill_manual(values = c("#CC79A7","#0072B2", "#E69F00","#56B4E9"), name="Type") +
 	geom_hline(yintercept = 0) +
 	theme(legend.position = "none") +
-	ylim(-max(s[,2]+s[,3],-s[,4]-s[,5]) , max(s[,2]+s[,3],-s[,4]-s[,5]) )+
+	#ylim(-max(s[,2]+s[,3],-s[,4]-s[,5]) , max(s[,2]+s[,3],-s[,4]-s[,5]) )+
+	coord_cartesian(ylim=c(-max(s[,2]+s[,3]), max(s[,2]+s[,3]))) +
 	theme(axis.title.y=element_blank()) #, axis.text.y=element_blank())
-
 
 print(p1, vp = vplayout(1, 1:100))
 print(p2, vp = vplayout(1, 101:200))
