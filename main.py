@@ -61,19 +61,12 @@ args = parser.parse_args()
 #-----------------------READ IN THE DATA
 path = os.path.dirname(os.path.realpath(__file__))
 dat = pd.read_csv(path + "/data/aa/" + args.genome_id + ".tsv.gz", compression='gzip', header=0,sep='\t' )
-end = pd.read_csv(path + "/data/ends/" + args.genome_id + ".tsv", header=None)
 
 with gzip.open(path + '/genomes/fna/' + args.genome_id + '.fna.gz') as f:
 	first_line = f.readline().decode("utf-8")
 
 import re
 name = re.search('\[.*\]', first_line).group(0)
-
-dat['TYPE'] = dat['STOP'].isin(end[0])
-
-#dat = dat.groupby(['STOP','TYPE'],as_index=False)[list("ARNDCEQGHILKMFPSTWYV")].sum()
-
-#dat = dat[dat['CODON'].isin(['ATG','GTG','TTG'])]
 
 X = dat[list("ARNDCEQGHILKMFPSTWYV")]
 X = X.div(X.sum(axis=1), axis=0)
@@ -85,7 +78,7 @@ if(args.data_type == 'se'):
 	title = 'shannon-entropy'
 else:
 	title = 'aminoacid-percent'
-X['n'] = dat['COUNT']
+
 X_std = StandardScaler().fit_transform(X)
 
 if(args.clust_type == 'km'):
@@ -139,8 +132,7 @@ dat.fillna(0, inplace=True)
 import matplotlib.pyplot as plt
 fig = plt.figure()
 
-#fig.suptitle(args.genome_id + " (" + title + ")", fontsize=20)
-fig.suptitle('KMeans of 2', fontsize=20)
+fig.suptitle(args.genome_id + " (" + title + ")", fontsize=20)
 p = P[~dat.TYPE]
 plt.scatter(p[:, 0], p[:, 1], c='#F2766E', alpha=0.7, edgecolors='none', label='non-coding')
 p = P[dat.TYPE]
