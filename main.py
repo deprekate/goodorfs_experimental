@@ -66,9 +66,6 @@ end = pd.read_csv(path + "/data/ends/" + args.genome_id + ".tsv", header=None)
 with gzip.open(path + '/genomes/fna/' + args.genome_id + '.fna.gz') as f:
 	first_line = f.readline().decode("utf-8")
 
-dat = dat[dat.CODON != 'CTG']
-dat['COUNT'] = dat.groupby(['STOP'])['START'].transform('count')
-
 import re
 name = re.search('\[.*\]', first_line).group(0)
 
