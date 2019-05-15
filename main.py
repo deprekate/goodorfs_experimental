@@ -84,17 +84,17 @@ X = StandardScaler().fit_transform(X)
 if(args.clust_type == 'km'):
 	dat['CLUSTER'] = KMeans(n_clusters=args.clust_num, n_init=50).fit(X).labels_
 elif(args.clust_type == 'gm'):
-	dat['CLUSTER'] = GaussianMixture(n_components=2,covariance_type='tied').fit(X).predict(X)
+	dat['CLUSTER'] = GaussianMixture(n_components=args.clust_num,covariance_type='tied').fit(X).predict(X)
 elif(args.clust_type == 'bgm'):
-	dat['CLUSTER'] = BayesianGaussianMixture(n_components=3,covariance_type='tied').fit_predict(X)
+	dat['CLUSTER'] = BayesianGaussianMixture(n_components=args.clust_num,covariance_type='tied').fit_predict(X)
 elif(args.clust_type == 'ag'):
-	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=2).fit_predict(X)
+	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num).fit_predict(X)
 
 pca = decomposition.PCA(n_components=2).fit(X)
 dat['x'],dat['y'] = pca.fit_transform(X).T
 
 # PICK THE CLUSTER WITH THE LOWEST VARIANCE
-variance = [np.var(X[dat.CLUSTER==i]) for i in range(3)]
+variance = [np.var(X[dat.CLUSTER==i]) for i in range(args.clust_num)]
 index_min = np.argmin(variance)
 #index_mid = np.argmed(variance)
 #index_max = np.argmax(variance)
@@ -138,8 +138,8 @@ if(args.annotate):
 plt.legend(handles=[mpatches.Patch(color=col, label=str(lab)) for lab,col in colors.items()])
 
 fig.set_size_inches(5, 5)
-fig.savefig(args.genome_id + '.png', dpi=200)
-#plt.show() #block=False)
+#fig.savefig(args.genome_id + '.png', dpi=200)
+plt.show() #block=False)
 #time.sleep(4)
 #plt.close("all") 
 exit()
