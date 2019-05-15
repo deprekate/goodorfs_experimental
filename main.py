@@ -125,7 +125,7 @@ fig, ax = plt.subplots()
 # PLOT
 colors = {True:'#3CC9CF', False:'#F2766E'}
 
-fig.suptitle(args.genome_id + " (" + title + ")", fontsize=20)
+fig.suptitle(args.genome_id + " (" + title + ")")
 ax.scatter(dat['x'], dat['y'], c=dat['TYPE'].apply(lambda x: colors[x]), marker='.', linewidths=0.0, alpha=0.8, zorder=5)
 
 ax.scatter(dat[dat.CLUSTER==index_min].x, dat[dat.CLUSTER==index_min].y, facecolor='none', cmap='Spectral', alpha=0.5, marker='d', edgecolor='black', label='Predicted', zorder=10)
@@ -137,8 +137,8 @@ if(args.annotate):
 
 plt.legend(handles=[mpatches.Patch(color=col, label=str(lab)) for lab,col in colors.items()])
 
-fig.set_size_inches(8, 8)
-fig.savefig(args.genome_id + '.png', dpi=72)
+fig.set_size_inches(5, 5)
+fig.savefig(args.genome_id + '.png', dpi=200)
 #plt.show() #block=False)
 #time.sleep(4)
 #plt.close("all") 
