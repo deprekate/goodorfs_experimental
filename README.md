@@ -15,6 +15,7 @@ This command will take the amino-acid counts of the file `data/aa/1002725.9.tsv.
 5. Find the variances of the points for each cluster, and assigning the cluster with the lowest variance as the 'good' cluster
 6. Decompose the normalized scores using Principle Component Analysis from 20 dimensions into 2
 7. Plot all the ORFs in 2-dimensional space using the 2 components using `Matplotlib`
+</code></pre>
 
 ## Output
 If **goodorfs** ran correctly you should get an output image titled 1002725.9.png, which should look like the image below:
