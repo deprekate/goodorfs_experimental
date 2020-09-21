@@ -58,6 +58,12 @@ setattr(np, 'aad', aad)
 def amd(data, axis=None):
 	    return np.median(np.absolute(data - np.median(data, axis)), axis)
 setattr(np, 'amd', amd)
+def mmd(data, axis=None):
+	    return np.mean(np.absolute(data - np.median(data, axis)), axis)
+setattr(np, 'mmd', mmd)
+def maa(data, axis=None):
+	    return np.median(np.absolute(data - np.mean(data, axis)), axis)
+setattr(np, 'maa', maa)
 
 def argmid(x):
     for i, item in enumerate(x):
@@ -103,6 +109,13 @@ with gzip.open(path + '/genomes/fna/' + args.genome_id + '.fna.gz') as f:
 
 counts = dat.groupby('STOP').START.nunique().to_dict()
 
+if len(counts) < 100:
+	args.clust_num = 2
+else:
+	args.clust_num = 3
+
+#args.clust_num = min(int(log10(len(dat))), 3)
+
 count = dict()
 mask = []
 longest = dict()
@@ -111,9 +124,10 @@ for index,row in dat[['START', 'STOP']].iterrows():
 	count[r[1]] = count.get(r[1], 0) + 1
 	#if count[r[1]] <= 30:
 	#if count[r[1]] <= 4*log2(counts[r[1]]):
-	if count[r[1]] <= 10+sqrt(counts[r[1]]):
+	#if count[r[1]] <= 10+sqrt(counts[r[1]]):
+	if count[r[1]] <= args.clust_num * sqrt(counts[r[1]]):
 
-	#if count[r[1]] <= 10: #(counts[r[0]]/2):
+	#if count[r[1]] <= (counts[r[1]]/1.5):
 		mask.append(False)
 	else:
 		mask.append(True)
@@ -154,9 +168,8 @@ else:
 #X['NUM'] = dat['NUM'].div(dat['NUM'].mean()/X.to_numpy().mean(), axis=0
 #X['NUM'] = np.array(nums) * -np.log(np.array(nums))
 #X['NUM'] = nums
-#X = StandardScaler().fit_transform(X)
+X = StandardScaler().fit_transform(X)
 
-args.clust_num = int(log10(len(X)))
 
 print('len', len(X), 'clustnum', args.clust_num) 
 
@@ -165,7 +178,7 @@ if(args.clust_type == 'km'):
 	dat['CLUSTER'] = KMeans(n_clusters=args.clust_num, n_init=50).fit(X).labels_
 elif(args.clust_type == 'gm'):
 	#dat['CLUSTER'] = GaussianMixture(n_components=args.clust_num,covariance_type='spherical').fit(X).predict(X)
-	model = GaussianMixture(n_components=args.clust_num, n_init=10, covariance_type='spherical', reg_covar=0.01).fit(X)
+	model = GaussianMixture(n_components=args.clust_num, n_init=10, covariance_type='spherical', reg_covar=0.00001).fit(X)
 	print(model.covariances_)
 	print(model.converged_)
 	print(model.n_iter_)
@@ -174,7 +187,7 @@ elif(args.clust_type == 'gm'):
 elif(args.clust_type == 'bgm'):
 	dat['CLUSTER'] = BayesianGaussianMixture(n_components=args.clust_num,covariance_type='spherical').fit_predict(X)
 elif(args.clust_type == 'ag'):
-	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num).fit_predict(X)
+	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num, affinity='manhattan', linkage='complete').fit_predict(X)
 elif(args.clust_type == 'ward'):
 	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num, linkage='ward').fit_predict(X)
 elif(args.clust_type == 'pam'):
@@ -191,13 +204,12 @@ pca = decomposition.PCA(n_components=2).fit(X)
 dat['x'],dat['y'] = pca.fit_transform(X).T
 
 # PICK THE CLUSTER WITH THE LOWEST VARIANCE
-variance = [np.sum(np.var(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)]
 print("----------")
-print('   var', variance)
-v = [np.sum(np.aad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)]
-print('sumaad', v)
-v = [np.sum(np.amd(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)]
-print('   amd', v)
+v = [np.sum(np.var(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('   var', v)
+v = [np.sum(np.aad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('sumaad', v)
+v = [np.sum(np.amd(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('   amd', v)
+v = [np.sum(np.mmd(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('   mmd', v)
+v = [np.sum(np.maa(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('   maa', v)
 l = [len(X[dat.CLUSTER==i]) for i in range(args.clust_num)]
 print('   len', l)
 #index_min = np.argmin(variance)
@@ -206,6 +218,9 @@ index_min = get_best(v, l)
 print(index_min)
 #index_mid = np.argmed(variance)
 #index_max = np.argmax(variance)
+print(dat.loc[dat.CLUSTER==index_min,].groupby('STOP').TYPE.agg(['first'])['first'].value_counts())
+
+
 title = "[" + ', '.join(str(round(e, 2)) for e in v) + "]"
 
 dat['GOOD'] = dat.STOP.map(dat[dat.CLUSTER==index_min].STOP.value_counts())
@@ -236,7 +251,8 @@ fig, ax = plt.subplots()
 
 # PLOT
 colors = {True:'#3CC9CF', False:'#F2766E'}
-markers = {0:'o', 1:'v', 2:'^', 3:'<', 4:'>', 5:'s'}
+#markers = {0:'o', 1:'v', 2:'^', 3:'<', 4:'>', 5:'s'}
+markers = {k:v for k,v in zip({0,1,2}.difference({index_min}), ['o','s'])}
 
 fig.suptitle(args.genome_id + " (" + title + ")")
 ax.scatter(dat['x'], dat['y'], c=dat['TYPE'].apply(lambda x: colors[x]), marker='.', linewidths=0.0, alpha=0.4, zorder=5)
@@ -252,6 +268,7 @@ else:
 	for i in range(args.clust_num):
 		if i != index_min:
 			ax.scatter(dat[dat.CLUSTER==i].x, dat[dat.CLUSTER==i].y, facecolor='none', cmap='Spectral', s=80, linewidths=0.3, alpha=0.5, marker=markers[i], edgecolor='green', label='Predicted', zorder=10)
+			pass
 	pass
 
 ## visualize projections
