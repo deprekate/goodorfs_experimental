@@ -43,7 +43,7 @@ def argmed(a):
         return [np.where(a == left)[0][0], np.where(a==right)[0][0]]
 setattr(np, 'argmed', argmed)
 
-def mad(arr):
+def xxx(arr):
     """ Median Absolute Deviation: a "Robust" version of standard deviation.
         Indices variabililty of the sample.
         https://en.wikipedia.org/wiki/Median_absolute_deviation 
@@ -51,19 +51,19 @@ def mad(arr):
     arr = np.ma.array(arr).compressed() # should be faster to not use masked arrays.
     med = np.median(arr)
     return np.median(np.abs(arr - med))
-setattr(np, 'mad', mad)
+setattr(np, 'xxx', xxx)
 def aad(data, axis=None):
-	    return np.mean(np.absolute(data - np.mean(data, axis)), axis)
+	return np.mean(np.absolute(data - np.mean(data, axis)), axis)
 setattr(np, 'aad', aad)
 def amd(data, axis=None):
-	    return np.median(np.absolute(data - np.median(data, axis)), axis)
+	return np.median(np.absolute(data - np.median(data, axis)), axis)
 setattr(np, 'amd', amd)
 def mmd(data, axis=None):
-	    return np.mean(np.absolute(data - np.median(data, axis)), axis)
+	return np.mean(np.absolute(data - np.median(data, axis)), axis)
 setattr(np, 'mmd', mmd)
-def maa(data, axis=None):
-	    return np.median(np.absolute(data - np.mean(data, axis)), axis)
-setattr(np, 'maa', maa)
+def mad(data, axis=None):
+	return np.median(np.absolute(data - np.mean(data, axis)), axis)
+setattr(np, 'mad', mad)
 
 def argmid(x):
     for i, item in enumerate(x):
@@ -81,8 +81,11 @@ def color(x):
 def get_best(variances, counts):
 	index = None
 	v = float("+Inf")
+	C = dat.groupby('STOP').START.nunique().to_dict()
 	for i, (var,count) in enumerate(zip(variances, counts)):
-		if var<v and var>=0 and (count/sum(counts))>0.05:
+		c = dat[dat.CLUSTER==i].groupby('STOP').START.nunique().to_dict()
+		#print(len(c))
+		if var<v and var>=0 and (len(c)/len(C))>0.05: #(count/sum(counts))>0.05 and len(c)>1:
 			index = i
 			v = var
 	return index
@@ -109,12 +112,8 @@ with gzip.open(path + '/genomes/fna/' + args.genome_id + '.fna.gz') as f:
 
 counts = dat.groupby('STOP').START.nunique().to_dict()
 
-if len(counts) < 100:
-	args.clust_num = 2
-else:
-	args.clust_num = 3
-
-#args.clust_num = min(int(log10(len(dat))), 3)
+#args.clust_num = int(log10(len(counts)))
+args.clust_num = 3 #round(log10(len(dat)-len(counts)))
 
 count = dict()
 mask = []
@@ -122,11 +121,12 @@ longest = dict()
 for index,row in dat[['START', 'STOP']].iterrows():
 	r = list(row.values)
 	count[r[1]] = count.get(r[1], 0) + 1
-	#if count[r[1]] <= 30:
+	#if count[r[1]] <= 10:
 	#if count[r[1]] <= 4*log2(counts[r[1]]):
 	#if count[r[1]] <= 10+sqrt(counts[r[1]]):
-	if count[r[1]] <= args.clust_num * sqrt(counts[r[1]]):
+	if True: #count[r[1]] <= args.clust_num * sqrt(counts[r[1]]):
 
+	#if count[r[1]] <= 3 or count[r[1]] <= (counts[r[1]]/3):
 	#if count[r[1]] <= (counts[r[1]]/1.5):
 		mask.append(False)
 	else:
@@ -152,6 +152,7 @@ X = X.div(X.sum(axis=1), axis=0)
 
 dat.loc[:,'A':'V'] = dat.loc[:,'A':'V'].div(dat.loc[:,'A':'V'].sum(axis=1), axis=0)
 
+#x = X
 if(args.data_type == 'se'):
 	#this is the shannon entropy
 	X = X * np.log(X)
@@ -159,16 +160,18 @@ if(args.data_type == 'se'):
 	#X = np.nan_to_num(X, nan=0)
 	X = X.div(X.sum(axis=1), axis=0)
 	#X = X / X.sum(axis=1, keepdims=True)
+	X = StandardScaler().fit_transform(X)
 	title = 'shannon-entropy'
 else:
 	X = StandardScaler().fit_transform(X)
 	title = 'aminoacid-percent'
 
+#X = StandardScaler().fit_transform(np.concatenate((X,x),axis=1))
+
 #X['NUM'] = dat['NUM']
 #X['NUM'] = dat['NUM'].div(dat['NUM'].mean()/X.to_numpy().mean(), axis=0
 #X['NUM'] = np.array(nums) * -np.log(np.array(nums))
 #X['NUM'] = nums
-X = StandardScaler().fit_transform(X)
 
 
 print('len', len(X), 'clustnum', args.clust_num) 
@@ -187,7 +190,8 @@ elif(args.clust_type == 'gm'):
 elif(args.clust_type == 'bgm'):
 	dat['CLUSTER'] = BayesianGaussianMixture(n_components=args.clust_num,covariance_type='spherical').fit_predict(X)
 elif(args.clust_type == 'ag'):
-	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num, affinity='manhattan', linkage='complete').fit_predict(X)
+	#dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num, affinity='cosine', linkage='complete').fit_predict(X)
+	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=None, distance_threshold=1.8, affinity='cosine', linkage='complete').fit_predict(X)
 elif(args.clust_type == 'ward'):
 	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num, linkage='ward').fit_predict(X)
 elif(args.clust_type == 'pam'):
@@ -205,11 +209,12 @@ dat['x'],dat['y'] = pca.fit_transform(X).T
 
 # PICK THE CLUSTER WITH THE LOWEST VARIANCE
 print("----------")
-v = [np.sum(np.var(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('   var', v)
-v = [np.sum(np.aad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('sumaad', v)
-v = [np.sum(np.amd(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('   amd', v)
-v = [np.sum(np.mmd(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('   mmd', v)
-v = [np.sum(np.maa(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('   maa', v)
+v = [np.sum(np.var(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('var', v)
+v = [np.sum(np.amd(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('amd', v)
+v = [np.sum(np.mmd(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mmd', v)
+v = [np.sum(np.aad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('aad', v)
+v = [np.median(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mmm', v)
+v = [np.sum(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mad', v)
 l = [len(X[dat.CLUSTER==i]) for i in range(args.clust_num)]
 print('   len', l)
 #index_min = np.argmin(variance)
@@ -219,6 +224,10 @@ print(index_min)
 #index_mid = np.argmed(variance)
 #index_max = np.argmax(variance)
 print(dat.loc[dat.CLUSTER==index_min,].groupby('STOP').TYPE.agg(['first'])['first'].value_counts())
+
+
+print('ratio:' , dat[ (dat.CLUSTER==index_min) & (dat.TYPE==True) ].groupby('STOP').START.nunique().to_dict().__len__(), dat[ (dat.TYPE==True) ].groupby('STOP').START.nunique().to_dict().__len__() , sep='\t')
+
 
 
 title = "[" + ', '.join(str(round(e, 2)) for e in v) + "]"
@@ -251,8 +260,7 @@ fig, ax = plt.subplots()
 
 # PLOT
 colors = {True:'#3CC9CF', False:'#F2766E'}
-#markers = {0:'o', 1:'v', 2:'^', 3:'<', 4:'>', 5:'s'}
-markers = {k:v for k,v in zip({0,1,2}.difference({index_min}), ['o','s'])}
+markers = {k:v for k,v in zip({0,1,2,3}.difference({index_min}), ['o','s','H'])}
 
 fig.suptitle(args.genome_id + " (" + title + ")")
 ax.scatter(dat['x'], dat['y'], c=dat['TYPE'].apply(lambda x: colors[x]), marker='.', linewidths=0.0, alpha=0.4, zorder=5)
