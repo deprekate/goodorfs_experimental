@@ -30,6 +30,39 @@ from scipy import stats
 import warnings
 warnings.filterwarnings('ignore')
 
+def confidence_ellipse(x, y, ax, n_std=3.0, facecolor='none', **kwargs):
+    if x.size != y.size:
+        raise ValueError("x and y must be the same size")
+
+    cov = np.cov(x, y)
+    pearson = cov[0, 1] / np.sqrt(cov[0, 0] * cov[1, 1])
+    # Using a special case to obtain the eigenvalues of this two-dimensionl dataset.
+    ell_radius_x = np.sqrt(1 + pearson)
+    ell_radius_y = np.sqrt(1 - pearson)
+    ellipse = Ellipse((0, 0),
+                      width=ell_radius_x * 2,
+                      height=ell_radius_y * 2,
+                      facecolor=facecolor,
+                      **kwargs)
+
+    # Calculating the stdandard deviation of x from
+    # the squareroot of the variance and multiplying
+    # with the given number of standard deviations.
+    scale_x = np.sqrt(cov[0, 0]) * n_std
+    mean_x = np.mean(x)
+
+    # calculating the stdandard deviation of y ...
+    scale_y = np.sqrt(cov[1, 1]) * n_std
+    mean_y = np.mean(y)
+
+    transf = matplotlib.transforms.Affine2D() \
+        .rotate_deg(45) \
+        .scale(scale_x, scale_y) \
+        .translate(mean_x, mean_y)
+
+    ellipse.set_transform(transf + ax.transData)
+    return ax.add_patch(ellipse)
+
 
 def argmed(a):
     if(len(a) == 2):
@@ -43,7 +76,7 @@ def argmed(a):
         return [np.where(a == left)[0][0], np.where(a==right)[0][0]]
 setattr(np, 'argmed', argmed)
 
-def xxx(arr):
+def xx(arr):
     """ Median Absolute Deviation: a "Robust" version of standard deviation.
         Indices variabililty of the sample.
         https://en.wikipedia.org/wiki/Median_absolute_deviation 
@@ -51,7 +84,11 @@ def xxx(arr):
     arr = np.ma.array(arr).compressed() # should be faster to not use masked arrays.
     med = np.median(arr)
     return np.median(np.abs(arr - med))
+
+def xxx(data, axis=None):
+	return np.absolute(np.median(data - np.mean(data, axis), axis))
 setattr(np, 'xxx', xxx)
+
 def aad(data, axis=None):
 	return np.mean(np.absolute(data - np.mean(data, axis)), axis)
 setattr(np, 'aad', aad)
@@ -64,6 +101,9 @@ setattr(np, 'mmd', mmd)
 def mad(data, axis=None):
 	return np.median(np.absolute(data - np.mean(data, axis)), axis)
 setattr(np, 'mad', mad)
+def sad(data, axis=None):
+	return np.sum(np.absolute(data - np.mean(data, axis)), axis)
+setattr(np, 'sad', sad)
 
 def argmid(x):
     for i, item in enumerate(x):
@@ -113,12 +153,14 @@ with gzip.open(path + '/genomes/fna/' + args.genome_id + '.fna.gz') as f:
 counts = dat.groupby('STOP').START.nunique().to_dict()
 
 #args.clust_num = int(log10(len(counts)))
-args.clust_num = 3 #round(log10(len(dat)-len(counts)))
+#args.clust_num = 3 #round(log10(len(dat)-len(counts)))
 
 count = dict()
 mask = []
 longest = dict()
-for index,row in dat[['START', 'STOP']].iterrows():
+
+coding_frame = dict()
+for index,row in dat[['START', 'STOP', 'TYPE']].iterrows():
 	r = list(row.values)
 	count[r[1]] = count.get(r[1], 0) + 1
 	#if count[r[1]] <= 10:
@@ -133,18 +175,48 @@ for index,row in dat[['START', 'STOP']].iterrows():
 		mask.append(True)
 	length = max(r[1]-r[0], r[0]-r[1])
 	longest[r[1]] = max(longest.get(r[1],0), length) 
+	if r[2] == True:
+		for i in range(min(r[0], r[1]), max(r[0], r[1])):
+			if (i not in coding_frame) or (r[0]>r[1]):
+				coding_frame[i] = (max(r[0],r[1]) % 3) + 1
+				if r[0] > r[1]:
+					coding_frame[i] *= -1
+
 
 dat = dat.drop(dat[mask].index)
 #dat = dat[dat.CODON != 'TTG']
 
+def sign(n):
+	if n != 0:
+		return abs(n)/n
+	else:
+		return 1.0
+
 nums = []
+offset = []
 for index,row in dat[['START','STOP']].iterrows():
 	r = list(row.values)
 	length = max(r[1]-r[0], r[0]-r[1])
 	#nums.append(r[0] / counts[r[1]])
 	nums.append(length/longest[r[1]])
 	#nums.append(length)
-
+	frames = {0:0, 1:0, 2:0, 3:0, -1:0, -2:0, -3:0}
+	l = (max(r[0],r[1]) % 3) + 1
+	if r[0] > r[1]:
+		l *= -1
+	for i in range(min(r[0], r[1]), max(r[0], r[1])):
+		frames[coding_frame.get(i, 0)] += 1
+	#del frames[0]
+	a = max(frames, key=frames.get)
+	if a != 0:
+		#print(r[0], r[1])
+		#print(a, l)
+		#print( sign(a)*sign(l), ((abs(a)+3-abs(l))%3) )
+		offset.append( str(sign(a)*sign(l) * ((abs(a)+3-abs(l))%3)).replace('.0', '') )
+	else:
+		offset.append('IG')
+dat['OFFSET'] = offset
+dat.loc[dat.TYPE==True, 'OFFSET'] = True
 
 X = dat[list("ARNDCEQGHILKMFPSTWYV")]
 X = X.div(X.sum(axis=1), axis=0)
@@ -214,12 +286,14 @@ v = [np.sum(np.amd(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ;
 v = [np.sum(np.mmd(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mmd', v)
 v = [np.sum(np.aad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('aad', v)
 v = [np.median(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mmm', v)
+v = [np.linalg.norm(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('euc', v)
 v = [np.sum(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mad', v)
+v = [np.sum(np.xxx(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('xxx', v)
 l = [len(X[dat.CLUSTER==i]) for i in range(args.clust_num)]
 print('   len', l)
 #index_min = np.argmin(variance)
-#index_min = np.argmin(v)
-index_min = get_best(v, l)
+index_min = np.argmin(v)
+#index_min = get_best(v, l)
 print(index_min)
 #index_mid = np.argmed(variance)
 #index_max = np.argmax(variance)
@@ -256,20 +330,29 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-fig, ax = plt.subplots()
+from matplotlib.patches import Ellipse
+fig, ax = plt.subplots(figsize=(4,3.5))
+#fig.set_size_inches(4, 2.5)
 
 # PLOT
 colors = {True:'#3CC9CF', False:'#F2766E'}
+#colors = {True:'#3CC9CF', 'IG':'black', '-0':'b', '1':'g', '2':'r', '-1':'m', '-2':'y'}
 markers = {k:v for k,v in zip({0,1,2,3}.difference({index_min}), ['o','s','H'])}
 
-fig.suptitle(args.genome_id + " (" + title + ")")
+#fig.suptitle(args.genome_id + " (" + title + ")")
+fig.suptitle(args.genome_id)
 ax.scatter(dat['x'], dat['y'], c=dat['TYPE'].apply(lambda x: colors[x]), marker='.', linewidths=0.0, alpha=0.4, zorder=5)
+#ax.scatter(dat['x'], dat['y'], c=dat['OFFSET'].apply(lambda x: colors[x]), marker='.', linewidths=0.0, alpha=0.4, zorder=5)
+ax.set_xlabel('PC1', fontsize=12)
+plt.ylabel('PC2')
 
+#for label in ['1', '2', '-0', '-1', '-2']:
+#	confidence_ellipse(dat.loc[dat.OFFSET == label, 'x'], dat.loc[dat.OFFSET == label, 'y'], ax, edgecolor=colors[label], linewidth=0.5, zorder=0)
 
 if(args.annotate):
-	p = dat[dat.CLUSTER==index_min]
+	p = dat[(dat.NUM==1) & (dat.CLUSTER!=6)] #index_min]
 	for i, row in p.iterrows():
-		plt.annotate(str(row.STOP), (row.x, row.y), size=4, zorder=10)
+		ax.annotate(str(row.STOP), (row.x, row.y), size=2, zorder=10)
 		print(row.STOP)
 else:
 	ax.scatter(dat[dat.CLUSTER==index_min].x, dat[dat.CLUSTER==index_min].y, facecolor='none', cmap='Spectral', s=80, linewidths=0.3, alpha=0.3, marker='d', edgecolor='black', label='Predicted', zorder=10)
@@ -280,22 +363,21 @@ else:
 	pass
 
 ## visualize projections
-#xvector = pca.components_[0] # see 'prcomp(my_data)$rotation' in R
-#yvector = pca.components_[1]
-#xs = pca.transform(X)[:,0] # see 'prcomp(my_data)$x' in R
-#ys = pca.transform(X)[:,1]
-#for i in range(len(xvector)):
-	# arrows project features (ie columns from csv) as vectors onto PC axes
-	#plt.arrow(0, 0, xvector[i]*max(xs), yvector[i]*max(ys), color='black', alpha=0.7, width=0.0005, head_width=0.0025, zorder=11)
-	#plt.text(xvector[i]*max(xs)*1.2, yvector[i]*max(ys)*1.2, list("ARNDCEQGHILKMFPSTWYV")[i], color='black', alpha=0.7, zorder=11)
+xvector = pca.components_[0] # see 'prcomp(my_data)$rotation' in R
+yvector = pca.components_[1]
+xs = 2.2*pca.transform(X)[:,0] # see 'prcomp(my_data)$x' in R
+ys = 2.2*pca.transform(X)[:,1]
+for i in range(len(xvector)):
+	#arrows project features (ie columns from csv) as vectors onto PC axes
+	plt.arrow(0, 0, xvector[i]*max(xs), yvector[i]*max(ys), color='black', alpha=0.2, width=0.00001, head_width=0.0025, zorder=11)
+	plt.text(xvector[i]*max(xs)*1.1, yvector[i]*max(ys)*1.1, list("ARNDCEQGHILKMFPSTWYV")[i], color='black', alpha=0.5, zorder=11)
 #	pass
 
 
-plt.legend(handles=[mpatches.Patch(color=col, label=str(lab)) for lab,col in colors.items()])
+ax.legend(handles=[mpatches.Patch(color=col, label=str(lab)) for lab,col in colors.items()])
 
-fig.set_size_inches(4, 2.5)
-fig.savefig(args.genome_id + '.png', dpi=300)
-plt.show() #block=False)
+fig.savefig(args.genome_id + '.png', dpi=300, bbox_inches='tight')
+#plt.show() #block=False)
 #time.sleep(4)
 #plt.close("all") 
 exit()
