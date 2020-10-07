@@ -5,10 +5,8 @@ import argparse
 import numpy as np
 import pandas as pd 
 import gzip
-from math import sqrt
 from statistics import mean
-from math import log10
-from math import log2
+from math import log2, log10, sqrt, ceil
 
 #from matplotlib.mlab import PCA
 from sklearn.decomposition import PCA
@@ -94,8 +92,14 @@ def sums(data, axis=None):
 	return np.sum(np.absolute(data - np.mean(data, axis)), axis)
 setattr(np, 'sums', sums)
 
+def nrm(data, axis=None):
+	x = np.array(data - np.mean(data, axis))
+	d = np.linalg.norm(x, axis=1)
+	return np.linalg.norm(x, axis=1)
+setattr(np, 'nrm', nrm)
 
 def aad(data, axis=None):
+	print( np.round(np.mean(np.absolute(data - np.mean(data, axis)), axis), 2) )
 	return np.mean(np.absolute(data - np.mean(data, axis)), axis)
 setattr(np, 'aad', aad)
 def amd(data, axis=None):
@@ -105,6 +109,7 @@ def mmd(data, axis=None):
 	return np.mean(np.absolute(data - np.median(data, axis)), axis)
 setattr(np, 'mmd', mmd)
 def mad(data, axis=None):
+	#print( np.round(np.median(np.absolute(data - np.mean(data, axis)), axis), 2) )
 	return np.median(np.absolute(data - np.mean(data, axis)), axis)
 setattr(np, 'mad', mad)
 def sad(data, axis=None):
@@ -148,7 +153,7 @@ parser.add_argument('-t','--clust_type', action="store", dest="clust_type", requ
 parser.add_argument('-n','--clust_num', action="store", dest="clust_num", required=True, type=int)
 parser.add_argument('-a','--annotate', action="store_true", dest="annotate", required=False)
 parser.add_argument('-o','--offset', action="store_true", dest="offset", required=False)
-parser.add_argument('-m','--maxd', type=int, default=80, dest="maxd", required=False)
+parser.add_argument('-m','--maxd', type=float, default=70, dest="maxd", required=False)
 
 args = parser.parse_args()
 
@@ -172,13 +177,15 @@ coding_frame = dict()
 for index,row in dat[['START', 'STOP', 'TYPE']].iterrows():
 	r = list(row.values)
 	count[r[1]] = count.get(r[1], 0) + 1
+	#if count[r[1]] <= 1:
 	#if count[r[1]] <= 10:
 	#if count[r[1]] <= 4*log2(counts[r[1]]):
 	#if count[r[1]] <= 10+sqrt(counts[r[1]]):
-	if True: #count[r[1]] <= args.clust_num * sqrt(counts[r[1]]):
 
 	#if count[r[1]] <= 3 or count[r[1]] <= (counts[r[1]]/3):
-	#if count[r[1]] <= (counts[r[1]]/1.5):
+	#if (count[r[1]] == 1) or (count[r[1]] <= (counts[r[1]]/2)):
+	if count[r[1]] <= ceil(counts[r[1]]/2):
+	#if True: #count[r[1]] <= args.clust_num * sqrt(counts[r[1]]):
 		mask.append(False)
 	else:
 		mask.append(True)
@@ -190,7 +197,6 @@ for index,row in dat[['START', 'STOP', 'TYPE']].iterrows():
 				coding_frame[i] = (max(r[0],r[1]) % 3) + 1
 				if r[0] > r[1]:
 					coding_frame[i] *= -1
-
 
 dat = dat.drop(dat[mask].index)
 #dat = dat[dat.CODON != 'TTG']
@@ -227,18 +233,23 @@ for index,row in dat[['START','STOP']].iterrows():
 dat['OFFSET'] = offset
 dat.loc[dat.TYPE==True, 'OFFSET'] = True
 
-
 dat.loc[dat.CODON=='ATG', 'M'] = dat.loc[dat.CODON=='ATG', 'M'] - 1
 dat.loc[dat.CODON=='GTG', 'V'] = dat.loc[dat.CODON=='GTG', 'V'] - 1
 dat.loc[dat.CODON=='TTG', 'L'] = dat.loc[dat.CODON=='TTG', 'L'] - 1
+dat['n'] = dat.loc[:, 'A':'V'].sum(axis=1)
+#dat = dat[dat.SUM > 50]
+
+print(dat)
 
 X = dat[list("ARNDCEQGHILKMFPSTWYV")]
 X = X.div(X.sum(axis=1), axis=0)
 #X.loc[:, list("ARNDCEQGHILKMFPSTWYV")]  = StandardScaler().fit_transform(X)
 
-dat.loc[:,'A':'V'] = dat.loc[:,'A':'V'].div(dat.loc[:,'A':'V'].sum(axis=1), axis=0)
+
+#dat.loc[:,'A':'V'] = dat.loc[:,'A':'V'].div(dat.loc[:,'A':'V'].sum(axis=1), axis=0)
 
 #x = X
+#x = StandardScaler().fit_transform(X)
 if(args.data_type == 'se'):
 	#this is the shannon entropy
 	X = X * np.log(X)
@@ -246,25 +257,37 @@ if(args.data_type == 'se'):
 	#X = np.nan_to_num(X, nan=0)
 	X = X.div(X.sum(axis=1), axis=0)
 	#X = X / X.sum(axis=1, keepdims=True)
+	X = np.concatenate((X,dat[['n']]),axis=1)
 	X = StandardScaler().fit_transform(X)
 	title = 'shannon-entropy'
 else:
 	X = StandardScaler().fit_transform(X)
 	title = 'aminoacid-percent'
 
+#print(X)
+
 #X = StandardScaler().fit_transform(np.concatenate((X,x),axis=1))
+#X = np.concatenate((X,x),axis=1)
 
 #X['NUM'] = dat['NUM']
 #X['NUM'] = dat['NUM'].div(dat['NUM'].mean()/X.to_numpy().mean(), axis=0
 #X['NUM'] = np.array(nums) * -np.log(np.array(nums))
 #X['NUM'] = nums
 
+#x = X
+#pca = decomposition.PCA(n_components=2).fit(X)
+#X = pca.fit_transform(X)
 
 print('len', len(X), 'clustnum', args.clust_num) 
 
 
 if(args.clust_type == 'km'):
 	dat['CLUSTER'] = KMeans(n_clusters=args.clust_num, n_init=50).fit(X).labels_
+	#from sklearn.metrics import silhouette_samples, silhouette_score
+	#for n in [2, 3, 4, 5, 6]:
+	#	labs = KMeans(n_clusters=n, n_init=50).fit(X).labels_
+	#	silhouette_avg = silhouette_score(X, labs)
+	#	print("For n_clusters =", n, "The average silhouette_score is :", silhouette_avg)
 elif(args.clust_type == 'gm'):
 	#dat['CLUSTER'] = GaussianMixture(n_components=args.clust_num,covariance_type='spherical').fit(X).predict(X)
 	model = GaussianMixture(n_components=args.clust_num, n_init=10, covariance_type='spherical', reg_covar=0.00001).fit(X)
@@ -277,12 +300,13 @@ elif(args.clust_type == 'bgm'):
 	dat['CLUSTER'] = BayesianGaussianMixture(n_components=args.clust_num,covariance_type='spherical').fit_predict(X)
 elif(args.clust_type == 'h'):
 	from scipy.cluster.hierarchy import dendrogram, linkage, fcluster
-	Z = linkage(X, 'ward')
-	print(args.maxd)
-	dat['CLUSTER'] = fcluster(Z, args.maxd, criterion='distance') - 1
+	Z = linkage(X, method='ward')
+	#dat['CLUSTER'] = fcluster(Z, args.maxd, criterion='distance') - 1
+	dat['CLUSTER'] = fcluster(Z, 3, criterion='maxclust') - 1
+	args.clust_num = dat['CLUSTER'].nunique()
 elif(args.clust_type == 'ag'):
-	#dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num, affinity='cosine', linkage='complete').fit_predict(X)
-	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=None, distance_threshold=1.8, affinity='cosine', linkage='complete').fit_predict(X)
+	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num, affinity='cosine', linkage='complete').fit_predict(X)
+	#dat['CLUSTER'] = AgglomerativeClustering(n_clusters=None, distance_threshold=1.8, affinity='cosine', linkage='complete').fit_predict(X)
 elif(args.clust_type == 'ward'):
 	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num, linkage='ward', compute_full_tree=True).fit_predict(X)
 elif(args.clust_type == 'pam'):
@@ -294,24 +318,30 @@ elif(args.clust_type == 'sp'):
 elif(args.clust_type == 'b'):
 	dat['CLUSTER'] = Birch(n_clusters=args.clust_num).fit_predict(X)
 
-print(dat)
-
+#dat['SUM'] = dat.loc[:, 'A':'V'].sum(axis=1)
+#print(dat.to_string())
+#exit()
+#X = x
 pca = decomposition.PCA(n_components=2).fit(X)
 dat['x'],dat['y'] = pca.fit_transform(X).T
 
 # PICK THE CLUSTER WITH THE LOWEST VARIANCE
 print("----------")
+l = [len(X[dat.CLUSTER==i]) for i in range(args.clust_num)] ; print('len', l)
+#a = [dat.loc[dat.CLUSTER==i, 'A':'V'].to_numpy().sum() for i in range(args.clust_num)] ; print('   aa', a)
 v = [np.sum(np.var(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('var', v)
 v = [np.sum(np.amd(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('amd', v)
 v = [np.sum(np.mmd(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mmd', v)
-v = [np.sum(np.aad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('aad', v)
 v = [np.median(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mmm', v)
 v = [np.linalg.norm(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('euc', v)
-v = [np.sum(np.xxx(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('xxx', v)
 v = [np.sum(np.sums(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('sum', v)
-v = [np.sum(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mad', v)
-l = [len(X[dat.CLUSTER==i]) for i in range(args.clust_num)]
-print('   len', l)
+v = [np.mean(np.nrm(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('nrm', v)
+v = [np.mean(np.aad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('aad', v)
+v = [np.mean(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mad', v)
+v = [np.mean(np.xxx(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('xxx', v)
+v = [np.sum(np.mad(X[dat.CLUSTER==i, :-1], axis=0)) for i in range(args.clust_num)] ; print('mad', v)
+#v = [np.sum(np.mad(X[dat.CLUSTER==i], axis=0))/l[i] for i in range(args.clust_num)] ; print('mad', v)
+
 #index_min = np.argmin(variance)
 #index_min = np.argmin(v)
 index_min = get_best(v, l)
@@ -321,7 +351,11 @@ print(index_min)
 print(dat.loc[dat.CLUSTER==index_min,].groupby('STOP').TYPE.agg(['first'])['first'].value_counts())
 
 
-print('ratio:' , dat[ (dat.CLUSTER==index_min) & (dat.TYPE==True) ].groupby('STOP').START.nunique().to_dict().__len__(), dat[ (dat.TYPE==True) ].groupby('STOP').START.nunique().to_dict().__len__() , sep='\t')
+cor = dat[ (dat.CLUSTER==index_min) & (dat.TYPE==True) ].groupby('STOP').START.nunique().to_dict().__len__()
+tru = dat[ (dat.TYPE==True)].STOP.nunique() #.to_dict().__len__() 
+uni = dat.STOP.nunique() #.to_dict().__len__() 
+tot = dat.START.nunique() #.to_dict().__len__() 
+print(args.genome_id, cor, tru, cor/tru, uni, tot, "ratio", sep='\t')
 
 
 
@@ -352,10 +386,11 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.patches import Ellipse
-fig, ax = plt.subplots(figsize=(3.97,3.49))
+fig, ax = plt.subplots(figsize=(3.93,3.49), dpi=300)
 #fig.set_size_inches(4, 2.5)
 
 '''
+from scipy.cluster.hierarchy import dendrogram
 dendrogram(
     Z,
     leaf_rotation=90.,  # rotates the x axis labels
@@ -364,7 +399,6 @@ dendrogram(
 fig.savefig(args.genome_id + '.png', dpi=300, bbox_inches='tight')
 exit()
 '''
-
 
 # PLOT
 markers = {k:v for k,v in zip({0,1,2,3}.difference({index_min}), ['o','s','H'])}
@@ -377,7 +411,7 @@ plt.ylabel('PC2')
 if(args.annotate):
 	colors = {True:'#3CC9CF', False:'#F2766E'}
 	ax.scatter(dat['x'], dat['y'], c=dat['TYPE'].apply(lambda x: colors[x]), marker='.', linewidths=0.0, alpha=0.4, zorder=5)
-	p = dat[(dat.NUM==1) & (dat.CLUSTER!=6)] #index_min]
+	p = dat[dat.CLUSTER==index_min]
 	for i, row in p.iterrows():
 		ax.annotate(str(row.STOP), (row.x, row.y), size=2, zorder=10)
 		print(row.STOP)
@@ -388,6 +422,8 @@ elif(args.offset):
 		confidence_ellipse(dat.loc[dat.OFFSET == label, 'x'], dat.loc[dat.OFFSET == label, 'y'], ax, edgecolor=colors[label], linewidth=0.5, zorder=0)
 else:
 	colors = {True:'#3CC9CF', False:'#F2766E'}
+	markers = {k:v for k,v in zip({0,1,2,3,4,5,6}.difference({index_min}), ['o','s','H','v','^','<', '>'])}
+
 	ax.scatter(dat['x'], dat['y'], c=dat['TYPE'].apply(lambda x: colors[x]), marker='.', linewidths=0.0, alpha=0.4, zorder=5)
 	ax.scatter(dat[dat.CLUSTER==index_min].x, dat[dat.CLUSTER==index_min].y, facecolor='none', cmap='Spectral', s=80, linewidths=0.3, alpha=0.3, marker='d', edgecolor='black', label='Predicted', zorder=10)
 	for i in range(args.clust_num):
@@ -404,13 +440,13 @@ ys = 2.2*pca.transform(X)[:,1]
 for i in range(len(xvector)):
 	#arrows project features (ie columns from csv) as vectors onto PC axes
 	plt.arrow(0, 0, xvector[i]*max(xs), yvector[i]*max(ys), color='black', alpha=0.2, width=0.00001, head_width=0.0025, zorder=11)
-	plt.text(xvector[i]*max(xs)*1.1, yvector[i]*max(ys)*1.1, list("ARNDCEQGHILKMFPSTWYV")[i], color='black', alpha=0.5, zorder=11)
+	plt.text(xvector[i]*max(xs)*1.1, yvector[i]*max(ys)*1.1, list("ARNDCEQGHILKMFPSTWYVn")[i], color='black', alpha=0.5, zorder=11)
 #	pass
 
 
 ax.legend(handles=[mpatches.Patch(color=col, label=str(lab)) for lab,col in colors.items()])
 
-fig.savefig(args.genome_id + '.png', dpi=300, bbox_inches='tight')
+fig.savefig(args.genome_id + '.png', bbox_inches='tight')
 #plt.show() #block=False)
 #time.sleep(4)
 #plt.close("all") 
