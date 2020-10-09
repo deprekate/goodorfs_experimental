@@ -141,7 +141,7 @@ def get_best(variances, counts):
 	for i, (var,count) in enumerate(zip(variances, counts)):
 		c = dat[dat.CLUSTER==i].groupby('STOP').START.nunique().to_dict()
 		#print(len(c))
-		if var<v and var>=0 and (len(c)/len(C))>0.05: #(count/sum(counts))>0.05 and len(c)>1:
+		if var<v and var>=0 and (len(c)/len(C))>0.10: #(count/sum(counts))>0.05 and len(c)>1:
 			index = i
 			v = var
 	return index
@@ -294,13 +294,13 @@ else:
 #pca = decomposition.PCA(n_components=2).fit(X)
 #X = pca.fit_transform(X)
 uni = dat.STOP.nunique() #.to_dict().__len__() 
-if uni < 100:
+tot = len(dat)
+if uni+tot < 500:
 	args.clust_num = 2
-elif uni < 500:
+elif uni+tot < 1500:
 	args.clust_num = 3
 else:
 	args.clust_num = 4
-
 
 
 print('len', len(X), 'clustnum', args.clust_num) 
