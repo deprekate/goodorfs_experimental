@@ -28,6 +28,12 @@ from scipy import stats
 import warnings
 warnings.filterwarnings('ignore')
 
+def sign(n):
+	if n != 0:
+		return abs(n)/n
+	else:
+		return 1.0
+
 def confidence_ellipse(x, y, ax, n_std=3.0, facecolor='none', **kwargs):
     if x.size != y.size:
         raise ValueError("x and y must be the same size")
@@ -99,7 +105,6 @@ def nrm(data, axis=None):
 setattr(np, 'nrm', nrm)
 
 def aad(data, axis=None):
-	print( np.round(np.mean(np.absolute(data - np.mean(data, axis)), axis), 2) )
 	return np.mean(np.absolute(data - np.mean(data, axis)), axis)
 setattr(np, 'aad', aad)
 def amd(data, axis=None):
@@ -153,7 +158,7 @@ parser.add_argument('-t','--clust_type', action="store", dest="clust_type", requ
 parser.add_argument('-n','--clust_num', action="store", dest="clust_num", required=True, type=int)
 parser.add_argument('-a','--annotate', action="store_true", dest="annotate", required=False)
 parser.add_argument('-o','--offset', action="store_true", dest="offset", required=False)
-parser.add_argument('-m','--maxd', type=float, default=70, dest="maxd", required=False)
+parser.add_argument('-m','--maxd', type=float, default=60, dest="maxd", required=False)
 
 args = parser.parse_args()
 
@@ -173,7 +178,6 @@ count = dict()
 mask = []
 longest = dict()
 
-coding_frame = dict()
 for index,row in dat[['START', 'STOP', 'TYPE']].iterrows():
 	r = list(row.values)
 	count[r[1]] = count.get(r[1], 0) + 1
@@ -189,49 +193,62 @@ for index,row in dat[['START', 'STOP', 'TYPE']].iterrows():
 		mask.append(False)
 	else:
 		mask.append(True)
-	length = max(r[1]-r[0], r[0]-r[1])
-	longest[r[1]] = max(longest.get(r[1],0), length) 
-	if r[2] == True:
-		for i in range(min(r[0], r[1]), max(r[0], r[1])):
-			if (i not in coding_frame) or (r[0]>r[1]):
-				coding_frame[i] = (max(r[0],r[1]) % 3) + 1
-				if r[0] > r[1]:
-					coding_frame[i] *= -1
+	#length = max(r[1]-r[0], r[0]-r[1])
+	#longest[r[1]] = max(longest.get(r[1],0), length) 
 
-dat = dat.drop(dat[mask].index)
-#dat = dat[dat.CODON != 'TTG']
 
-def sign(n):
-	if n != 0:
-		return abs(n)/n
-	else:
-		return 1.0
-
-nums = []
+#--------------------------------------------------------------------
+coding_frame = dict()
 offset = []
+with gzip.open(path + '/genomes/gff/' + args.genome_id + '.gff.gz') as f:
+	for line in f:
+		col = line.decode("utf-8").rstrip().split('\t')
+		if col[0] and not col[0].startswith('#') and col[2] == 'CDS':
+			col[3] = int(col[3])
+			col[4] = int(col[4])
+			for i in range(col[3], col[4]):
+					coding_frame[i] = (col[4] % 3) + 1
+					if col[6] != '+':
+						coding_frame[i] *= -1
 for index,row in dat[['START','STOP']].iterrows():
 	r = list(row.values)
-	length = max(r[1]-r[0], r[0]-r[1])
-	#nums.append(r[0] / counts[r[1]])
-	nums.append(length/longest[r[1]])
-	#nums.append(length)
+	left = min(r)
+	right = max(r)
 	frames = {0:0, 1:0, 2:0, 3:0, -1:0, -2:0, -3:0}
-	l = (max(r[0],r[1]) % 3) + 1
-	if r[0] > r[1]:
-		l *= -1
-	for i in range(min(r[0], r[1]), max(r[0], r[1])):
+	l = sign(r[1]-r[0]) * ((right % 3) + 1)
+	for i in range(left, right):
 		frames[coding_frame.get(i, 0)] += 1
-	#del frames[0]
+	#frames[0] = frames[0] / 2
 	a = max(frames, key=frames.get)
+	if sign(l) == sign(a):
+		f = sign(a)*sign(l)*((l-a)%3)
+	elif sign(a) > 0:
+		f = sign(a)*sign(l)*((abs(l)-a)%3)
+	else:
+		f = sign(a)*sign(l)*(( abs(a)-abs(l) )%3)
 	if a != 0:
-		#print(r[0], r[1])
-		#print(a, l)
-		#print( sign(a)*sign(l), ((abs(a)+3-abs(l))%3) )
-		offset.append( str(sign(a)*sign(l) * ((abs(a)+3-abs(l))%3)).replace('.0', '') )
+		offset.append( str(f).replace('.0', '') )
 	else:
 		offset.append('IG')
 dat['OFFSET'] = offset
-dat.loc[dat.TYPE==True, 'OFFSET'] = True
+dat.loc[(dat.TYPE==True) | (dat.OFFSET=='0'), 'OFFSET'] = True
+#--------------------------------------------------------------------
+
+#if not args.offset:
+dat = dat.drop(dat[mask].index)
+#dat = dat[dat.CODON != 'TTG']
+
+
+'''
+nums = []
+for index,row in dat[['START','STOP']].iterrows():
+	r = list(row.values)
+	length = max(r[1]-r[0], r[0]-r[1])
+	nums.append(r[0] / counts[r[1]])
+	nums.append(length/longest[r[1]])
+	nums.append(length)
+'''
+
 
 dat.loc[dat.CODON=='ATG', 'M'] = dat.loc[dat.CODON=='ATG', 'M'] - 1
 dat.loc[dat.CODON=='GTG', 'V'] = dat.loc[dat.CODON=='GTG', 'V'] - 1
@@ -257,14 +274,13 @@ if(args.data_type == 'se'):
 	#X = np.nan_to_num(X, nan=0)
 	X = X.div(X.sum(axis=1), axis=0)
 	#X = X / X.sum(axis=1, keepdims=True)
-	X = np.concatenate((X,dat[['n']]),axis=1)
+	#X = np.concatenate((X,dat[['n']]),axis=1)
 	X = StandardScaler().fit_transform(X)
 	title = 'shannon-entropy'
 else:
 	X = StandardScaler().fit_transform(X)
 	title = 'aminoacid-percent'
 
-#print(X)
 
 #X = StandardScaler().fit_transform(np.concatenate((X,x),axis=1))
 #X = np.concatenate((X,x),axis=1)
@@ -277,6 +293,15 @@ else:
 #x = X
 #pca = decomposition.PCA(n_components=2).fit(X)
 #X = pca.fit_transform(X)
+uni = dat.STOP.nunique() #.to_dict().__len__() 
+if uni < 100:
+	args.clust_num = 2
+elif uni < 500:
+	args.clust_num = 3
+else:
+	args.clust_num = 4
+
+
 
 print('len', len(X), 'clustnum', args.clust_num) 
 
@@ -301,14 +326,14 @@ elif(args.clust_type == 'bgm'):
 elif(args.clust_type == 'h'):
 	from scipy.cluster.hierarchy import dendrogram, linkage, fcluster
 	Z = linkage(X, method='ward')
-	#dat['CLUSTER'] = fcluster(Z, args.maxd, criterion='distance') - 1
-	dat['CLUSTER'] = fcluster(Z, 3, criterion='maxclust') - 1
+	dat['CLUSTER'] = fcluster(Z, args.maxd, criterion='distance') - 1
+	#dat['CLUSTER'] = fcluster(Z, 3, criterion='maxclust') - 1
 	args.clust_num = dat['CLUSTER'].nunique()
 elif(args.clust_type == 'ag'):
-	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num, affinity='cosine', linkage='complete').fit_predict(X)
+	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num, linkage='complete', affinity='euclidean', compute_full_tree=True).fit_predict(X)
 	#dat['CLUSTER'] = AgglomerativeClustering(n_clusters=None, distance_threshold=1.8, affinity='cosine', linkage='complete').fit_predict(X)
 elif(args.clust_type == 'ward'):
-	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num, linkage='ward', compute_full_tree=True).fit_predict(X)
+	dat['CLUSTER'] = AgglomerativeClustering(n_clusters=args.clust_num, linkage='ward', affinity='euclidean', compute_full_tree=True).fit_predict(X)
 elif(args.clust_type == 'pam'):
 	dat['CLUSTER'] = KMedoids(n_clusters=args.clust_num).fit_predict(X)
 elif(args.clust_type == 'op'):
@@ -324,9 +349,22 @@ elif(args.clust_type == 'b'):
 #X = x
 pca = decomposition.PCA(n_components=2).fit(X)
 dat['x'],dat['y'] = pca.fit_transform(X).T
+xvector = pca.components_[0] # see 'prcomp(my_data)$rotation' in R
+yvector = pca.components_[1]
+xs = 2.2*pca.transform(X)[:,0] # see 'prcomp(my_data)$x' in R
+ys = 2.2*pca.transform(X)[:,1]
 
 # PICK THE CLUSTER WITH THE LOWEST VARIANCE
+for aa in list("ARNDCEQGHILKMFPSTWYVn"):
+	print(aa, end='\t')
+print()
+for i in range(args.clust_num):
+	data = X[dat.CLUSTER==i]
+	for nn in np.round(np.mean(np.absolute(data - np.mean(data, 0)), 0), 2):
+		print(nn, end='\t')
+	print()
 print("----------")
+X = X[:,:-1]
 l = [len(X[dat.CLUSTER==i]) for i in range(args.clust_num)] ; print('len', l)
 #a = [dat.loc[dat.CLUSTER==i, 'A':'V'].to_numpy().sum() for i in range(args.clust_num)] ; print('   aa', a)
 v = [np.sum(np.var(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('var', v)
@@ -337,9 +375,11 @@ v = [np.linalg.norm(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust
 v = [np.sum(np.sums(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('sum', v)
 v = [np.mean(np.nrm(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('nrm', v)
 v = [np.mean(np.aad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('aad', v)
-v = [np.mean(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mad', v)
 v = [np.mean(np.xxx(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('xxx', v)
-v = [np.sum(np.mad(X[dat.CLUSTER==i, :-1], axis=0)) for i in range(args.clust_num)] ; print('mad', v)
+v = [np.mean(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mad', v)
+v = [np.sum(np.mad(X[dat.CLUSTER==i], axis=0)) for i in range(args.clust_num)] ; print('mad', v)
+#v = [np.sum(np.mad(X[dat.CLUSTER==i], axis=0))/l[i] for i in range(args.clust_num)] ; print('mad', v)
+#v = [np.sum(np.var(X[dat.CLUSTER==i], axis=0))/l[i] for i in range(args.clust_num)] ; print('var', v)
 #v = [np.sum(np.mad(X[dat.CLUSTER==i], axis=0))/l[i] for i in range(args.clust_num)] ; print('mad', v)
 
 #index_min = np.argmin(variance)
@@ -433,10 +473,6 @@ else:
 	pass
 
 ## visualize projections
-xvector = pca.components_[0] # see 'prcomp(my_data)$rotation' in R
-yvector = pca.components_[1]
-xs = 2.2*pca.transform(X)[:,0] # see 'prcomp(my_data)$x' in R
-ys = 2.2*pca.transform(X)[:,1]
 for i in range(len(xvector)):
 	#arrows project features (ie columns from csv) as vectors onto PC axes
 	plt.arrow(0, 0, xvector[i]*max(xs), yvector[i]*max(ys), color='black', alpha=0.2, width=0.00001, head_width=0.0025, zorder=11)
@@ -444,7 +480,7 @@ for i in range(len(xvector)):
 #	pass
 
 
-ax.legend(handles=[mpatches.Patch(color=col, label=str(lab)) for lab,col in colors.items()])
+ax.legend(prop={'size': 6}, handles=[mpatches.Patch(color=col, label=str(lab)) for lab,col in colors.items()])
 
 fig.savefig(args.genome_id + '.png', bbox_inches='tight')
 #plt.show() #block=False)
